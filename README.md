@@ -1,7 +1,7 @@
 # The-Coolony-Game
 [Proposal] JavaScript Project (JSP) for App Academy by Kira Porter
 
-## The Coolony Game: Background
+## The Coolony Game: Overview
 In this ant-themed, idle clicker-esque game, the player assigns tasks for ants to do. Tasks include gathering resources, excavating tunnels, creating new ants, and sleeping to restore energy (which depletes over time as ants do tasks).
 Ants do tasks in cycles, adding to the player’s resource deposits at the end of each cycle. The player must assign a new task to each ant when its previous task has been completed, or it will sit idle. 
 
