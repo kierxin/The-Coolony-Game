@@ -41,6 +41,6 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 
 ### Bonus Features (Future Goals)
 1. Nice game graphics
-2. Ability for user to zoom in/out on game board (CSS scale transformation)
-3. Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)
-4. Ability for user to log in & retrieve previous game data
+1. Ability for user to zoom in/out on game board (CSS scale transformation)
+1. Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)
+1. Ability for user to log in & retrieve previous game data
