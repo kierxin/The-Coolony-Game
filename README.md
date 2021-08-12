@@ -18,12 +18,12 @@ In addition, this project might include:
 - An option for the user to display their game stats in a simplified modal or page
 - Achievements and/or 'special loot’ (which isn’t usable in the game in any way, but would essentially be a form of game achievement (acquired through random drop events during gameplay))
 
-### Wireframes / Prototypes / Design
-A partial prototype I assembled while trying out Figma (screenshot below):
+### Mockup
+A mockup I assembled while trying out Figma (screenshot below):
 
 [Link to Figma Project](https://www.figma.com/file/GwP3HkK7CZiAaqMuvK4iTA/Untitled?node-id=0%3A1 "View Prototype on Figma Website")
 
-![Prototype Screenshot](https://cdn.discordapp.com/attachments/865227670039560212/875478177819025418/Coolony_Prototype.png "Screenshot of the Figma Prototype")
+![Mockup Screenshot](https://cdn.discordapp.com/attachments/865227670039560212/875478177819025418/Coolony_Prototype.png "Screenshot of the Figma Mockup")
 
 ### Technologies, Libraries, APIs
 This project will incorporate JavaScript unit testing, HTML’s drag-and-drop API, and CSS animations/parallax (in the 'how-to' section). The board may have a background graphic (SVG).
