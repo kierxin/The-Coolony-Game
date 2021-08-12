@@ -27,6 +27,7 @@ A partial prototype I assembled while trying out Figma (screenshot below):
 
 ### Technologies, Libraries, APIs
 This project will incorporate JavaScript unit testing, HTML’s drag-and-drop API, and CSS animations/parallax (in the 'how-to' section).
+Ideally, I will enable users to click and drag around the game board (JavaScript event listeners), and maybe even zoom in/out (CSS transformations).
 
 ### Implementation Timeline
 - Friday 8/13: Game (create grid board, ant instances, resource deposits, collected resources)
