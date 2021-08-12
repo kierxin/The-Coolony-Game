@@ -33,7 +33,7 @@ This project will incorporate JavaScript unit testing, HTML’s drag-and-drop AP
 - Saturday 8/14: Game (Task cycles / time-based accumulation of resources, new ant creation)
 - Sunday 8/15: Game (Ant energy/appetite decay, display idle ants list, display stats modal)
 - Monday 8/16: Game (drag-and-drop functionality to assign ants to tasks, new tunnel excavation / resource deposit discovery)
-- Tuesday 8/17: Code the welcome section / how-to / and game container (minus the game itself), override ‘onscroll’ event when inside game container (HTML div)
+- Tuesday 8/17: Code the welcome section / how-to / and game container (HTML div), override ‘onscroll’ event when inside game container
 - Wednesday 8/18: Better graphics, write ‘how-to’, add networking/social media links, CSS animations/parallax
 - Thursday 8/19: Deploy (GitHub Pages)
 
