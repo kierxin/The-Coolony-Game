@@ -26,11 +26,9 @@ A partial prototype I assembled while trying out Figma (screenshot below):
 ![Prototype Screenshot](https://cdn.discordapp.com/attachments/865227670039560212/875478177819025418/Coolony_Prototype.png "Screenshot of the Figma Prototype")
 
 ### Technologies, Libraries, APIs
-This project will incorporate JavaScript unit testing, HTML’s drag-and-drop API, and CSS animations/parallax (in the 'how-to' section).
+This project will incorporate JavaScript unit testing, HTML’s drag-and-drop API, and CSS animations/parallax (in the 'how-to' section). The board may have a background graphic (SVG).
 
-Ideally, I will also enable users to click and drag around the game board (JavaScript event listeners), and maybe even zoom in/out (CSS transformations).
-
-The board may have a background graphic (SVG).
+Ideally, I will also enable users to click and drag around the game board (JavaScript event listeners).
 
 ### Implementation Timeline
 - Friday 8/13: Game (create grid board, ant instances, resource deposits, collected resources)
@@ -43,5 +41,6 @@ The board may have a background graphic (SVG).
 
 ### Bonus Features (Future Goals)
 - Nice game graphics
+- Ability for user to zoom in/out on game board (CSS scale transformation)
 - Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)
 - Ability for user to log in & retrieve previous game data (post-App Academy goal)
