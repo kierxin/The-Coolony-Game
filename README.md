@@ -16,7 +16,7 @@ In The Coolony Game, users will be able to:
  
 In addition, this project will include:
 - An option for the user to display their game stats in a simplified modal or page
-- Achievements and/or collect special ‘loot’ (which isn’t usable in the game in any way, but would essentially be a form of game achievement
+- Achievements and/or 'special loot’ (which isn’t usable in the game in any way, but would essentially be a form of game achievement
 
 ### Wireframes / Prototypes / Design
 A partial prototype I assembled while trying out Figma (screenshot below):
