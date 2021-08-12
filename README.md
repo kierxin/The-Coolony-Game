@@ -5,7 +5,7 @@
 In this ant-themed, idle clicker-esque game, the player assigns tasks for ants to do. Tasks include gathering resources, excavating tunnels, creating new ants, and sleeping to restore energy (which depletes over time as ants do tasks).
 Ants do tasks in cycles, adding to the player’s resource deposits at the end of each cycle. The player must assign a new task to each ant when its previous task has been completed, or it will sit idle. 
 
-Visually, players can view the available resource deposits on the game board (grid). Clicking on a resource deposit allows the player to view which ants are currently making use of that resource deposit. To view which ants are idle (not currently on any resource deposit), the player can click a button to view a list of their idle ants. By viewing the resource desposits or idle list, players can (re)assign a task for each ant to work on.
+Visually speaking, players can view the available resource deposits on the game board (grid). Clicking on a resource deposit allows the player to view which ants are currently making use of that resource deposit. To view which ants are idle (not currently on any resource deposit), the player can click a button to view a list of their idle ants. By viewing the resource desposits or idle list, players can (re)assign a task for each ant to work on.
 
 ### Functionality & MVPs
 In The Coolony Game, users will be able to:
@@ -14,9 +14,9 @@ In The Coolony Game, users will be able to:
 - View a how-to page (modal, or section on the same page as game window)
 - View how many resources have already been accumulated (modal or fixed-position overlay at top of game window)
  
-In addition, this project will include:
+In addition, this project might include:
 - An option for the user to display their game stats in a simplified modal or page
-- Achievements and/or 'special loot’ (which isn’t usable in the game in any way, but would essentially be a form of game achievement (acquired through random drop event during gameplay))
+- Achievements and/or 'special loot’ (which isn’t usable in the game in any way, but would essentially be a form of game achievement (acquired through random drop events during gameplay))
 
 ### Wireframes / Prototypes / Design
 A partial prototype I assembled while trying out Figma (screenshot below):
@@ -40,7 +40,7 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 - Thursday 8/19: Deploy (GitHub Pages)
 
 ### Bonus Features (Future Goals)
-- Nice game graphics
-- Ability for user to zoom in/out on game board (CSS scale transformation)
-- Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)
-- Ability for user to log in & retrieve previous game data (post-App Academy goal)
+1. Nice game graphics
+2. Ability for user to zoom in/out on game board (CSS scale transformation)
+3. Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)
+4. Ability for user to log in & retrieve previous game data
