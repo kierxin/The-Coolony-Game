@@ -30,6 +30,8 @@ This project will incorporate JavaScript unit testing, HTML’s drag-and-drop AP
 
 Ideally, I will also enable users to click and drag around the game board (JavaScript event listeners), and maybe even zoom in/out (CSS transformations).
 
+The board may have a background graphic (SVG).
+
 ### Implementation Timeline
 - Friday 8/13: Game (create grid board, ant instances, resource deposits, collected resources)
 - Saturday 8/14: Game (Task cycles / time-based accumulation of resources, new ant creation)
