@@ -31,12 +31,12 @@ This project will incorporate JavaScript unit testing, HTML’s drag-and-drop AP
 Ideally, I will also enable users to click and drag around the game board (JavaScript event listeners).
 
 ### Implementation Timeline
-- **`FRI 8/13`** Game (create grid board, ant instances, resource deposits, collected resources)
-- **`SAT 8/14`** Game (Task cycles / time-based accumulation of resources, new ant creation)
-- **`SUN 8/15`** Game (Ant energy/appetite decay, display idle ants list, display stats modal)
-- **`MON 8/16`** Game (drag-and-drop functionality to assign ants to tasks, new tunnel excavation / resource deposit discovery)
-- **`TUE 8/17`** Code the landing page, how-to, & game container (HTML div), override ‘onscroll’ event when inside game container
-- **`WED 8/18`** Better graphics, write ‘how-to’, add networking/social media links, CSS animations/parallax
+- **`FRI 8/13`** Landing page, how-to, & game container (HTML div), override ‘onscroll’ event in game container, networking/social media links, Game grid array
+- **`SAT 8/14`** Game (ant instances, resource deposits, resource deposit modals)
+- **`SUN 8/15`** Game (task cycles / time-based accumulation of resources, toggleable collected resources overlay)
+- **`MON 8/16`** Game (Ant energy/appetite decay, new ant creation, display idle ants list, display stats modal)
+- **`TUE 8/17`** Game (drag-and-drop functionality to assign ants to tasks, stats modal)
+- **`WED 8/18`** Better graphics, write ‘how-to’, CSS animations/parallax; Game (new tunnel excavation / resource deposit discovery)
 - **`THU 8/19`** Deploy (GitHub Pages)
 
 ### Bonus Features (Future Goals)
