@@ -1,6 +1,6 @@
 $test-color-1: red;
 $test-color-2: yellow;
-$test-color-3: magenta;
+$test-color-3: lime;
 
 $sides-bg: rgb(54, 44, 40);
 $landing-bg: rgb(173, 224, 233);
@@ -73,6 +73,11 @@ body {
     color: black;
 }
 
+.game-grid-container::selection {
+    color: transparent;
+    background-color: transparent;
+}
+
 .game-grid-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
@@ -81,15 +86,35 @@ body {
     -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
     scrollbar-width: none;  /* Firefox hide scrollbar */
 
-    cursor: grab;
+    // cursor: grab;
 }
 
 .game-grid {
-    background-image: url(https://marvel-b1-cdn.bc0a.com/f00000000038905/www.aao.org/image.axd?id=4a0d828b-c698-47cf-9455-e265332e7968&t=635998033438800000);
+    background-image: url(https://images.unsplash.com/photo-1549331847-168be8aea4fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80);
     background-repeat: repeat;
-    height: 200%;
-    width: 200%;
+    // position: absolute;
+    top: 0;
+    height: 300%;
+    width: 300%;
     color: $test-color-3;
     font-weight: bold;
     text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
+}
+
+#draggable {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: green;
+    font-size: 300px;
+    opacity: 0;
+    text-shadow: none;
+    overflow: hidden;
+    word-wrap: break-word;
+    line-height: 1600px;
+}
+
+#draggable::selection {
+    display: none;
 }
