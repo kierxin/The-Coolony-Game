@@ -12,7 +12,7 @@ In The Coolony Game, users will be able to:
 - Designate resource-collection tasks for their ants to carry out
 - Use gathered resources to upgrade resource deposits
 - View a how-to page (modal, or section on the same page as game window)
-- View how many resources have already been accumulated (modal or fixed-position overlay at top of game window)
+- View how many resources have already been accumulated (fixed-position, toggleable overlay at top of game window)
  
 In addition, this project might include:
 - An option for the user to display their game stats in a simplified modal or page
