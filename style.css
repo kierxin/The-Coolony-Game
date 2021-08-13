@@ -1,0 +1,82 @@
+html {
+    background-color: rgb(80, 59, 47);
+}
+
+body {
+    width: 80%;
+    max-width: 1600px;
+    min-width: 900px;
+    background-color: rgb(54, 44, 40);
+    margin: 0 auto;
+}
+
+.landing {
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(173, 224, 233);
+}
+
+.how-to {
+    height: 800px;
+    width: 100%;
+    background-color: rgb(57, 131, 85);
+    z-index: 5;
+}
+
+.game-container {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(92, 62, 45);
+    position: relative;
+}
+
+.back-to-how-to-container {
+    height: 7%;
+    min-height: 40px;
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid lime;
+}
+
+.game-window {
+    position: absolute;
+    bottom: 20px;
+    height: 90%;
+    max-height: 900px;
+    width: 80%;
+    left: calc(20% / 2);
+    background-color: rgb(156, 119, 83);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.game-grid-container {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    white-space: nowrap;
+    color: black;
+}
+
+.game-grid-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.game-grid-container {
+  -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
+  scrollbar-width: none;  /* Firefox hide scrollbar */
+}
+
+.game-grid {
+    background-image: url(https://marvel-b1-cdn.bc0a.com/f00000000038905/www.aao.org/image.axd?id=4a0d828b-c698-47cf-9455-e265332e7968&t=635998033438800000);
+    background-repeat: repeat;
+    height: 200%;
+    width: 200%;
+    cursor: grab;
+    color: rgb(71, 143, 12);
+    font-weight: bold;
+    text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
+}
