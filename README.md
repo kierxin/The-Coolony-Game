@@ -26,7 +26,7 @@ A mockup I assembled while trying out Figma (screenshot below):
 ![Mockup Screenshot](https://cdn.discordapp.com/attachments/865227670039560212/875478177819025418/Coolony_Prototype.png "Screenshot of the Figma Mockup")
 
 ### Technologies, Libraries, APIs
-This project will incorporate JavaScript unit testing, HTML’s drag-and-drop API, and CSS animations/parallax (in the 'how-to' section). The board may have a background graphic (SVG).
+This project will incorporate JavaScript unit testing, HTML’s drag-and-drop API, and CSS animations/parallax (in the 'how-to' section). The board may have a background graphic (SVG). Sass (SCSS) will be used for styling.
 
 Ideally, I will also enable users to click and drag around the game board (JavaScript event listeners).
 
