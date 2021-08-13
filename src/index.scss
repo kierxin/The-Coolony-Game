@@ -1,6 +1,6 @@
 $test-color-1: red;
 $test-color-2: yellow;
-$test-color-3: lime;
+$test-color-3: magenta;
 
 $sides-bg: rgb(54, 44, 40);
 $landing-bg: rgb(173, 224, 233);
@@ -78,8 +78,10 @@ body {
 }
 
 .game-grid-container {
-  -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
-  scrollbar-width: none;  /* Firefox hide scrollbar */
+    -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
+    scrollbar-width: none;  /* Firefox hide scrollbar */
+
+    cursor: grab;
 }
 
 .game-grid {
@@ -87,7 +89,6 @@ body {
     background-repeat: repeat;
     height: 200%;
     width: 200%;
-    cursor: grab;
     color: $test-color-3;
     font-weight: bold;
     text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
