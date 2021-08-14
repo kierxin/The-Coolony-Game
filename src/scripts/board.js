@@ -1,4 +1,4 @@
-function board() {
+function Board(strToPrintAsTest) {
 
     const starterBoard1 = [["", "T", "", "", "", "", "", "", "C", ""],
                           ["O", "T", "T", "T", "T", "T", "T", "T", "T", ""],
@@ -25,10 +25,14 @@ function board() {
 
     // const gameBoard = document.querySelector(".game-grid");
 
-    gridRender(starterBoard1, starterBoard2, starterBoard3);
+    gridRender(potentialStarterBoards, strToPrintAsTest);
 
 }
 
-function gridRender(starterBoard1, starterBoard2, starterBoard3) {
-
+function gridRender(potentialStarterBoards, strToPrintAsTest) {
+    console.log(strToPrintAsTest);
+    console.log(potentialStarterBoards[1]);
 }
+
+
+module.exports = Board;

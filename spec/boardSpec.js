@@ -1,6 +1,6 @@
 describe("Board creation", function() {
     it("randomly chooses 1 of the hardcoded starter board arrays", function() {
-
+        // expect(Board.gridRender).toBeFalsy;
     });
     it("assigns the starter board array as the player's startBoard", function() {
 
