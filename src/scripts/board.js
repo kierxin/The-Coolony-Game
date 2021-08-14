@@ -1,13 +1,10 @@
-const starterBoard = require("./starterBoard");
-const restOfBoard = require("./restOfBoard");
+const starterBoard = require("./starterBoard.js");
+const restOfBoard = require("./restOfBoard.js");
 
-function Board() {
+export function Board() {
 
     this.starter = starterBoard();
     this.theRest = restOfBoard();
     this.wholeBoard = []
 
 }
-
-
-module.exports = Board;

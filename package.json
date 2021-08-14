@@ -2,7 +2,7 @@
   "name": "The-Coolony-Game",
   "version": "1.0.0",
   "description": "JavaScript Project (JSP) for App Academy",
-  "main": "./src/index.js",
+  "main": "./dist/main.js",
   "scripts": {
     "test": "jasmine",
     "watch": "webpack --watch --mode=development",

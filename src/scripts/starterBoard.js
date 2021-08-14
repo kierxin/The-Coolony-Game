@@ -1,6 +1,6 @@
-function StarterBoard() {
+export function StarterBoard() {
 
-    this.starterBoard1 = [
+    const starterBoard1 = [
         ["", "T", "", "", "", "", "", "", "C", ""],
         ["O", "T", "T", "T", "T", "T", "T", "T", "T", ""],
         ["", "T", "", "", "", "O", "", "", "T", "C"],
@@ -9,7 +9,7 @@ function StarterBoard() {
         ["", "F", "", "", "E", "", "", "", "", ""]
     ];
 
-    this.starterBoard2 = [
+    const starterBoard2 = [
         ["", "", "", "", "O", "", "T", "", "", ""],
         ["", "T", "T", "T", "T", "T", "T", "T", "", "C"],
         ["", "", "N", "N", "T", "", "", "T", "", "O"],
@@ -18,7 +18,7 @@ function StarterBoard() {
         ["F", "F", "", "", "", "", "", "", "", "E"]
     ];
 
-    this.starterBoard3 = [
+    const starterBoard3 = [
         ["", "", "", "", "", "", "", "", "", "T"],
         ["O", "T", "", "", "", "T", "C", "T", "T", "T"],
         ["", "T", "T", "", "C", "", "T", "T", "T", ""],
@@ -27,15 +27,12 @@ function StarterBoard() {
         ["", "N", "N", "E", "", "", "", "O", "", ""]
     ];
 
-    this.potentialStarterBoards = [this.starterBoard1, this.starterBoard2, this.starterBoard3];
+    const potentialStarterBoards = [starterBoard1, starterBoard2, starterBoard3];
 
     // choose 1 of the 3 available starter boards:
     const randomized = () => {
         return Math.floor(Math.random() * 3);
     }
 
-    return this.potentialStarterBoards[randomized()];
+    return potentialStarterBoards[randomized()];
 }
-
-
-module.exports = StarterBoard;

@@ -1,4 +1,4 @@
-function RestOfBoard() {
+export function RestOfBoard() {
 
     // RestOfBoard dimensions
     const width = 10; // (must match starterBoard width)
@@ -25,6 +25,10 @@ function RestOfBoard() {
 
 function fillRestOfBoard (width, height, taskSitesToPlace) {
     const board = new Array(height);
+    board.forEach(el => el = []);
+    console.log(board);
+
+
     // create 2D array representing board
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < width; j++) {
@@ -32,14 +36,15 @@ function fillRestOfBoard (width, height, taskSitesToPlace) {
         }
     }
 
-    return placeTaskSites(width, length, board, taskSitesToPlace);
+
+    return placeTaskSites(width, height, board, taskSitesToPlace);
 }
 
 
-function placeTaskSites (width, length, board, taskSitesToPlace) {
+function placeTaskSites (width, height, board, taskSitesToPlace) {
     if (taskSitesToPlace.length > 1) return board;
 
-    let randomPos = getRandomPos(width, length);
+    let randomPos = getRandomPos(width, height);
 
     if (board[randomPos] === undefined) {
         board[randomPos] = this.taskSitesToPlace.shift();
@@ -49,7 +54,7 @@ function placeTaskSites (width, length, board, taskSitesToPlace) {
 }
 
 
-Board.prototype.getRandomPos = function(width, length) {
+function getRandomPos(width, height) {
     const randomPos = [0,0];
 
     const randomX = Math.floor(Math.random() * width);
@@ -60,6 +65,3 @@ Board.prototype.getRandomPos = function(width, length) {
 
     return randomPos;
 }
-
-
-module.exports = RestOfBoard;

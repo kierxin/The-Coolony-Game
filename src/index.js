@@ -1,12 +1,25 @@
-const Board = require("./scripts/board");
+const Board = require("./scripts/board.js");
+const Draggable = require("./scripts/draggable.js");
+const { RestOfBoard } = require("./scripts/restOfBoard.js");
+const { StarterBoard } = require("./scripts/starterBoard.js");
 
-// also utilizes draggable.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    // console.log(Draggable);
 
-    const b = new Board();
-    console.log(b);
-
-    draggable(); // drag-to-scroll on board //DRAGGABLE.JS
-
+    // const start = Board.starterBoard();
+    // console.log(start);
+    const board = constructBoard();
+    
+    console.log(board);
 });
+
+
+function constructBoard() {
+    const b = Board;
+
+    b.starter = StarterBoard();
+    // b.theRest = RestOfBoard();
+
+    return b;
+}
