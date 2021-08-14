@@ -4,7 +4,7 @@
   "description": "JavaScript Project (JSP) for App Academy",
   "main": "/src/scripts/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jasmine",
     "watch": "webpack --watch --mode=development",
     "build": "webpack --mode=production"
   },
@@ -34,5 +34,8 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "devDependencies": {
+    "jasmine": "^3.8.0"
+  }
 }

@@ -31,12 +31,21 @@ This project will incorporate JavaScript unit testing, HTML’s drag-and-drop AP
 Ideally, I will also enable users to click and drag around the game board (JavaScript event listeners).
 
 ### Implementation Timeline
-- **`FRI 8/13`** ~~Landing page~~, ~~how-to~~, ~~& game container (HTML div)~~, ~~override ‘onscroll’ event in game container~~, ~~networking/social media links~~; Game (grid array)
+- **`FRI 8/13`** Landing page, how-to, & game container (HTML div), override ‘onscroll’ event in game container, networking/social media links; Game (grid array)
 - **`SAT 8/14`** Game (ant instances, resource deposits, resource deposit modals)
 - **`SUN 8/15`** Game (task cycles / time-based accumulation of resources, toggleable collected resources overlay)
 - **`MON 8/16`** Game (Ant energy/appetite decay, new ant creation, display idle ants list, display stats modal)
 - **`TUE 8/17`** Game (drag-and-drop functionality to assign ants to tasks, stats modal)
 - **`WED 8/18`** Better graphics, write ‘how-to’, CSS animations/parallax; Game (new tunnel excavation / resource deposit discovery)
+- **`THU 8/19`** Deploy (GitHub Pages)
+
+### Actual Implementation Timeline (Updated As I Go)
+- **`FRI 8/13`** Landing page, how-to, & game container (HTML div), override ‘onscroll’ event in game container, networking/social media links; 
+- **`SAT 8/14`** Game (grid array, ant instances, resource deposits)
+- **`SUN 8/15`** Game (resource deposit modal, task cycles / time-based accumulation of resources)
+- **`MON 8/16`** Game (toggleable collected resources overlay, stats modal, display idle ants list)
+- **`TUE 8/17`** Game (Ant energy/appetite decay, new ant creation, new tunnel excavation / resource deposit discovery)
+- **`WED 8/18`** Better graphics, write ‘how-to’, CSS animations/parallax, drag-and-drop functionality to assign ants to tasks
 - **`THU 8/19`** Deploy (GitHub Pages)
 
 ### Bonus Features (Future Goals)
