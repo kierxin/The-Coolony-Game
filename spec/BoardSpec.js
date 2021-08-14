@@ -1,12 +1,11 @@
 const Board = require("../src/scripts/board");
 
-describe("Board render", function() {
-    // let b = new Board();
-    // beforeEach(function() {
-    //     console.log(b);
-    // });
+describe("Board", function() {
+    beforeEach(function() {
+        const b = new Board("this is my test string");
+    });
 
-    it("has an array of potential starter boards", function() {
+    xit("has an array of potential starter boards", function() {
         // expect(Board.potentialStarterBoards).toBeFalsy;
     });
     xit("randomly chooses 1 of the hardcoded starter board arrays", function() {
@@ -23,3 +22,17 @@ describe("Board render", function() {
             //in other words, each subArray of the startBoard should not contain further subArrays
     })
 })
+
+
+
+
+function createStarterBoard() {
+    return [
+        ["", "T", "", "", "", "", "", "", "C", ""],
+        ["O", "T", "T", "T", "T", "T", "T", "T", "T", ""],
+        ["", "T", "", "", "", "O", "", "", "T", "C"],
+        ["", "T", "", "T", "", "", "N", "N", "T", ""],
+        ["", "F", "T", "T", "T", "T", "N", "N", "", ""],
+        ["", "F", "", "", "E", "", "", "", "", ""]
+    ];
+}

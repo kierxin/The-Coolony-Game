@@ -1,6 +1,5 @@
 function draggable() {
 
-
     // QUERY SELECTORS START
     const gameGridContainer = document.querySelector(".game-grid-container");
     const draggableEle = document.getElementById("draggable");
@@ -22,6 +21,5 @@ function draggable() {
         this.scrollTop += (scrollPositions[1][1] - scrollPositions[scrollPositions.length - 2][1]) * 5;
         this.scrollLeft += (scrollPositions[1][0] - scrollPositions[scrollPositions.length - 2][0]) * 5;
     }
-
 
 }

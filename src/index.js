@@ -1,9 +1,13 @@
-const board = require("./scripts/board");
+const Board = require("./scripts/board");
+
+// also utilizes draggable.js
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    console.log(board("Thisis a test str"));
-    // board(); // from grid.js //RENDER.JS
+    const b = new Board();
+    console.log(b);
+
+
     draggable(); // drag-to-scroll on board //DRAGGABLE.JS
 
 });

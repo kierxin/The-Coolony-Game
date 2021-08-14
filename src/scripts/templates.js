@@ -1,7 +1,7 @@
 // TEMPLATES; DO NOT EDIT
 
 
-    // FOR USE IN:  BOARD.JS
+    // FOR USE IN:  starterBoard.js
     // const starterBoard0 = [["", "", "", "", "", "", "", "", "", ""],
     //                       ["", "", "", "", "", "", "", "", "", ""],
     //                       ["", "", "", "", "", "", "", "", "", ""],
@@ -10,7 +10,7 @@
     //                       ["", "", "", "", "", "", "", "", "", ""]];
 
 
-    // FOR USE IN:  BOARD.JS
+    // FOR USE IN:  board.js
     // let start0Dup = []
     //     starterBoard0.forEach((arr) => {
     //     let xEd = arr.map(el => {
