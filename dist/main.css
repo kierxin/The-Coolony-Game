@@ -12,12 +12,91 @@ body {
   margin: 0 auto;
 }
 
+.networking-icons-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  margin: 0 4vh;
+  z-index: 20;
+}
+
+.networking-icon img {
+  width: 4vw;
+  height: 4vw;
+}
+
+.networking-icon img:hover {
+  opacity: 0.8;
+}
+
+.networking-icon img:active {
+  opacity: 1;
+}
+
 .landing {
   height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
   background-color: #c0e9f0;
+}
+
+.how-to-and-play-btns-container {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: calc((100vw - 40vw) / 2);
+  flex-direction: row;
+  justify-content: center;
+  width: 40vw;
+  min-width: 400px;
+  height: 50px;
+  background-color: #8dac6f;
+  border: 2px solid #503731;
+  border-radius: 20px 20px 0 0;
+  border-width: 2px 2px 0px 2px;
+}
+
+.landing-btn {
+  width: 50%;
+  height: 100%;
+}
+
+.landing-btn a {
+  display: block;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-top: 16px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #503731;
+  text-decoration: none;
+  font-family: "Kanit", sans-serif;
+}
+
+#how-to-btn {
+  border-radius: 20px 0 0 0;
+  border-right: 2px solid #503731;
+  height: 100%;
+}
+
+#play-btn {
+  border-radius: 0 20px 0 0;
+  height: 100%;
+}
+
+.landing-btn a:hover {
+  background-color: #83a369;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.landing-btn a:active {
+  background-color: #8dac6f;
 }
 
 .how-to {
@@ -27,7 +106,7 @@ body {
   z-index: 5;
 }
 
-.grid-container {
+.grid-section {
   height: 100vh;
   width: 100%;
   background-color: #695042;
@@ -102,7 +181,7 @@ body {
   text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
 }
 
-/* the super tall line height ensures that the
+/* the super tall line-height ensures that the
 user can drag the "background" (actually, the
 text in this div) from anywhere in the grid window;
 as they drag this text around, the grid
@@ -124,83 +203,4 @@ dragging it) */
   line-height: 1600px;
   color: transparent;
   text-shadow: none;
-}
-
-.networking-icons-container {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100vh;
-  margin: 0 4vh;
-  z-index: 20;
-}
-
-.networking-icon img {
-  width: 4vw;
-  height: 4vw;
-}
-
-.networking-icon img:hover {
-  opacity: 0.8;
-}
-
-.networking-icon img:active {
-  opacity: 1;
-}
-
-.how-to-and-play-btns-container {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: calc((100vw - 40vw) / 2);
-  flex-direction: row;
-  justify-content: center;
-  width: 40vw;
-  min-width: 400px;
-  height: 50px;
-  background-color: #8dac6f;
-  border: 2px solid #503731;
-  border-radius: 20px 20px 0 0;
-  border-width: 2px 2px 0px 2px;
-}
-
-.landing-btn {
-  width: 50%;
-  height: 100%;
-}
-
-.landing-btn a {
-  display: block;
-  background-color: transparent;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding-top: 16px;
-  font-size: 1.2rem;
-  text-align: center;
-  color: #503731;
-  text-decoration: none;
-  font-family: "Kanit", sans-serif;
-}
-
-#how-to-btn {
-  border-radius: 20px 0 0 0;
-  border-right: 2px solid #503731;
-  height: 100%;
-}
-
-#play-btn {
-  border-radius: 0 20px 0 0;
-  height: 100%;
-}
-
-.landing-btn a:hover {
-  background-color: #83a369;
-  letter-spacing: 3px;
-  cursor: pointer;
-}
-
-.landing-btn a:active {
-  background-color: #8dac6f;
 }
