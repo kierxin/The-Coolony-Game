@@ -16,13 +16,20 @@
         <!-- FAVICON -->
         <link rel="icon" type="image/png" href="./src/images/coolony-favicon.png">
 
+        <!-- GOOGLE FONTS -->
+            <!-- Kanit -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Varela+Round&display=swap"
+            rel="stylesheet">
+
         <!-- STYLESHEETS -->
         <link type="text/css" rel="stylesheet" href="./src/styles/reset.css">
         <link type="text/css" rel="stylesheet" href="./src/index.scss">
         <link type="text/css" rel="stylesheet" href="./dist/main.css">
 
         <!-- SCRIPTS -->
-        <!-- <script src="./src/scripts/render.js"></script> -->
         <script src="./src/index.js"></script>
         <script src="./src/scripts/render.js"></script>
         <script src="./src/scripts/draggable.js"></script>
@@ -32,21 +39,24 @@
     <body>
         <ul class="networking-icons-container">
             <li class="networking-icon"><a href="https://github.com/kierxin"><img src="./src/images/Github-Icon.png" alt="icon linking to Kira's Github" title="github.com/kierxin"></a></li>
-            <li class="networking-icon"><a href="#"><img src="./src/images/AngelList-Icon.png" alt="icon linking to Kira's Angel List" title=""></a></li>
+            <li class="networking-icon"><a href="#"><img src="./src/images/AngelList-Icon.png" alt="icon linking to Kira's Angel List" title="AngelList: #"></a></li>
             <li class="networking-icon"><a href="https://www.linkedin.com/in/kiraporter"><img src="./src/images/LinkedIn-Icon.png" alt="icon linking to Kira's Linked In" title="linkedin.com/in/kiraporter"></a></li>
-            <li class="networking-icon"><a href="#"><img src="./src/images/Portfolio-Icon.png" alt="icon linking to Kira's Portfolio Site" title=""></a></li>
+            <li class="networking-icon"><a href="#"><img src="./src/images/Portfolio-Icon.png" alt="icon linking to Kira's Portfolio Site" title="Portfolio: #"></a></li>
         </ul>
 
         <section class="landing">
-            the coolony game TEST
+            <ul class="how-to-and-play-btns-container">
+                <li class="landing-btn"><a href="#how-to-anchor" id="how-to-btn">How To ▼</a></li>
+                <li class="landing-btn"><a href="#game-container-anchor" id="play-btn">Play ▼</a></li>
+            </ul>
         </section>
 
-        <section class="how-to">
-            how to
+        <section class="how-to" id="how-to-anchor">
+            
         </section>
 
-        <section class="game-container">
-            <div class="back-to-how-to-container"></div>
+        <section class="game-container" id="game-container-anchor">
+            <div class="back-to-how-to-container"><a href="#how-to-anchor">How To ▲</a></div>
 
             <div class="game-window">
                 <div class="game-grid-container">

@@ -2,14 +2,16 @@ $test-color-1: red;
 $test-color-2: yellow;
 $test-color-3: lime;
 
-$sides-bg: rgb(54, 44, 40);
-$landing-bg: rgb(173, 224, 233);
+$sides-bg: rgb(80, 55, 49);
+$landing-bg: rgb(192, 233, 240);
 $off-white: rgb(226, 224, 223);
-$game-container-bg: rgb(92, 62, 45);
-$how-to-bg: rgb(57, 131, 85);
+$game-container-bg: rgb(105, 80, 66);
+$how-to-bg: rgb(141, 172, 111);
+$how-to-bg-darkened: rgb(131, 163, 105);
 $game-window-bg: rgb(156, 119, 83);
 
 $default-fonts: Arial, Helvetica, sans-serif;
+$kanit: 'Kanit', sans-serif;
 
 html {
     background-color: $sides-bg;
@@ -47,9 +49,27 @@ body {
 .back-to-how-to-container {
     height: 7%;
     min-height: 40px;
-    width: 40%;
+    width: 30%;
     margin: 0 auto;
-    border: 1px solid $test-color-2;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.back-to-how-to-container a {
+    text-decoration: none;
+    color: $off-white;
+    display: block;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family: $kanit;
+    letter-spacing: 2px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.back-to-how-to-container a:hover {
+    letter-spacing: 3px;
+    color: white;
 }
 
 .game-window {
@@ -63,6 +83,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .game-grid-container {
@@ -111,21 +132,88 @@ dragging it) */
     overflow: hidden;
     word-wrap: break-word;
     line-height: 1600px; //ensure everywhere in game window is draggable
-    border: 1px solid $test-color-2;
     color: transparent;
     text-shadow: none;
 }
 
 .networking-icons-container {
     position: fixed;
-    z-index: 20;
     display: flex;
     flex-direction: column;
-    margin: 0 calc(3% / 2);
+    justify-content: space-around;
+    height: 100vh;
+    margin: 0 4vh;
+    z-index: 20;
 }
 
 .networking-icon img {
-    width: 5vw;
-    height: 5vw;
-    margin: 10px 0;
+    width: 4vw;
+    height: 4vw;
+}
+
+.networking-icon img:hover {
+    opacity: .8;
+}
+
+.networking-icon img:active {
+    opacity: 1;
+}
+
+.how-to-and-play-btns-container {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: calc((100vw - 40vw) / 2);
+    flex-direction: row;
+    justify-content: center;
+    width: 40vw;
+    min-width: 400px;
+    height: 50px;
+    background-color: $how-to-bg;
+    border: 2px solid $sides-bg;
+    border-radius: 20px 20px 0 0;
+    border-width: 2px 2px 0px 2px;
+}
+
+.landing-btn {
+    width: 50%;
+    height: 100%;
+}
+
+.landing-btn a {
+    display: block;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 16px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: $sides-bg;
+    text-decoration: none;
+    font-family: $kanit;
+}
+
+#how-to-btn {
+    border-radius: 20px 0 0 0;
+    border-right: 2px solid $sides-bg;
+    height: 100%;
+}
+
+#play-btn {
+    border-radius: 0 20px 0 0;
+    height: 100%;
+}
+
+.landing-btn a:hover {
+    background-color: $how-to-bg-darkened;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.landing-btn a:active {
+    background-color: $how-to-bg;
+}
+
+.how-to {
 }
