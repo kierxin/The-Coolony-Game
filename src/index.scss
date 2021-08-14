@@ -5,10 +5,10 @@ $test-color-3: lime;
 $sides-bg: rgb(80, 55, 49);
 $landing-bg: rgb(192, 233, 240);
 $off-white: rgb(226, 224, 223);
-$game-container-bg: rgb(105, 80, 66);
+$grid-container-bg: rgb(105, 80, 66);
 $how-to-bg: rgb(141, 172, 111);
 $how-to-bg-darkened: rgb(131, 163, 105);
-$game-window-bg: rgb(156, 119, 83);
+$grid-window-bg: rgb(156, 119, 83);
 
 $default-fonts: Arial, Helvetica, sans-serif;
 $kanit: 'Kanit', sans-serif;
@@ -39,10 +39,10 @@ body {
     z-index: 5;
 }
 
-.game-container {
+.grid-container {
     height: 100vh;
     width: 100%;
-    background-color: $game-container-bg;
+    background-color: $grid-container-bg;
     position: relative;
 }
 
@@ -72,21 +72,21 @@ body {
     color: white;
 }
 
-.game-window {
+.grid-window {
     position: absolute;
     bottom: 20px;
     height: 90%;
     max-height: 900px;
     width: 80%;
     left: calc(20% / 2);
-    background-color: $game-window-bg;
+    background-color: $grid-window-bg;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
     border-radius: 10px;
 }
 
-.game-grid-container {
+.grid-container {
     height: 100%;
     width: 100%;
     overflow: scroll;
@@ -94,16 +94,16 @@ body {
     color: black;
 }
 
-.game-grid-container::-webkit-scrollbar {
+.grid-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
 }
 
-.game-grid-container {
+.grid-container {
     -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
     scrollbar-width: none;  /* Firefox hide scrollbar */
 }
 
-.game-grid {
+.grid {
     height: 400%;
     width: 100%;
     color: $test-color-3;
@@ -114,8 +114,8 @@ body {
 
 /* the super tall line height ensures that the
 user can drag the "background" (actually, the
-text in this div) from anywhere in the game window;
-as they drag this text around, the game board
+text in this div) from anywhere in the grid window;
+as they drag this text around, the grid
 appears to get dragged around (its ScrollTop and
 ScrollLeft properties are altered based on how
 far the user's cursor travelled from when they
@@ -127,11 +127,11 @@ dragging it) */
     height: 100%;
     z-index: 10;
     font-size: 10px;
-    color: $game-container-bg;
+    color: $grid-container-bg;
     opacity: 1;
     overflow: hidden;
     word-wrap: break-word;
-    line-height: 1600px; //ensure everywhere in game window is draggable
+    line-height: 1600px; //ensure everywhere in grid window is draggable
     color: transparent;
     text-shadow: none;
 }

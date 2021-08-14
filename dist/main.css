@@ -27,7 +27,7 @@ body {
   z-index: 5;
 }
 
-.game-container {
+.grid-container {
   height: 100vh;
   width: 100%;
   background-color: #695042;
@@ -60,7 +60,7 @@ body {
   color: white;
 }
 
-.game-window {
+.grid-window {
   position: absolute;
   bottom: 20px;
   height: 90%;
@@ -74,7 +74,7 @@ body {
   border-radius: 10px;
 }
 
-.game-grid-container {
+.grid-container {
   height: 100%;
   width: 100%;
   overflow: scroll;
@@ -82,19 +82,19 @@ body {
   color: black;
 }
 
-.game-grid-container::-webkit-scrollbar {
+.grid-container::-webkit-scrollbar {
   display: none;
   /* Chrome, Safari, Opera */
 }
 
-.game-grid-container {
+.grid-container {
   -ms-overflow-style: none;
   /* IE, Edge hide scrollbar */
   scrollbar-width: none;
   /* Firefox hide scrollbar */
 }
 
-.game-grid {
+.grid {
   height: 400%;
   width: 100%;
   color: lime;
@@ -104,8 +104,8 @@ body {
 
 /* the super tall line height ensures that the
 user can drag the "background" (actually, the
-text in this div) from anywhere in the game window;
-as they drag this text around, the game board
+text in this div) from anywhere in the grid window;
+as they drag this text around, the grid
 appears to get dragged around (its ScrollTop and
 ScrollLeft properties are altered based on how
 far the user's cursor travelled from when they
