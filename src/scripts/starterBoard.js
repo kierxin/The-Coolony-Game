@@ -29,12 +29,13 @@ function StarterBoard() {
 
     this.potentialStarterBoards = [this.starterBoard1, this.starterBoard2, this.starterBoard3];
 
+    // choose 1 of the 3 available starter boards:
     const randomized = () => {
-        return Math.floor(Math.random(2.9));
+        return Math.floor(Math.random() * 3);
     }
 
-    const starterBoardResult = this.potentialStarterBoards[randomized()];
-    return starterBoardResult;
+    return this.potentialStarterBoards[randomized()];
 }
+
 
 module.exports = StarterBoard;

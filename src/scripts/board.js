@@ -1,13 +1,12 @@
 const starterBoard = require("./starterBoard");
-
+const restOfBoard = require("./restOfBoard");
 
 function Board() {
-    this.starter = starterBoard();
-    this.gridRender(this.starter);
-}
 
-Board.prototype.gridRender = function(starterBoard) {
-    console.log(starterBoard);
+    this.starter = starterBoard();
+    this.theRest = restOfBoard();
+    this.wholeBoard = []
+
 }
 
 
