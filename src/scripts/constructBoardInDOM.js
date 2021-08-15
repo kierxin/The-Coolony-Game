@@ -1,36 +1,39 @@
-const { BoardAsString } = require("./boardAsString.js");
+const { BoardAs1DArray } = require("./boardAs1DArray.js");
 
 
 export function ConstructBoardInDOM() {
     const grid = document.querySelector(".grid");
 
-    let boardString = BoardAsString();
+    let boardArr = BoardAs1DArray();
 
-    for (let i = 0; i < boardString.length; i++) {
+    for (let i = 0; i < boardArr.length; i++) {
         const gridCell = document.createElement("div");
 
         gridCell.classList.add("grid-cell");
 
-        if (boardString[i] === "-") {
+        const tileType = boardArr[i][0]
+
+        if (tileType === "-") {
             gridCell.style.opacity = "0";
-        } else if (boardString[i] === "T") {
+        } else if (tileType === "T") {
             gridCell.style.backgroundColor = `rgb(80, 55, 49)`;
-            // gridCell.innerText = `${boardString[i]}`;
+            gridCell.style.boxShadow = "0 0 1px black inset";
         } else {
             gridCell.style.backgroundColor = `rgb(105, 80, 66)`;
-            gridCell.innerText = `${boardString[i]}`;
+            gridCell.innerText = `${tileType}`;
 
-            if (boardString[i] === "C") {
+            if (tileType === "C") {
                 gridCell.style.textShadow = "1px 1px 0 #ffa51f";
-            } else if (boardString[i] === "O") {
+            } else if (tileType === "O") {
                 gridCell.style.textShadow = "1px 1px 0 #a3978c";
-            } else if (boardString[i] === "G") {
+            } else if (tileType === "G") {
                 gridCell.style.textShadow = "1px 1px 0 #ebbc13";
-            } else if (boardString[i] === "E") {
-                gridCell.style.textShadow = "none";
-                gridCell.innerText = "E";
+            } else if (tileType === "E") {
+                gridCell.style.backgroundColor = `rgb(80, 55, 49)`;
+                gridCell.style.boxShadow = "0 0 1px black inset";
+                gridCell.innerText = "";
+                gridCell.style.backgroundSize = "100%";
                 gridCell.style.backgroundImage = "url('./src/images/excavate-icon.png')";
-                gridCell.style.backgroundSize = `${gridCell.offsetWidth}px`;
             }
         }
     
