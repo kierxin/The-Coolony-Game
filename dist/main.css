@@ -81,7 +81,7 @@ body {
   min-width: 400px;
   height: 50px;
   background-color: #8dac6f;
-  border: 2px solid #503731;
+  border: 2px solid #83a369;
   border-radius: 20px 20px 0 0;
   border-width: 2px 2px 0px 2px;
 }
@@ -100,14 +100,14 @@ body {
   padding-top: 16px;
   font-size: 1.2rem;
   text-align: center;
-  color: #503731;
+  color: #e2e0df;
   text-decoration: none;
   font-family: "Kanit", sans-serif;
 }
 
 #how-to-btn {
   border-radius: 20px 0 0 0;
-  border-right: 2px solid #503731;
+  border-right: 2px solid #83a369;
   height: 100%;
 }
 
@@ -221,13 +221,7 @@ body {
 }
 
 .hidden-from-player {
-  color: transparent !important;
-  background-color: transparent !important;
-  font-size: 0 !important;
-  border: none !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-  background-image: none !important;
+  visibility: hidden;
 }
 
 .tile-type-food {
