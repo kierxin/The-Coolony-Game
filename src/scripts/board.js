@@ -7,6 +7,9 @@ export function Board() {
     const theRest = RestOfBoard();
     const wholeBoard = starter.concat(theRest);
 
+    // console.log("ih");
+    console.log(wholeBoard);
+
 
     return wholeBoard;
 
