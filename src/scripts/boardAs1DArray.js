@@ -14,19 +14,5 @@ export function BoardAs1DArray() {
         row.forEach(col => board1DArr.push(col));
     })
 
-    // const stringifiedBoard = function () {
-    //     const boardAsStr = [];
-
-    //     wholeBoardAsArray.forEach((row) => {
-    //         boardAsStr.push(row.join(""))
-    //     });
-
-    //     return boardAsStr.join("");
-    // }
-
-    // return stringifiedBoard();
-
-    console.log(board1DArr);
-
     return board1DArr;
 }

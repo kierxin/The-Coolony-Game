@@ -6,6 +6,8 @@ export function ConstructBoardInDOM() {
 
     let boardArr = BoardAs1DArray();
 
+    console.log(boardArr);
+
     for (let i = 0; i < boardArr.length; i++) {
         const gridCell = document.createElement("div");
 
@@ -16,7 +18,7 @@ export function ConstructBoardInDOM() {
         if (tileType === "-") {
             gridCell.style.opacity = "0";
         } else if (tileType === "T") {
-            gridCell.style.backgroundColor = `rgb(80, 55, 49)`;
+            gridCell.style.backgroundColor = `rgb(156, 119, 83)`;
             gridCell.style.boxShadow = "0 0 1px black inset";
         } else {
             gridCell.style.backgroundColor = `rgb(105, 80, 66)`;
@@ -29,14 +31,18 @@ export function ConstructBoardInDOM() {
             } else if (tileType === "G") {
                 gridCell.style.textShadow = "1px 1px 0 #ebbc13";
             } else if (tileType === "E") {
-                gridCell.style.backgroundColor = `rgb(80, 55, 49)`;
+                gridCell.style.backgroundColor = `rgb(156, 119, 83)`;
                 gridCell.style.boxShadow = "0 0 1px black inset";
                 gridCell.innerText = "";
                 gridCell.style.backgroundSize = "100%";
                 gridCell.style.backgroundImage = "url('./src/images/excavate-icon.png')";
             }
+
         }
-    
+
+        if (boardArr[i].includes("H")) {
+            gridCell.classList.add("hidden-from-player");
+        }
 
         grid.appendChild(gridCell);
     }

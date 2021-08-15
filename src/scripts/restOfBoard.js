@@ -53,7 +53,7 @@ export function RestOfBoard () {
         }
 
         if (!bool.includes("false")) {
-            board[x][y] = taskSites.shift();
+            board[x][y] = `${taskSites.shift()}H`;
         };
 
         // Recursive call

@@ -9,7 +9,7 @@ $grid-container-bg: rgb(105, 80, 66);
 $grid-container-bg-darkened: rgb(88, 68, 55);
 $how-to-bg: rgb(141, 172, 111);
 $how-to-bg-darkened: rgb(131, 163, 105);
-$grid-window-bg: rgb(156, 119, 83);
+// $grid-window-bg: rgb(156, 119, 83);
 
 $default-fonts: Arial, Helvetica, sans-serif;
 $kanit: 'Kanit', sans-serif;
@@ -172,7 +172,7 @@ body {
     max-height: 900px;
     width: 80%;
     left: calc(20% / 2);
-    background-color: $grid-window-bg;
+    background-color: $sides-bg;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -216,6 +216,11 @@ body {
     height: 0;
     padding-bottom: 10%;
 }
+
+.hidden-from-player {
+    display: none;
+}
+
 
 /* the super tall line-height ensures that the
 user can drag the "background" (actually, the
