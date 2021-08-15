@@ -8,7 +8,7 @@ export function ConstructBoardInDOM() {
 
 
     for (let i = 0; i < boardArr.length; i++) {
-        const gridCell = document.createElement("div");
+        const gridCell = document.createElement("button");
 
         const tileType = boardArr[i][0];
 
