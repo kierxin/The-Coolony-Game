@@ -14,7 +14,12 @@ export function RestOfBoard () {
 
     board = placeTaskSites(board, additionalTaskSites, width, height);
     
-    return board;
+    // setTimeout(() => {
+        // console.log("hi");
+        return board;
+    // }, 2000);
+
+    // return board;
 };
 
 
@@ -37,7 +42,10 @@ function fillRestOfBoard(width, height, board) {
 
 function placeTaskSites(board, taskSitesToPlace, width, height) {
 
-    if (taskSitesToPlace.length < 1) return board;
+    if (taskSitesToPlace.length < 1) {
+        console.log(board);
+        return board;
+    }
 
     let randomPos = getRandomPos(width, height);
 

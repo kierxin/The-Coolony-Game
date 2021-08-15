@@ -5,12 +5,12 @@ export function Board() {
 
     const starter = StarterBoard();
     const theRest = RestOfBoard();
-    const wholeBoard = starter.concat(theRest);
 
-    // console.log("ih");
-    console.log(wholeBoard);
-
-
-    return wholeBoard;
+    let wholeBoard;
+    // setTimeout(() => {
+        wholeBoard = starter.concat(theRest);
+        // console.log(wholeBoard);
+        return wholeBoard;
+    // }, 5000);
 
 }
