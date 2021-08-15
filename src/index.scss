@@ -225,6 +225,10 @@ body {
     padding-bottom: 10%;
 }
 
+.discovered:hover {
+    cursor: pointer;
+}
+
 .hidden-from-player {
     color: transparent !important;
     background-color: transparent !important;
@@ -232,6 +236,7 @@ body {
     border: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
+    background-image: none !important;
 }
 
 .tile-type-food {
@@ -254,21 +259,23 @@ body {
 .tile-type-clay {
     background-color: $non-tunnel-bg;
     text-shadow: 1px 1px 0 $clay-color;
+    background-image: url('../src/images/clay.png');
+    background-size: 100%;
 }
 
 .tile-type-clay:hover {
-    opacity: .9;
-    box-shadow: 0 0 2px $clay-color inset;
+    box-shadow: 0 0 4px $clay-color inset;
 }
 
 .tile-type-ore {
     background-color: $non-tunnel-bg;
     text-shadow: 1px 1px 0 $ore-color;
+    background-image: url('../src/images/ore.png');
+    background-size: 100%;
 }
 
 .tile-type-ore:hover {
-    opacity: .9;
-    box-shadow: 0 0 2px $ore-color inset;
+    box-shadow: 0 0 4px $ore-color inset;
 }
 
 .tile-type-gold {
@@ -284,8 +291,12 @@ body {
 .tile-type-excavate {
     background-color: $tunnel-bg;
     box-shadow: 0 0 1px black inset;
-    background-image: url('../src/images/excavate-icon.png');
+    background-image: url('../src/images/excavate.png');
     background-size: 100%;
+}
+
+.tile-type-excavate:hover {
+    opacity: .9;
 }
 
 
