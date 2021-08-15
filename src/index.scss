@@ -23,7 +23,7 @@ $default-fonts: Arial, Helvetica, sans-serif;
 $kanit: 'Kanit', sans-serif;
 
 
-// NON-SECTION-SPECIFIC
+// NON-SECTION-SPECIFIC STYLING:
 
 html {
     background-color: $sides-bg;
@@ -41,9 +41,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100vh;
     margin: 0 4vh;
     z-index: 20;
+
+    // should match .game-icons-container:
+    height: 90%;
+    bottom: 20px;
 }
 
 .networking-icon img {
@@ -56,6 +59,34 @@ body {
 }
 
 .networking-icon img:active {
+    opacity: 1;
+}
+
+.game-icons-container {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 4vh;
+    z-index: 20;
+
+    //these should match .grid-window:
+    bottom: 20px;
+    height: 90%;
+}
+
+.game-icon img {
+    width: 4vw;
+    height: 4vw;
+}
+
+.game-icon img:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.game-icon img:active {
     opacity: 1;
 }
 
@@ -227,6 +258,9 @@ body {
     padding-bottom: 10%;
 }
 
+
+// GRID CELLS (TILES) SECTION
+
 .grid-cell::selection {
     color: transparent;
     background-color: transparent;
@@ -286,12 +320,13 @@ body {
 
 .tile-type-gold {
     background-color: $non-tunnel-bg;
-    text-shadow: 1px 1px 0 $gold-color;
+    background-image: url('../src/images/gold.png');
+    background-size: 100%;
 }
 
 .tile-type-gold:hover {
     opacity: .9;
-    box-shadow: 0 0 2px $gold-color inset;
+    box-shadow: 0 0 6px $gold-color inset;
 }
 
 .tile-type-excavate {
@@ -306,6 +341,7 @@ body {
 }
 
 
+// DRAGGABLE SECTION
 
 /* the super tall line-height ensures that the
 user can drag the "background" (actually, the
