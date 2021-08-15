@@ -1,5 +1,7 @@
 export function StarterBoard() {
 
+    // template for new starterBoard available in templates.js
+
     const starterBoard1 = [
         ["-", "T", "-", "-", "-", "-", "-", "-", "C", "-"],
         ["O", "T", "T", "T", "T", "T", "T", "T", "T", "-"],

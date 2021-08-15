@@ -6,13 +6,13 @@ export function ConstructBoardInDOM() {
 
     let boardArr = BoardAs1DArray();
 
-    console.log(boardArr);
 
     for (let i = 0; i < boardArr.length; i++) {
         const gridCell = document.createElement("div");
 
         const tileType = boardArr[i][0];
 
+        gridCell.innerText = `${tileType}`;
         
 
         gridCell.classList.add("grid-cell");
@@ -26,7 +26,6 @@ export function ConstructBoardInDOM() {
         }
 
 
-
         if (tileType === "-") {
             gridCell.style.opacity = "0";
             
@@ -34,22 +33,19 @@ export function ConstructBoardInDOM() {
             gridCell.classList.add("tile-type-tunnel");
 
         } else {
-            gridCell.innerText = `${tileType}`;
 
             if (tileType === "C") {
                 gridCell.classList.add("tile-type-clay");
-                gridCell.innerText = "";
 
             } else if (tileType === "O") {
                 gridCell.classList.add("tile-type-ore");
-                gridCell.innerText = "";
 
             } else if (tileType === "G") {
                 gridCell.classList.add("tile-type-gold");
 
             } else if (tileType === "E") {
                 gridCell.classList.add("tile-type-excavate");
-                gridCell.innerText = "";
+                gridCell.innerText = "dig";
 
             } else if (tileType === "F") {
                 gridCell.classList.add("tile-type-food");
@@ -63,5 +59,5 @@ export function ConstructBoardInDOM() {
         grid.appendChild(gridCell);
     }
 
-    return "Rendered board's grid lines to HTML";
+    return "";
 }

@@ -42,10 +42,10 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 ### Actual Implementation Timeline (Updating As I Go)
 - **✔ `FRI 8/13`** Landing page, how-to, & game container (HTML div), override ‘onscroll’ event in game container `hit a big roadblock here because I had trouble getting drag-and-drop events to be recognized; hindsight being 20/20, I've commented out all related code and put this on the back burner`, networking/social media links
 - **✔ `SAT 8/14`** Game (grid array `roadblock - spent several hours trying to figure out how to get my functions to return the results that I was logging to terminal but otherwise not receiving; the next morning I woke up and found the solution in 10 minutes: closure`)
-- **`SUN 8/15`** Game (resource deposits), get grid array into DOM, toggleable collected resources overlay, right-hand icons (icons for resource modals, ants overview, stats, quickview)
+- **`SUN 8/15`** Game (resource deposits), get grid array into DOM, toggleable collected resources overlay, right-hand icons (icons for resource modals, ants overview, stats, quickview), Coolony title graphic
 - **`MON 8/16`** Game (Ant instances, ants overview modal, resource modals)
 - **`TUE 8/17`** Game (Task cycles / time-based accumulation of resources, ant energy/appetite decay, new tunnel excavation / resource deposit discovery)
-- **`WED 8/18`** Write ‘how-to’, Game (new ant creation), try to implement any functionality I didn't get around; play catch-up
+- **`WED 8/18`** Write ‘how-to’, Game (new ant creation), add CSS media screen breakpoints, try to implement any functionality I didn't get around; play catch-up
 - **`THU 8/19`** Deploy (GitHub Pages)
 
 ### Bonus Features (Future Goals)
