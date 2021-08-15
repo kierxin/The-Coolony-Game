@@ -18,24 +18,23 @@ export function ConstructBoardInDOM() {
         if (tileType === "-") {
             gridCell.style.opacity = "0";
         } else if (tileType === "T") {
-            gridCell.style.backgroundColor = `rgb(156, 119, 83)`;
-            gridCell.style.boxShadow = "0 0 1px black inset";
+            gridCell.classList.add("tile-type-tunnel");
         } else {
-            gridCell.style.backgroundColor = `rgb(105, 80, 66)`;
             gridCell.innerText = `${tileType}`;
 
             if (tileType === "C") {
-                gridCell.style.textShadow = "1px 1px 0 #ffa51f";
+                gridCell.classList.add("tile-type-clay");
             } else if (tileType === "O") {
-                gridCell.style.textShadow = "1px 1px 0 #a3978c";
+                gridCell.classList.add("tile-type-ore");
             } else if (tileType === "G") {
-                gridCell.style.textShadow = "1px 1px 0 #ebbc13";
+                gridCell.classList.add("tile-type-gold");
             } else if (tileType === "E") {
-                gridCell.style.backgroundColor = `rgb(156, 119, 83)`;
-                gridCell.style.boxShadow = "0 0 1px black inset";
+                gridCell.classList.add("tile-type-excavate");
                 gridCell.innerText = "";
-                gridCell.style.backgroundSize = "100%";
-                gridCell.style.backgroundImage = "url('./src/images/excavate-icon.png')";
+            } else if (tileType === "F") {
+                gridCell.classList.add("tile-type-food");
+            } else if (tileType === "N") {
+                gridCell.classList.add("tile-type-nest");
             }
 
         }

@@ -10,6 +10,7 @@ $grid-container-bg-darkened: rgb(88, 68, 55);
 $how-to-bg: rgb(141, 172, 111);
 $how-to-bg-darkened: rgb(131, 163, 105);
 // $grid-window-bg: rgb(156, 119, 83);
+$grid-window-bg-darkened: rgb(143, 108, 74);
 
 $default-fonts: Arial, Helvetica, sans-serif;
 $kanit: 'Kanit', sans-serif;
@@ -220,6 +221,42 @@ body {
 .hidden-from-player {
     display: none;
 }
+
+.tile-type-food {
+    background-color: rgb(105, 80, 66);
+}
+
+.tile-type-nest {
+    background-color: rgb(105, 80, 66);
+}
+
+.tile-type-tunnel {
+    background-color: $grid-window-bg-darkened;
+    box-shadow: 0 0 1px black inset;
+}
+
+.tile-type-clay {
+    background-color: rgb(105, 80, 66);
+    text-shadow: 1px 1px 0 #ffa51f;
+}
+
+.tile-type-ore {
+    background-color: rgb(105, 80, 66);
+    text-shadow: 1px 1px 0 #a3978c;
+}
+
+.tile-type-gold {
+    background-color: rgb(105, 80, 66);
+    text-shadow: 1px 1px 0 #ebbc13;
+}
+
+.tile-type-excavate {
+    background-color: rgb(156, 119, 83);
+    box-shadow: 0 0 1px black inset;
+    background-size: 100%;
+    background-image: url('./src/images/excavate-icon.png');
+}
+
 
 
 /* the super tall line-height ensures that the

@@ -186,6 +186,41 @@ body {
   display: none;
 }
 
+.tile-type-food {
+  background-color: #695042;
+}
+
+.tile-type-nest {
+  background-color: #695042;
+}
+
+.tile-type-tunnel {
+  background-color: #8f6c4a;
+  box-shadow: 0 0 1px black inset;
+}
+
+.tile-type-clay {
+  background-color: #695042;
+  text-shadow: 1px 1px 0 #ffa51f;
+}
+
+.tile-type-ore {
+  background-color: #695042;
+  text-shadow: 1px 1px 0 #a3978c;
+}
+
+.tile-type-gold {
+  background-color: #695042;
+  text-shadow: 1px 1px 0 #ebbc13;
+}
+
+.tile-type-excavate {
+  background-color: #9c7753;
+  box-shadow: 0 0 1px black inset;
+  background-size: 100%;
+  background-image: url("./src/images/excavate-icon.png");
+}
+
 /* the super tall line-height ensures that the
 user can drag the "background" (actually, the
 text in this div) from anywhere in the grid window;
