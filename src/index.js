@@ -1,12 +1,11 @@
-const { Board } = require("./scripts/board.js");
+const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
 const { Draggable } = require("./scripts/draggable.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // console.log(Draggable);
+    Draggable();
 
-    const board = Board();
-    
+    console.log(ConstructBoardInDOM());
 });
 
 
