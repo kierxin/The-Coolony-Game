@@ -1,10 +1,13 @@
-const starterBoard = require("./starterBoard.js");
-const restOfBoard = require("./restOfBoard.js");
+const { StarterBoard } = require("./starterBoard.js");
+const { RestOfBoard } = require("./restOfBoard.js");
 
 export function Board() {
 
-    this.starter = starterBoard();
-    this.theRest = restOfBoard();
-    this.wholeBoard = []
+    const starter = StarterBoard();
+    const theRest = RestOfBoard();
+    const wholeBoard = starter.concat(theRest);
+
+
+    return wholeBoard;
 
 }

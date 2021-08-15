@@ -19,15 +19,21 @@ export function RestOfBoard() {
         }
     }
 
-    return fillRestOfBoard(width, height, additionalTaskSites);
+
+    let board = [];
+    board = fillRestOfBoard(width, height, board);
+    console.log(board);
+    board = placeTaskSites(board, additionalTaskSites, width, height);
+    console.log(board);
+    return board;
 };
 
 
-function fillRestOfBoard (width, height, taskSitesToPlace) {
-    const board = new Array(height);
-    board.forEach(el => el = []);
-    console.log(board);
-
+function fillRestOfBoard (width, height, board) {
+    
+    for (let i = 0; i < height; i++) {
+        board.push([]);
+    }
 
     // create 2D array representing board
     for (let i = 0; i < board.length; i++) {
@@ -36,32 +42,45 @@ function fillRestOfBoard (width, height, taskSitesToPlace) {
         }
     }
 
-
-    return placeTaskSites(width, height, board, taskSitesToPlace);
+    return board;
 }
 
 
-function placeTaskSites (width, height, board, taskSitesToPlace) {
-    if (taskSitesToPlace.length > 1) return board;
+function placeTaskSites(board, taskSitesToPlace, width, height) {
+    if (taskSitesToPlace.length < 1) return board;
 
     let randomPos = getRandomPos(width, height);
 
-    if (board[randomPos] === undefined) {
-        board[randomPos] = this.taskSitesToPlace.shift();
-    } else {
-        placeTaskSites();
+
+    let x = randomPos[0];
+    let y = randomPos[1];
+
+    const marked = ["C", "O", "G"];
+
+    let bool = [];
+    for (let i = 0; i < marked.length; i++) {
+        console.log(board[x][y]);
+        if (board[x][y].includes(marked[i])) {
+            bool.push("false");
+        }
     }
+
+    board[x][y] = taskSitesToPlace.shift();
+    placeTaskSites(board, taskSitesToPlace, width, height);
+
 }
 
 
 function getRandomPos(width, height) {
-    const randomPos = [0,0];
+    let randomPos = [];
 
-    const randomX = Math.floor(Math.random() * width);
-    const randomY = Math.floor(Math.random() * height);
+    let randomX = Math.floor(Math.random() * width);
+    let randomY = Math.floor(Math.random() * height);
 
-    randomPos[0] = randomX;
-    randomPos[1] = randomY;
+    randomPos.push(randomX);
+    randomPos.push(randomY);
+
+    console.log(randomPos);
 
     return randomPos;
 }
