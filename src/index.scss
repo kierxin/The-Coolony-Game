@@ -6,6 +6,7 @@ $sides-bg: rgb(80, 55, 49);
 $landing-bg: rgb(192, 233, 240);
 $off-white: rgb(226, 224, 223);
 $grid-container-bg: rgb(105, 80, 66);
+$grid-container-bg-darkened: rgb(88, 68, 55);
 $how-to-bg: rgb(141, 172, 111);
 $how-to-bg-darkened: rgb(131, 163, 105);
 $grid-window-bg: rgb(156, 119, 83);
@@ -181,26 +182,39 @@ body {
 .grid-container {
     height: 100%;
     width: 100%;
-    overflow: scroll;
+    overflow-y: scroll;
     white-space: nowrap;
     color: black;
+    // -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
+    // scrollbar-width: none;  /* Firefox hide scrollbar */
 }
 
 .grid-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
-
-.grid-container {
-    -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
-    scrollbar-width: none;  /* Firefox hide scrollbar */
+    // display: none; /* Chrome, Safari, Opera */
 }
 
 .grid {
-    height: 400%;
     width: 100%;
-    color: $test-color-3;
     font-weight: bold;
     text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border: 1px solid $grid-container-bg-darkened;
+}
+
+.grid-cell {
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+
+    // css trick to set height equal to whatever width is;
+    // padding-bottom % should be same as width %
+    height: 0;
+    padding-bottom: 10%;
 }
 
 /* the super tall line-height ensures that the

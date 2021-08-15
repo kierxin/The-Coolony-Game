@@ -156,29 +156,30 @@ body {
 .grid-container {
   height: 100%;
   width: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   white-space: nowrap;
   color: black;
 }
 
-.grid-container::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari, Opera */
-}
-
-.grid-container {
-  -ms-overflow-style: none;
-  /* IE, Edge hide scrollbar */
-  scrollbar-width: none;
-  /* Firefox hide scrollbar */
-}
-
 .grid {
-  height: 400%;
   width: 100%;
-  color: lime;
   font-weight: bold;
   text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  border: 1px solid #584437;
+}
+
+.grid-cell {
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  height: 0;
+  padding-bottom: 10%;
 }
 
 /* the super tall line-height ensures that the

@@ -1,7 +1,5 @@
 export function Draggable() {
 
-    console.log(this);
-
     // VARIABLE
     let scrollPositions = [];
 
@@ -31,14 +29,3 @@ export function Draggable() {
 
     return true;
 }
-
-
-// function calculateMouseMoveDistance(e) {
-//     scrollPositions.push([e.clientX, e.clientY]);
-//     // console.log(scrollPositions[scrollPositions.length - 2]);
-// }
-
-// function visuallyShiftGrid(e) {
-//     this.scrollTop += (scrollPositions[1][1] - scrollPositions[scrollPositions.length - 2][1]) * 5;
-//     this.scrollLeft += (scrollPositions[1][0] - scrollPositions[scrollPositions.length - 2][0]) * 5;
-// }

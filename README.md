@@ -41,8 +41,8 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 
 ### Actual Implementation Timeline (Updated As I Go)
 - **`FRI 8/13`** Landing page, how-to, & game container (HTML div), override ‘onscroll’ event in game container, networking/social media links; 
-- **`SAT 8/14`** Game (grid array); learn to write unit tests with Jasmine
-- **`SUN 8/15`** Game (resource deposits, ant instances, ants overview modal)
+- **`SAT 8/14`** Game (grid array)
+- **`SUN 8/15`** Game (resource deposits, ant instances, ants overview modal), get grid array into DOM
 - **`MON 8/16`** Game (task cycles / time-based accumulation of resources, toggleable collected resources overlay)
 - **`TUE 8/17`** Game (Ant energy/appetite decay, new tunnel excavation / resource deposit discovery)
 - **`WED 8/18`** Write ‘how-to’, Game (new ant creation, resource modals)
