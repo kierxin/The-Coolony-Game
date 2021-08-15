@@ -13,6 +13,10 @@ export function ConstructBoardInDOM() {
 
         gridCell.classList.add("grid-cell");
 
+        if (boardArr[i].includes("H")) {
+            gridCell.classList.add("hidden-from-player");
+        }
+
         const tileType = boardArr[i][0]
 
         if (tileType === "-") {
@@ -37,10 +41,6 @@ export function ConstructBoardInDOM() {
                 gridCell.classList.add("tile-type-nest");
             }
 
-        }
-
-        if (boardArr[i].includes("H")) {
-            gridCell.classList.add("hidden-from-player");
         }
 
         grid.appendChild(gridCell);

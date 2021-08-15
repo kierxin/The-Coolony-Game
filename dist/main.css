@@ -183,42 +183,66 @@ body {
 }
 
 .hidden-from-player {
-  display: none;
+  color: transparent !important;
+  background-color: transparent !important;
+  font-size: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
 .tile-type-food {
-  background-color: #695042;
+  background-color: #9c7c5b;
 }
 
 .tile-type-nest {
-  background-color: #695042;
+  background-color: #9c7c5b;
 }
 
 .tile-type-tunnel {
-  background-color: #8f6c4a;
+  background-color: #7c5a3f;
   box-shadow: 0 0 1px black inset;
+}
+
+.tile-type-tunnel:hover {
+  opacity: 0.9;
 }
 
 .tile-type-clay {
-  background-color: #695042;
-  text-shadow: 1px 1px 0 #ffa51f;
+  background-color: #9c7c5b;
+  text-shadow: 1px 1px 0 #df8832;
+}
+
+.tile-type-clay:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 2px #df8832 inset;
 }
 
 .tile-type-ore {
-  background-color: #695042;
-  text-shadow: 1px 1px 0 #a3978c;
+  background-color: #9c7c5b;
+  text-shadow: 1px 1px 0 #c4bcb5;
+}
+
+.tile-type-ore:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 2px #c4bcb5 inset;
 }
 
 .tile-type-gold {
-  background-color: #695042;
-  text-shadow: 1px 1px 0 #ebbc13;
+  background-color: #9c7c5b;
+  text-shadow: 1px 1px 0 #ffc64a;
+}
+
+.tile-type-gold:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 2px #ffc64a inset;
 }
 
 .tile-type-excavate {
-  background-color: #9c7753;
+  background-color: #7c5a3f;
   box-shadow: 0 0 1px black inset;
+  background-image: url("../src/images/excavate-icon.png");
   background-size: 100%;
-  background-image: url("./src/images/excavate-icon.png");
 }
 
 /* the super tall line-height ensures that the

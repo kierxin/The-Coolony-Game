@@ -12,6 +12,13 @@ $how-to-bg-darkened: rgb(131, 163, 105);
 // $grid-window-bg: rgb(156, 119, 83);
 $grid-window-bg-darkened: rgb(143, 108, 74);
 
+$tunnel-bg: rgb(124, 90, 63);
+$non-tunnel-bg: rgb(156, 124, 91);
+
+$clay-color: rgb(223, 136, 50);
+$ore-color: rgb(196, 188, 181);
+$gold-color: rgb(255, 198, 74);
+
 $default-fonts: Arial, Helvetica, sans-serif;
 $kanit: 'Kanit', sans-serif;
 
@@ -219,42 +226,66 @@ body {
 }
 
 .hidden-from-player {
-    display: none;
+    color: transparent !important;
+    background-color: transparent !important;
+    font-size: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
 }
 
 .tile-type-food {
-    background-color: rgb(105, 80, 66);
+    background-color: $non-tunnel-bg;
 }
 
 .tile-type-nest {
-    background-color: rgb(105, 80, 66);
+    background-color: $non-tunnel-bg;
 }
 
 .tile-type-tunnel {
-    background-color: $grid-window-bg-darkened;
+    background-color: $tunnel-bg;
     box-shadow: 0 0 1px black inset;
+}
+
+.tile-type-tunnel:hover {
+    opacity: .9;
 }
 
 .tile-type-clay {
-    background-color: rgb(105, 80, 66);
-    text-shadow: 1px 1px 0 #ffa51f;
+    background-color: $non-tunnel-bg;
+    text-shadow: 1px 1px 0 $clay-color;
+}
+
+.tile-type-clay:hover {
+    opacity: .9;
+    box-shadow: 0 0 2px $clay-color inset;
 }
 
 .tile-type-ore {
-    background-color: rgb(105, 80, 66);
-    text-shadow: 1px 1px 0 #a3978c;
+    background-color: $non-tunnel-bg;
+    text-shadow: 1px 1px 0 $ore-color;
+}
+
+.tile-type-ore:hover {
+    opacity: .9;
+    box-shadow: 0 0 2px $ore-color inset;
 }
 
 .tile-type-gold {
-    background-color: rgb(105, 80, 66);
-    text-shadow: 1px 1px 0 #ebbc13;
+    background-color: $non-tunnel-bg;
+    text-shadow: 1px 1px 0 $gold-color;
+}
+
+.tile-type-gold:hover {
+    opacity: .9;
+    box-shadow: 0 0 2px $gold-color inset;
 }
 
 .tile-type-excavate {
-    background-color: rgb(156, 119, 83);
+    background-color: $tunnel-bg;
     box-shadow: 0 0 1px black inset;
+    background-image: url('../src/images/excavate-icon.png');
     background-size: 100%;
-    background-image: url('./src/images/excavate-icon.png');
 }
 
 
