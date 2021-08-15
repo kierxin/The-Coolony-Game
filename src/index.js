@@ -8,9 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log(Draggable);
 
     // const start = Board.starterBoard();
-    // console.log(start);
     const board = Board();
     
+
+
+    console.log("board:");
+
     console.log(board);
 });
 

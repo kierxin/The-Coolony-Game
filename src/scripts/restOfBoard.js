@@ -4,77 +4,75 @@ const { MoreTaskSites } = require("./moreTaskSites");
 export function RestOfBoard () {
 
     // RestOfBoard dimensions
-    const width = 10; // (must match starterBoard width)
+    const width = 10; // (should match starterBoard width)
     const height = 14;
 
     const additionalTaskSites = MoreTaskSites();
 
-    let board = [];
-    board = fillRestOfBoard(width, height, board);
+    const board = [];
 
-    board = placeTaskSites(board, additionalTaskSites, width, height);
-    
-    // setTimeout(() => {
-        // console.log("hi");
+
+    // Dependent on board being closed over:
+    let fill = function () {
+
+        for (let i = 0; i < height; i++) {
+            board.push([]);
+        }
+
+        // create 2D array representing board
+        for (let i = 0; i < board.length; i++) {
+            for (let j = 0; j < width; j++) {
+                board[i].push("");
+            }
+        }
+
         return board;
-    // }, 2000);
+    }
 
-    // return board;
+
+    // Also dependent on board being closed over:
+    const placeTasks = function () {
+
+        // Base case
+        if (additionalTaskSites.length < 1) {
+            return board;
+        }
+
+        const randomPos = getRandomPos(width, height);
+
+        const x = randomPos[0];
+        const y = randomPos[1];
+
+        const marked = ["C", "O", "G"];
+
+        let bool = [];
+        for (let i = 0; i < marked.length; i++) {
+            if (board[x][y].includes(marked[i])) {
+                bool.push("false");
+            }
+        }
+
+        if (!bool.includes("false")) {
+            board[x][y] = additionalTaskSites.shift();
+        };
+
+        // Recursive call
+        placeTasks();
+    }
+    
+
+    fill();
+    placeTasks();
+
+    return board;
 };
 
 
-function fillRestOfBoard(width, height, board) {
-
-    for (let i = 0; i < height; i++) {
-        board.push([]);
-    }
-
-    // create 2D array representing board
-    for (let i = 0; i < board.length; i++) {
-        for (let j = 0; j < width; j++) {
-            board[i].push("");
-        }
-    }
-
-    return board;
-}
-
-
-function placeTaskSites(board, taskSitesToPlace, width, height) {
-
-    if (taskSitesToPlace.length < 1) {
-        console.log(board);
-        return board;
-    }
-
-    let randomPos = getRandomPos(width, height);
-
-    let x = randomPos[0];
-    let y = randomPos[1];
-
-    const marked = ["C", "O", "G"];
-
-    let bool = [];
-    for (let i = 0; i < marked.length; i++) {
-        if (board[x][y].includes(marked[i])) {
-            bool.push("false");
-        }
-    }
-
-    if (!bool.includes("false")) {
-        board[x][y] = taskSitesToPlace.shift();
-    };
-
-    placeTaskSites(board, taskSitesToPlace, width, height);
-
-}
-
-
 function getRandomPos(width, height) {
-    let randomPos = [];
+    const randomPos = [];
 
-    let randomX = Math.floor(Math.random() * height);
-    let randomY = Math.floor(Math.random() * width);
+    const randomX = Math.floor(Math.random() * height);
+    const randomY = Math.floor(Math.random() * width);
 
     randomPos.push(randomX);
     randomPos.push(randomY);
