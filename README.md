@@ -40,9 +40,9 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 - **`THU 8/19`** Deploy (GitHub Pages)
 
 ### Actual Implementation Timeline (Updating As I Go)
-- **✔ `FRI 8/13`** Landing page, how-to, & game container (HTML div), override ‘onscroll’ event in game container `hit a roadblock here because I had trouble getting drag-and-drop events to be recognized; hindsight being 20/20, I've commented out all related code and put this on the back burner after spending hours coming up with a janky solution`, networking/social media links
-- **✔ `SAT 8/14`** Game (grid array `roadblock - spent several hours of my evening/night trying to figure out how to get my functions to return the results that I was logging to terminal but otherwise not receiving; the next morning I woke up and found the solution in 10 minutes: closure`)
-- **`SUN 8/15`** Game (resource deposits), get grid array into DOM `did this with flexbox and shortly thereafter realized grid would've been better here, since nests and food stores span multiple grid cells, and I'd like them to potentially be moveable and reproducible by player in future`, toggleable collected resources overlay, refactor board to be CSS grid rather than flexbox (or in addition to flexbox), right-hand icons (icons for resource modals, ants overview, stats, quickview)
+- **✔ `FRI 8/13`** Landing page, how-to, & game container (HTML div), override ‘onscroll’ event in game container `hit a big roadblock here because I had trouble getting drag-and-drop events to be recognized; hindsight being 20/20, I've commented out all related code and put this on the back burner`, networking/social media links
+- **✔ `SAT 8/14`** Game (grid array `roadblock - spent several hours trying to figure out how to get my functions to return the results that I was logging to terminal but otherwise not receiving; the next morning I woke up and found the solution in 10 minutes: closure`)
+- **`SUN 8/15`** Game (resource deposits), get grid array into DOM, toggleable collected resources overlay, right-hand icons (icons for resource modals, ants overview, stats, quickview)
 - **`MON 8/16`** Game (Ant instances, ants overview modal, resource modals)
 - **`TUE 8/17`** Game (Task cycles / time-based accumulation of resources, ant energy/appetite decay, new tunnel excavation / resource deposit discovery)
 - **`WED 8/18`** Write ‘how-to’, Game (new ant creation), try to implement any functionality I didn't get around; play catch-up
@@ -50,6 +50,7 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 
 ### Bonus Features (Future Goals)
 1. Nice game graphics
+1. Ability for user to move nest & food storage locations
 1. Ability for user to zoom in/out on game board (CSS scale transformation)
 1. Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)
 1. Ability for user to log in & retrieve previous game data

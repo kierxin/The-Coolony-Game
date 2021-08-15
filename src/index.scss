@@ -254,6 +254,7 @@ body {
 
 .tile-type-tunnel:hover {
     opacity: .9;
+    cursor: auto;
 }
 
 .tile-type-clay {
@@ -264,7 +265,7 @@ body {
 }
 
 .tile-type-clay:hover {
-    box-shadow: 0 0 4px $clay-color inset;
+    box-shadow: 0 0 6px $clay-color inset;
 }
 
 .tile-type-ore {
@@ -275,7 +276,7 @@ body {
 }
 
 .tile-type-ore:hover {
-    box-shadow: 0 0 4px $ore-color inset;
+    box-shadow: 0 0 6px $ore-color inset;
 }
 
 .tile-type-gold {
