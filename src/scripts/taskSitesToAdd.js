@@ -1,8 +1,8 @@
-export function MoreTaskSites() {
+export function TaskSitesToAdd() {
 
     const numAdditionalTaskSites = {
-        "C": 10, // Clay
-        "O": 10, // Ore
+        "C": 12, // Clay
+        "O": 12, // Ore
         "G": 5  // Gold
     }
 

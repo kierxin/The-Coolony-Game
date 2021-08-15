@@ -6,10 +6,14 @@ export function Board() {
     const starter = StarterBoard();
     const theRest = RestOfBoard();
 
-    let wholeBoard;
-    // setTimeout(() => {
-        wholeBoard = starter.concat(theRest);
-        return wholeBoard;
-    // }, 5000);
+    const wholeBoardAsArray = starter.concat(theRest);
+    console.log(wholeBoardAsArray);
+
+    wholeBoardAsArray.forEach((row, i) => {
+        let rowAsString;
+        row.forEach((col, j) => rowAsString += `${row[j]}`);
+
+        console.log(rowAsString);
+    })
 
 }

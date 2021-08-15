@@ -1,4 +1,4 @@
-const { MoreTaskSites } = require("./moreTaskSites");
+const { TaskSitesToAdd } = require("./taskSitesToAdd");
 
 
 export function RestOfBoard () {
@@ -7,7 +7,7 @@ export function RestOfBoard () {
     const width = 10; // (should match starterBoard width)
     const height = 14;
 
-    const additionalTaskSites = MoreTaskSites();
+    const taskSites = TaskSitesToAdd();
 
     const board = [];
 
@@ -22,7 +22,7 @@ export function RestOfBoard () {
         // create 2D array representing board
         for (let i = 0; i < board.length; i++) {
             for (let j = 0; j < width; j++) {
-                board[i].push("");
+                board[i].push("-");
             }
         }
 
@@ -34,7 +34,7 @@ export function RestOfBoard () {
     const placeTasks = function () {
 
         // Base case
-        if (additionalTaskSites.length < 1) {
+        if (taskSites.length < 1) {
             return board;
         }
 
@@ -53,7 +53,7 @@ export function RestOfBoard () {
         }
 
         if (!bool.includes("false")) {
-            board[x][y] = additionalTaskSites.shift();
+            board[x][y] = taskSites.shift();
         };
 
         // Recursive call
