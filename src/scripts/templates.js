@@ -1,7 +1,7 @@
 // TEMPLATES; DO NOT EDIT
 
 
-    // FOR 'hardcode another starter board' USE IN:  starterBoard.js
+    // FOR 'hardcode more starter boards' IN: /boardFactory/starterBoard.js
     // const starterBoard0 = [["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"],
     //                        ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"],
     //                        ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"],

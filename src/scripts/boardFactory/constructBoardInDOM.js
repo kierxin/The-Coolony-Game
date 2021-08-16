@@ -1,10 +1,10 @@
-const { BoardAs1DArray } = require("./boardAs1DArray.js");
+const { BoardWithTilesProperties } = require("./boardWithTilesProperties.js");
 
 
 export function ConstructBoardInDOM() {
     const grid = document.querySelector(".grid");
 
-    let boardArr = BoardAs1DArray();
+    let boardArr = BoardWithTilesProperties();
 
 
     for (let i = 0; i < boardArr.length; i++) {
