@@ -2,6 +2,7 @@
 const { WholeBoardArr } = require("./populateBoard/wholeBoardArr.js");
 
 // from TilesProperties:
+const { DetermineVisibility } = require("./tilesProperties/determineVisibility.js");
 const { DetermineResourceType } = require("./tilesProperties/determineResourceType.js");
 const { IsInteractive } = require("./tilesProperties/isInteractive.js");
 const { DetermineNeighborTiles } = require("./tilesProperties/determineNeighborTiles.js");
@@ -15,16 +16,16 @@ export function BoardWithTilesProperties() {
     const board = {};
 
     // boardArr tiles are formatted: [[x, y], ["tileType", "visibility"]]
-    boardArr.forEach(tile => {
-
+    for (let tile of boardArr) {
+        
         // helper variables
         const position = tile[0];
         const type = tile[1];
         const tileName = `tile${position[0]}${position[1]}`;
 
-        board[tileName].tileName = tileName;
+        board[tileName] = {};
         board[tileName].tileType = type[0];
-        board[tileName].visibility = type.includes("hidden") ? false : true;
+        board[tileName].visibility = DetermineVisibility(type);
         board[tileName].resourceType = DetermineResourceType(board[tileName].tileType);
         board[tileName].interactive = IsInteractive(board[tileName].tileType);
         board[tileName].neighborTiles = DetermineNeighborTiles(position);
@@ -33,7 +34,8 @@ export function BoardWithTilesProperties() {
         board[tileName].durationInMinutes = DetermineDuration(board[tileName].tileType);
         board[tileName].health = DetermineHealth(board[tileName].tileType);
         addSelfAsNeighborToNeighbors(position, board[tileName].neighborTiles);
-    });
+
+    }
 
     function addSelfAsNeighborToNeighbors(position, neighbors) {
         neighbors.forEach(neighbor => {
@@ -42,7 +44,8 @@ export function BoardWithTilesProperties() {
         })
     }
 
-    // return board;
 
-    return boardArr; //change this to board !!!
+    // console.log(board);
+
+    return board;
 }

@@ -8,6 +8,7 @@ export function RestOfBoard () {
     const height = 14;
 
     const taskSites = TaskSitesToAdd();
+    let tasksDup = taskSites.map(el => el);
 
     const board = [];
 
@@ -43,17 +44,17 @@ export function RestOfBoard () {
         const x = randomPos[0];
         const y = randomPos[1];
 
-        const marked = ["C", "O", "G"];
+        // const marked = ["C", "O", "G"];
 
         let bool = [];
-        for (let i = 0; i < marked.length; i++) {
-            if (board[x][y].includes(marked[i])) {
+        for (let i = 0; i < tasksDup.length; i++) {
+            if (board[x][y].includes(tasksDup[i])) {
                 bool.push("false");
             }
         }
 
         if (!bool.includes("false")) {
-            board[x][y] = `${taskSites.shift()}H`;
+            board[x][y] = [taskSites.shift(), "hidden"];
         };
 
         // Recursive call
@@ -63,6 +64,8 @@ export function RestOfBoard () {
 
     fill();
     placeTasks();
+
+    console.log(board);
 
     return board;
 };

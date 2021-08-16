@@ -1,9 +1,12 @@
 export function TaskSitesToAdd() {
 
     const numExtraTaskSites = {
-        "C": 12, // Clay
-        "O": 12, // Ore
-        "G": 5  // Gold
+        "beetle": 3,
+        "spider": 1,
+        "clay": 15,
+        "gold": 5,
+        "quartz": 8,
+        "mica": 8
     }
 
     const extraTaskSites = [];
