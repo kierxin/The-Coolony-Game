@@ -57,20 +57,20 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 - ✔ Draw clouds, put them onto landing page, add subtle animation
 
 #### MON 8/16
-- Pseudocode (tile classes + tile creation function)
-- Code (tile classes + tile creation function)
+- Complete board factory (including all tile-related functions)
+- Put revised board into DOM
 
 #### TUE 8/17
-- Finish coding tiles
-- Code ants
-- Pseudocode interaction between tiles & ants: task cycles / time-based accumulation of resources; ant energy/appetite decay; new tunnel excavation / tile discovery
+- Code player class
+- Code ant class, put ant instances onto DOM
+- Code interaction between tiles & ants: task cycles / time-based accumulation of resources; ant energy/appetite decay; new tunnel excavation / tile discovery; etc.
 
 #### WED 8/18
-- Code interactions between ants & tiles
-- Render everything to page
+- Code modals / click events
+- Finish UI
 
 #### THU 8/19
-- Finish UI; deploy (GitHub Pages)
+- Deploy (GitHub Pages)
 
 ### Bonus Features (Future Goals)
 1. Game tile graphics

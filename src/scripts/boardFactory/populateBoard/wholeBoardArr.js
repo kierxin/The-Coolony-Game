@@ -10,14 +10,14 @@ export function WholeBoardArr() {
     const board2DArr = starter.concat(theRest);
 
 
-    // make 2D board into 1D array
-    const board1DArr = [];
+    // attach the position to each element's value
+    const boardWithPositionAndValue = [];
 
-    board2DArr.forEach(row => {
-        row.forEach(col => board1DArr.push(col));
+    board2DArr.forEach((row, i) => {
+        row.forEach((col, j) => boardWithPositionAndValue.push([[i, j], col]));
     })
 
 
-    // return the 1D array
-    return board1DArr;
+    // // return the 1D array
+    return boardWithPositionAndValue;
 }
