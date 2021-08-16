@@ -1,6 +1,6 @@
 export function StarterBoard() {
 
-    // tunnel template for new starterBoard available in tunnel templates.js
+    // tunnel template for new starterBoard is available in templates.js
 
     const starterBoard1 = [[["-"], ["above"], ["-"], ["-"], ["-"], ["-"], ["quartz", "hidden"], ["-"], ["-"], ["-"]], [["-"], ["tunnel"], ["-"], ["-"], ["tunnel"], ["-"], ["-"], ["-"], ["-"], ["beetle", "hidden"]], [["tunnel"], ["tunnel"], ["-"], ["tunnel"], ["sleep"], ["-"], ["-"], ["clay", "hidden"], ["-"], ["-"]], [["-"], ["clay"], ["tunnel"], ["tunnel"], ["tunnel"], ["-"], ["-"], ["-"], ["tunnel"], ["-"]], [["-"], ["-"], ["-"], ["tunnel"], ["clay"], ["tunnel"], ["tunnel"], ["tunnel"], ["nurse"], ["tunnel"]], [["-"], ["quartz", "hidden"], ["quartz"], ["eat"], ["-"], ["-"], ["E"], ["-"], ["-"], ["tunnel"]]];
 
@@ -17,9 +17,5 @@ export function StarterBoard() {
     }
 
 
-    const result = potentialStarterBoards[randomized()];
-
-
-    console.log(result);
-    return result;
+    return potentialStarterBoards[randomized()];
 }

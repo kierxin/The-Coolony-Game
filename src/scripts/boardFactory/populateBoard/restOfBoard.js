@@ -65,7 +65,6 @@ export function RestOfBoard () {
     fill();
     placeTasks();
 
-    console.log(board);
 
     return board;
 };

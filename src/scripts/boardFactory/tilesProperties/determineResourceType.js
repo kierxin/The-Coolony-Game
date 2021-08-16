@@ -1,13 +1,8 @@
 export function DetermineResourceType(tileType) {
-    console.log(tileType);
 
-    const resources = ["food, twigs, clay, gold"];
-
-    if (!resources.includes(tileType)) {
-        return null;
-    } else if (tileType === "above") {
-        return "food,twigs"
-    } else {
-        return tileType;
-    }
+    if (tileType === "above") return "food,twigs";
+    if (tileType === "clay") return "clay";
+    if (tileType === "gold") return "gold";
+    return null;
+    
 }
