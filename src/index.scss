@@ -11,6 +11,7 @@ $landing-bg-darkened: rgb(165, 210, 218);
 $off-white: rgb(231, 231, 231);
 $grid-container-bg: rgb(105, 80, 66);
 $grid-container-bg-darkened: rgb(88, 68, 55);
+$site-title-bg: rgb(215, 233, 233);
 $how-to-bg: rgb(141, 172, 111);
 $how-to-bg-darkened: rgb(131, 163, 105);
 // $grid-window-bg: rgb(156, 119, 83);
@@ -24,6 +25,8 @@ $ore-color: rgb(196, 188, 181);
 $gold-color: rgb(255, 198, 74);
 
 $default-fonts: Arial, Helvetica, sans-serif;
+$boogaloo: 'Boogaloo', cursive;
+$chau-phil: 'Chau Philomene One', sans-serif;
 $kanit: 'Kanit', sans-serif;
 
 
@@ -96,6 +99,25 @@ nav {
     overflow: hidden;
 }
 
+#site-title {
+    position: absolute;
+    display: block;
+    width: 70vw;
+    height: 60vh;
+    top: calc(50% - 60vh/2);
+    left: calc(50% - 70vw/2);
+    text-align: center;
+    z-index: 100;
+    line-height: 450%;
+    letter-spacing: .9rem;
+    color: $how-to-bg;
+}
+
+header img {
+    width: 44vw;
+    max-width: 1200px;
+}
+
 .cloud {
     position: absolute;
 }
@@ -163,6 +185,8 @@ nav {
     min-width: 400px;
     height: 50px;
     background-color: $how-to-bg;
+    background-image: url("../src/images/landing-btns-bg.png");
+    background-size: 30vw;
     border: 2px solid $how-to-bg-darkened;
     border-radius: 20px 20px 0 0;
     border-width: 2px 2px 0px 2px;
@@ -171,18 +195,18 @@ nav {
 .landing-btn {
     width: 50%;
     height: 100%;
+    background: linear-gradient(transparent, $how-to-bg-darkened);
 }
 
 .landing-btn a {
     display: block;
-    background-color: transparent;
     border: none;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding-top: 8px;
     font-size: 1.2rem;
     text-align: center;
-    color: $off-white;
+    color: white;
     text-decoration: none;
     font-family: $kanit;
     z-index: 20px;
@@ -200,13 +224,13 @@ nav {
 }
 
 .landing-btn a:hover {
-    background-color: $how-to-bg-darkened;
     letter-spacing: 3px;
     cursor: pointer;
+    font-size: 1.3rem;
 }
 
 .landing-btn a:active {
-    background-color: $how-to-bg;
+    opacity: .7;
 }
 
 
@@ -217,7 +241,7 @@ nav {
     width: 100%;
     background-color: $how-to-bg;
     z-index: 30;
-    background: linear-gradient($how-to-bg, $non-tunnel-bg, $non-tunnel-bg, $non-tunnel-bg, $grid-container-bg);
+    background: linear-gradient($how-to-bg-darkened, $non-tunnel-bg, $non-tunnel-bg, $non-tunnel-bg, $grid-container-bg);
     border-top: 1px solid $how-to-bg-darkened;
 }
 
@@ -246,15 +270,20 @@ nav {
     display: block;
     font-size: 1.1rem;
     text-transform: uppercase;
-    font-family: $kanit;
-    letter-spacing: 2px;
+    // font-family: $kanit;
+    font-family: $chau-phil;
+    letter-spacing: 3px;
     padding: 5px;
     cursor: pointer;
 }
 
 .back-to-how-to-container a:hover {
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: white;
+}
+
+.back-to-how-to-container a:active {
+    color: $off-white;
 }
 
 .game-icons-container {
@@ -316,6 +345,7 @@ nav {
 }
 
 .grid {
+    margin-top: 1px;
     width: 100%;
     font-weight: bold;
     text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;

@@ -63,6 +63,25 @@ nav {
   overflow: hidden;
 }
 
+#site-title {
+  position: absolute;
+  display: block;
+  width: 70vw;
+  height: 60vh;
+  top: calc(50% - 60vh/2);
+  left: calc(50% - 70vw/2);
+  text-align: center;
+  z-index: 100;
+  line-height: 450%;
+  letter-spacing: 0.9rem;
+  color: #8dac6f;
+}
+
+header img {
+  width: 44vw;
+  max-width: 1200px;
+}
+
 .cloud {
   position: absolute;
 }
@@ -125,6 +144,8 @@ nav {
   min-width: 400px;
   height: 50px;
   background-color: #8dac6f;
+  background-image: url("../src/images/landing-btns-bg.png");
+  background-size: 30vw;
   border: 2px solid #83a369;
   border-radius: 20px 20px 0 0;
   border-width: 2px 2px 0px 2px;
@@ -133,18 +154,18 @@ nav {
 .landing-btn {
   width: 50%;
   height: 100%;
+  background: linear-gradient(transparent, #83a369);
 }
 
 .landing-btn a {
   display: block;
-  background-color: transparent;
   border: none;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding-top: 8px;
   font-size: 1.2rem;
   text-align: center;
-  color: #e7e7e7;
+  color: white;
   text-decoration: none;
   font-family: "Kanit", sans-serif;
   z-index: 20px;
@@ -162,13 +183,13 @@ nav {
 }
 
 .landing-btn a:hover {
-  background-color: #83a369;
   letter-spacing: 3px;
   cursor: pointer;
+  font-size: 1.3rem;
 }
 
 .landing-btn a:active {
-  background-color: #8dac6f;
+  opacity: 0.7;
 }
 
 .how-to {
@@ -176,7 +197,7 @@ nav {
   width: 100%;
   background-color: #8dac6f;
   z-index: 30;
-  background: linear-gradient(#8dac6f, #9c7c5b, #9c7c5b, #9c7c5b, #695042);
+  background: linear-gradient(#83a369, #9c7c5b, #9c7c5b, #9c7c5b, #695042);
   border-top: 1px solid #83a369;
 }
 
@@ -202,15 +223,19 @@ nav {
   display: block;
   font-size: 1.1rem;
   text-transform: uppercase;
-  font-family: "Kanit", sans-serif;
-  letter-spacing: 2px;
+  font-family: "Chau Philomene One", sans-serif;
+  letter-spacing: 3px;
   padding: 5px;
   cursor: pointer;
 }
 
 .back-to-how-to-container a:hover {
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   color: white;
+}
+
+.back-to-how-to-container a:active {
+  color: #e7e7e7;
 }
 
 .game-icons-container {
@@ -264,6 +289,7 @@ nav {
 }
 
 .grid {
+  margin-top: 1px;
   width: 100%;
   font-weight: bold;
   text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
