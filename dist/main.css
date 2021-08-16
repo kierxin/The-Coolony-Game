@@ -39,17 +39,14 @@ nav {
   height: 90%;
   bottom: 20px;
 }
-
-.networking-icon img {
+.networking-icons-container .networking-icon img {
   width: 4vw;
   height: 4vw;
 }
-
-.networking-icon img:hover {
+.networking-icons-container .networking-icon img:hover {
   opacity: 0.8;
 }
-
-.networking-icon img:active {
+.networking-icons-container .networking-icon img:active {
   opacity: 1;
 }
 
@@ -62,8 +59,7 @@ nav {
   background: linear-gradient(#a5d2da, #c0e9f0, #daf5fa);
   overflow: hidden;
 }
-
-#site-title {
+.landing #site-title {
   position: absolute;
   display: block;
   width: 70vw;
@@ -77,16 +73,13 @@ nav {
   color: #8f9d72;
   user-select: none;
 }
-
-header img {
+.landing #site-title img {
   width: 44vw;
   max-width: 1200px;
 }
-
-.cloud {
+.landing .cloud-animations .cloud {
   position: absolute;
 }
-
 @keyframes slideleft {
   from {
     margin-left: 0%;
@@ -107,7 +100,7 @@ header img {
     width: 50%;
   }
 }
-#cloud-1 {
+.landing .cloud-animations #cloud-1 {
   width: 20vh;
   top: 0vh;
   left: 20vw;
@@ -115,8 +108,7 @@ header img {
   animation-name: slideleft;
   z-index: 4;
 }
-
-#cloud-2 {
+.landing .cloud-animations #cloud-2 {
   width: 10vh;
   top: 40vh;
   left: 10vw;
@@ -124,17 +116,15 @@ header img {
   animation-duration: 200s;
   animation-name: slideleft;
 }
-
-#cloud-3 {
+.landing .cloud-animations #cloud-3 {
   width: 30vh;
   top: 30vh;
-  right: 6vw;
+  right: 10vw;
   z-index: 6;
   animation-duration: 160s;
   animation-name: slideright;
 }
-
-.how-to-and-play-btns-container {
+.landing .how-to-and-play-btns-container {
   display: flex;
   position: absolute;
   bottom: -1px;
@@ -151,14 +141,12 @@ header img {
   border-radius: 20px 20px 0 0;
   border-width: 2px 2px 0px 2px;
 }
-
-.landing-btn {
+.landing .how-to-and-play-btns-container .landing-btn {
   width: 50%;
   height: 100%;
   background: linear-gradient(transparent, #8f9d72);
 }
-
-.landing-btn a {
+.landing .how-to-and-play-btns-container .landing-btn a {
   display: block;
   border: none;
   text-transform: uppercase;
@@ -171,25 +159,21 @@ header img {
   font-family: "Kanit", sans-serif;
   z-index: 20px;
 }
-
-#how-to-btn {
+.landing .how-to-and-play-btns-container .landing-btn #how-to-btn {
   border-radius: 20px 0 0 0;
   border-right: 2px solid #8f9d72;
   height: 100%;
 }
-
-#play-btn {
+.landing .how-to-and-play-btns-container .landing-btn #play-btn {
   border-radius: 0 20px 0 0;
   height: 100%;
 }
-
-.landing-btn a:hover {
+.landing .how-to-and-play-btns-container .landing-btn a:hover {
   letter-spacing: 3px;
   cursor: pointer;
   font-size: 1.3rem;
 }
-
-.landing-btn a:active {
+.landing .how-to-and-play-btns-container .landing-btn a:active {
   opacity: 0.7;
 }
 
@@ -208,8 +192,7 @@ header img {
   background-color: #695042;
   position: relative;
 }
-
-.back-to-how-to-container {
+.grid-section .back-to-how-to-container {
   height: 7%;
   min-height: 40px;
   width: 30%;
@@ -217,8 +200,7 @@ header img {
   text-align: center;
   padding-top: 4px;
 }
-
-.back-to-how-to-container a {
+.grid-section .back-to-how-to-container a {
   text-decoration: none;
   color: #e7e7e7;
   display: block;
@@ -229,17 +211,14 @@ header img {
   padding: 5px;
   cursor: pointer;
 }
-
-.back-to-how-to-container a:hover {
+.grid-section .back-to-how-to-container a:hover {
   letter-spacing: 4px;
   color: white;
 }
-
-.back-to-how-to-container a:active {
+.grid-section .back-to-how-to-container a:active {
   color: #e7e7e7;
 }
-
-.game-icons-container {
+.grid-section .game-icons-container {
   position: absolute;
   right: 0;
   display: flex;
@@ -250,22 +229,18 @@ header img {
   bottom: 20px;
   height: 90%;
 }
-
-.game-icon img {
+.grid-section .game-icons-container img {
   width: 4vw;
   height: 4vw;
 }
-
-.game-icon img:hover {
+.grid-section .game-icons-container img:hover {
   opacity: 0.8;
   cursor: pointer;
 }
-
-.game-icon img:active {
+.grid-section .game-icons-container img:active {
   opacity: 1;
 }
-
-.grid-window {
+.grid-section .grid-window {
   position: absolute;
   bottom: 20px;
   height: 90%;
@@ -279,8 +254,7 @@ header img {
   overflow: hidden;
   border-radius: 10px;
 }
-
-.resource-bar {
+.grid-section .grid-window .resource-bar {
   position: sticky;
   list-style: none;
   display: flex;
@@ -291,8 +265,7 @@ header img {
   background-color: #695042;
   color: #8f9d72;
 }
-
-.resource-display {
+.grid-section .grid-window .resource-bar .resource-display {
   width: calc(100% / 5);
   height: 100%;
   font-family: "Chau Philomene One", sans-serif;
@@ -300,12 +273,10 @@ header img {
   border: 0;
   padding: 5px 4px 3px 5px;
 }
-
-.resource-display:hover {
+.grid-section .grid-window .resource-bar .resource-display:hover {
   background-color: #644c3e;
 }
-
-.grid-container {
+.grid-section .grid-container {
   height: 100%;
   width: 100%;
   overflow-y: scroll;
@@ -313,8 +284,7 @@ header img {
   color: black;
   position: relative;
 }
-
-.grid {
+.grid-section .grid-container .grid {
   margin-top: 1px;
   width: 100%;
   font-weight: bold;
@@ -326,8 +296,7 @@ header img {
   align-content: flex-start;
   background: linear-gradient(transparent, #3a2823, black);
 }
-
-.grid-cell {
+.grid-section .grid-container .grid .grid-cell {
   line-height: 1;
   padding: 0;
   margin: 0;
@@ -337,80 +306,64 @@ header img {
   height: 0;
   padding-bottom: 10%;
 }
-
-.grid-cell::selection {
-  color: transparent;
-  background-color: transparent;
-}
-
-.discovered:hover {
+.grid-section .grid-container .grid .discovered:hover {
   cursor: pointer;
 }
-
-.hidden-from-player {
+.grid-section .grid-container .grid .hidden-from-player {
   visibility: hidden;
 }
-
-.tile-type-food {
+.grid-section .grid-container .grid .tile-type-food {
   background-color: #9c7c5b;
 }
-
-.tile-type-nest {
+.grid-section .grid-container .grid .tile-type-nest {
   background-color: #9c7c5b;
 }
-
-.tile-type-tunnel {
+.grid-section .grid-container .grid .tile-type-tunnel {
   background-color: #816249;
   box-shadow: 0 0 1px black inset;
 }
-
-.tile-type-tunnel:hover {
+.grid-section .grid-container .grid .tile-type-tunnel:hover {
   opacity: 0.9;
   cursor: auto;
 }
-
-.tile-type-clay {
+.grid-section .grid-container .grid .tile-type-clay {
   background-color: #9c7c5b;
   background-image: url("../src/images/clay.png");
   background-size: 100%;
 }
-
-.tile-type-clay:hover {
+.grid-section .grid-container .grid .tile-type-clay:hover {
   box-shadow: 0 0 6px #df8832 inset;
 }
-
-.tile-type-ore {
+.grid-section .grid-container .grid .tile-type-ore {
   background-color: #9c7c5b;
   background-image: url("../src/images/ore.png");
   background-size: 100%;
 }
-
-.tile-type-ore:hover {
+.grid-section .grid-container .grid .tile-type-ore:hover {
   box-shadow: 0 0 6px #c4bcb5 inset;
 }
-
-.tile-type-gold {
+.grid-section .grid-container .grid .tile-type-gold {
   background-color: #9c7c5b;
   background-image: url("../src/images/gold.png");
   background-size: 100%;
 }
-
-.tile-type-gold:hover {
+.grid-section .grid-container .grid .tile-type-gold:hover {
   opacity: 0.9;
   box-shadow: 0 0 6px #ffc64a inset;
 }
-
-.tile-type-excavate {
+.grid-section .grid-container .grid .tile-type-excavate {
   background-color: #816249;
   box-shadow: 0 0 1px black inset;
   background-image: url("../src/images/excavate.png");
   background-size: 100%;
 }
-
-.tile-type-excavate:hover {
+.grid-section .grid-container .grid .tile-type-excavate:hover {
   opacity: 0.9;
 }
-
+.grid-section .grid-container .grid .grid-cell::selection {
+  color: transparent;
+  background-color: transparent;
+}
 /* the super tall line-height ensures that the
 user can drag the "background" (actually, the
 text in this div) from anywhere in the grid window;

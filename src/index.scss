@@ -30,8 +30,6 @@ $chau-phil: 'Chau Philomene One', sans-serif;
 $kanit: 'Kanit', sans-serif;
 
 
-// NON-SECTION-SPECIFIC STYLING:
-
 html {
     background-color: $sides-bg;
     scroll-behavior: smooth;
@@ -71,23 +69,20 @@ nav {
     // should match .game-icons-container:
     height: 90%;
     bottom: 20px;
+
+    .networking-icon img {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .networking-icon img:hover {
+        opacity: .8;
+    }
+
+    .networking-icon img:active {
+        opacity: 1;
+    }
 }
-
-.networking-icon img {
-    width: 4vw;
-    height: 4vw;
-}
-
-.networking-icon img:hover {
-    opacity: .8;
-}
-
-.networking-icon img:active {
-    opacity: 1;
-}
-
-
-// LANDING SECTION
 
 .landing {
     height: 100vh;
@@ -97,145 +92,147 @@ nav {
     background-color: $landing-bg;
     background: linear-gradient($landing-bg-darkened, $landing-bg, $landing-bg-lightened);
     overflow: hidden;
-}
 
-#site-title {
-    position: absolute;
-    display: block;
-    width: 70vw;
-    height: 60vh;
-    top: calc(50% - 60vh/2);
-    left: calc(50% - 70vw/2);
-    text-align: center;
-    z-index: 100;
-    line-height: 450%;
-    letter-spacing: .9rem;
-    color: $how-to-bg-darkened;
-    user-select: none;
-}
+    #site-title {
+        position: absolute;
+        display: block;
+        width: 70vw;
+        height: 60vh;
+        top: calc(50% - 60vh/2);
+        left: calc(50% - 70vw/2);
+        text-align: center;
+        z-index: 100;
+        line-height: 450%;
+        letter-spacing: .9rem;
+        color: $how-to-bg-darkened;
+        user-select: none;
 
-header img {
-    width: 44vw;
-    max-width: 1200px;
-}
+        img {
+            width: 44vw;
+            max-width: 1200px;
+        }
 
-.cloud {
-    position: absolute;
-}
-
-@keyframes slideleft {
-    from {
-        margin-left: 0%;
-        width: 50%;
     }
-    to {
-        margin-left: 18%;
-        width: 50%;
+
+    .cloud-animations {
+        .cloud {
+            position: absolute;
+        }
+
+        @keyframes slideleft {
+            from {
+                margin-left: 0%;
+                width: 50%;
+            }
+            to {
+                margin-left: 18%;
+                width: 50%;
+            }
+        }
+
+        @keyframes slideright {
+            from {
+                margin-right: 0%;
+                width: 50%;
+            }
+            to {
+                margin-right: 20%;
+                width: 50%;
+            }
+        }
+
+        #cloud-1 {
+            width: 20vh;
+            top: 0vh;
+            left: 20vw;
+
+            animation-duration: 120s;
+            animation-name: slideleft;
+            z-index: 4;
+        }
+
+        #cloud-2 {
+            width: 10vh;
+            top: 40vh;
+            left: 10vw;
+            z-index: 5;
+
+            animation-duration: 200s;
+            animation-name: slideleft;
+        }
+
+        #cloud-3 {
+            width: 30vh;
+            top: 30vh;
+            right: 10vw;
+            z-index: 6;
+
+            animation-duration: 160s;
+            animation-name: slideright;
+        }
+    }
+
+    .how-to-and-play-btns-container {
+        display: flex;
+        position: absolute;
+        bottom: -1px;
+        left: calc((100vw - 40vw) / 2);
+        flex-direction: row;
+        justify-content: center;
+        width: 40vw;
+        min-width: 400px;
+        height: 50px;
+        background-color: $how-to-bg-darkened;
+        background-image: url("../src/images/landing-btns-bg.png");
+        background-size: 30vw;
+        border: 2px solid $how-to-bg-darkened;
+        border-radius: 20px 20px 0 0;
+        border-width: 2px 2px 0px 2px;
+
+        .landing-btn {
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(transparent, $how-to-bg-darkened);
+
+            a {
+                display: block;
+                border: none;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding-top: 8px;
+                font-size: 1.2rem;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                font-family: $kanit;
+                z-index: 20px;
+            }
+
+            #how-to-btn {
+                border-radius: 20px 0 0 0;
+                border-right: 2px solid $how-to-bg-darkened;
+                height: 100%;
+            }
+
+            #play-btn {
+                border-radius: 0 20px 0 0;
+                height: 100%;
+            }
+
+            a:hover {
+                letter-spacing: 3px;
+                cursor: pointer;
+                font-size: 1.3rem;
+            }
+
+            a:active {
+                opacity: .7;
+            }
+        }
+
     }
 }
 
-@keyframes slideright {
-    from {
-        margin-right: 0%;
-        width: 50%;
-    }
-    to {
-        margin-right: 20%;
-        width: 50%;
-    }
-}
-
-#cloud-1 {
-    width: 20vh;
-    top: 0vh;
-    left: 20vw;
-
-    animation-duration: 120s;
-    animation-name: slideleft;
-    z-index: 4;
-}
-
-#cloud-2 {
-    width: 10vh;
-    top: 40vh;
-    left: 10vw;
-    z-index: 5;
-
-    animation-duration: 200s;
-    animation-name: slideleft;
-}
-
-#cloud-3 {
-    width: 30vh;
-    top: 30vh;
-    right: 6vw;
-    z-index: 6;
-
-    animation-duration: 160s;
-    animation-name: slideright;
-}
-
-.how-to-and-play-btns-container {
-    display: flex;
-    position: absolute;
-    bottom: -1px;
-    left: calc((100vw - 40vw) / 2);
-    flex-direction: row;
-    justify-content: center;
-    width: 40vw;
-    min-width: 400px;
-    height: 50px;
-    background-color: $how-to-bg-darkened;
-    background-image: url("../src/images/landing-btns-bg.png");
-    background-size: 30vw;
-    border: 2px solid $how-to-bg-darkened;
-    border-radius: 20px 20px 0 0;
-    border-width: 2px 2px 0px 2px;
-}
-
-.landing-btn {
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(transparent, $how-to-bg-darkened);
-}
-
-.landing-btn a {
-    display: block;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-top: 8px;
-    font-size: 1.2rem;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-family: $kanit;
-    z-index: 20px;
-}
-
-#how-to-btn {
-    border-radius: 20px 0 0 0;
-    border-right: 2px solid $how-to-bg-darkened;
-    height: 100%;
-}
-
-#play-btn {
-    border-radius: 0 20px 0 0;
-    height: 100%;
-}
-
-.landing-btn a:hover {
-    letter-spacing: 3px;
-    cursor: pointer;
-    font-size: 1.3rem;
-}
-
-.landing-btn a:active {
-    opacity: .7;
-}
-
-
-// HOW-TO SECTION
 
 .how-to {
     height: 800px;
@@ -247,231 +244,229 @@ header img {
 }
 
 
-// GRID SECTION
-
 .grid-section {
     height: 100vh;
     width: 100%;
     background-color: $grid-container-bg;
     position: relative;
-}
-
-.back-to-how-to-container {
-    height: 7%;
-    min-height: 40px;
-    width: 30%;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 4px;
-}
-
-.back-to-how-to-container a {
-    text-decoration: none;
-    color: $off-white;
-    display: block;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    // font-family: $kanit;
-    font-family: $boogaloo;
-    letter-spacing: 3px;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.back-to-how-to-container a:hover {
-    letter-spacing: 4px;
-    color: white;
-}
-
-.back-to-how-to-container a:active {
-    color: $off-white;
-}
-
-.game-icons-container {
-    position: absolute;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 0 4vh;
-    z-index: 20;
-
-    //these should match .grid-window:
-    bottom: 20px;
-    height: 90%;
-}
-
-.game-icon img {
-    width: 4vw;
-    height: 4vw;
-}
-
-.game-icon img:hover {
-    opacity: .8;
-    cursor: pointer;
-}
-
-.game-icon img:active {
-    opacity: 1;
-}
-
-.grid-window {
-    position: absolute;
-    bottom: 20px;
-    height: 90%;
-    max-height: 900px;
-    width: 80%;
-    left: calc(20% / 2);
-    background-color: $sides-bg;
-    background: linear-gradient($sides-bg-lightened, $sides-bg);
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.resource-bar {
-    position: sticky;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    user-select: none;
-    border-bottom: 1px solid $sides-bg;
-    background-color: $grid-container-bg;
-    color: $how-to-bg-darkened;
-}
-
-.resource-display {
-    width: calc(100% / 5);
-    height: 100%;
-    font-family: $chau-phil;
-    margin: 0;
-    border: 0;
-    padding: 5px 4px 3px 5px;
-}
-
-.resource-display:hover {
-    background-color: rgb(100, 76, 62);
-}
-
-.grid-container {
-    height: 100%;
-    width: 100%;
-    overflow-y: scroll;
-    white-space: nowrap;
-    color: black;
-    position: relative;
-    // -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
-    // scrollbar-width: none;  /* Firefox hide scrollbar */
-}
-
-.grid-container::-webkit-scrollbar {
-    // display: none; /* Chrome, Safari, Opera */
-}
-
-.grid {
-    margin-top: 1px;
-    width: 100%;
-    font-weight: bold;
-    text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    // border: 1px solid $grid-container-bg-darkened;
-    background: linear-gradient(transparent, $sides-bg-darkened, black);
-}
-
-.grid-cell {
-    line-height: 1;
-    padding: 0;
-    margin: 0;
-    width: 10%;
-    color: transparent;
-    text-shadow: none;
-
-    // css trick to set height equal to whatever width is;
-    // padding-bottom % should be same as width %
-    height: 0;
-    padding-bottom: 10%;
-}
 
 
-// GRID CELLS (TILES) SECTION
+    .back-to-how-to-container {
+        height: 7%;
+        min-height: 40px;
+        width: 30%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 4px;
 
-.grid-cell::selection {
-    color: transparent;
-    background-color: transparent;
-}
+        a {
+            text-decoration: none;
+            color: $off-white;
+            display: block;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            // font-family: $kanit;
+            font-family: $boogaloo;
+            letter-spacing: 3px;
+            padding: 5px;
+            cursor: pointer;
+        }
 
-.discovered:hover {
-    cursor: pointer;
-}
+        a:hover {
+            letter-spacing: 4px;
+            color: white;
+        }
 
-.hidden-from-player {
-    visibility: hidden;
-}
+        a:active {
+            color: $off-white;
+        }
+    }
 
-.tile-type-food {
-    background-color: $non-tunnel-bg;
-}
+    .game-icons-container {
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0 4vh;
+        z-index: 20;
 
-.tile-type-nest {
-    background-color: $non-tunnel-bg;
-}
+        //these should match .grid-window:
+        bottom: 20px;
+        height: 90%;
 
-.tile-type-tunnel {
-    background-color: $tunnel-bg;
-    box-shadow: 0 0 1px black inset;
-}
+        img {
+            width: 4vw;
+            height: 4vw;
+        }
 
-.tile-type-tunnel:hover {
-    opacity: .9;
-    cursor: auto;
-}
+        img:hover {
+            opacity: .8;
+            cursor: pointer;
+        }
 
-.tile-type-clay {
-    background-color: $non-tunnel-bg;
-    background-image: url('../src/images/clay.png');
-    background-size: 100%;
-}
+        img:active {
+            opacity: 1;
+        }
+    }
 
-.tile-type-clay:hover {
-    box-shadow: 0 0 6px $clay-color inset;
-}
+    .grid-window {
+        position: absolute;
+        bottom: 20px;
+        height: 90%;
+        max-height: 900px;
+        width: 80%;
+        left: calc(20% / 2);
+        background-color: $sides-bg;
+        background: linear-gradient($sides-bg-lightened, $sides-bg);
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        border-radius: 10px;
 
-.tile-type-ore {
-    background-color: $non-tunnel-bg;
-    background-image: url('../src/images/ore.png');
-    background-size: 100%;
-}
+        .resource-bar {
+            position: sticky;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            user-select: none;
+            border-bottom: 1px solid $sides-bg;
+            background-color: $grid-container-bg;
+            color: $how-to-bg-darkened;
 
-.tile-type-ore:hover {
-    box-shadow: 0 0 6px $ore-color inset;
-}
+            .resource-display {
+                width: calc(100% / 5);
+                height: 100%;
+                font-family: $chau-phil;
+                margin: 0;
+                border: 0;
+                padding: 5px 4px 3px 5px;
+            }
 
-.tile-type-gold {
-    background-color: $non-tunnel-bg;
-    background-image: url('../src/images/gold.png');
-    background-size: 100%;
-}
+            .resource-display:hover {
+                background-color: rgb(100, 76, 62);
+            }
 
-.tile-type-gold:hover {
-    opacity: .9;
-    box-shadow: 0 0 6px $gold-color inset;
-}
+        }
+    }
 
-.tile-type-excavate {
-    background-color: $tunnel-bg;
-    box-shadow: 0 0 1px black inset;
-    background-image: url('../src/images/excavate.png');
-    background-size: 100%;
-}
 
-.tile-type-excavate:hover {
-    opacity: .9;
+    .grid-container {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        white-space: nowrap;
+        color: black;
+        position: relative;
+        // -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
+        // scrollbar-width: none;  /* Firefox hide scrollbar */
+
+        .grid {
+            margin-top: 1px;
+            width: 100%;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            // border: 1px solid $grid-container-bg-darkened;
+            background: linear-gradient(transparent, $sides-bg-darkened, black);
+
+            .grid-cell {
+                line-height: 1;
+                padding: 0;
+                margin: 0;
+                width: 10%;
+                color: transparent;
+                text-shadow: none;
+
+                // css trick to set height equal to whatever width is;
+                // padding-bottom % should be same as width %
+                height: 0;
+                padding-bottom: 10%;
+            }
+
+            .discovered:hover {
+                cursor: pointer;
+            }
+
+            .hidden-from-player {
+                visibility: hidden;
+            }
+
+            .tile-type-food {
+                background-color: $non-tunnel-bg;
+            }
+
+            .tile-type-nest {
+                background-color: $non-tunnel-bg;
+            }
+
+            .tile-type-tunnel {
+                background-color: $tunnel-bg;
+                box-shadow: 0 0 1px black inset;
+            }
+
+            .tile-type-tunnel:hover {
+                opacity: .9;
+                cursor: auto;
+            }
+
+            .tile-type-clay {
+                background-color: $non-tunnel-bg;
+                background-image: url('../src/images/clay.png');
+                background-size: 100%;
+            }
+
+            .tile-type-clay:hover {
+                box-shadow: 0 0 6px $clay-color inset;
+            }
+
+            .tile-type-ore {
+                background-color: $non-tunnel-bg;
+                background-image: url('../src/images/ore.png');
+                background-size: 100%;
+            }
+
+            .tile-type-ore:hover {
+                box-shadow: 0 0 6px $ore-color inset;
+            }
+
+            .tile-type-gold {
+                background-color: $non-tunnel-bg;
+                background-image: url('../src/images/gold.png');
+                background-size: 100%;
+            }
+
+            .tile-type-gold:hover {
+                opacity: .9;
+                box-shadow: 0 0 6px $gold-color inset;
+            }
+
+            .tile-type-excavate {
+                background-color: $tunnel-bg;
+                box-shadow: 0 0 1px black inset;
+                background-image: url('../src/images/excavate.png');
+                background-size: 100%;
+            }
+
+            .tile-type-excavate:hover {
+                opacity: .9;
+            }
+
+            .grid-cell::selection {
+                color: transparent;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .grid-container::-webkit-scrollbar {
+        // display: none; /* Chrome, Safari, Opera */
+    }
 }
 
 
