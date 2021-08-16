@@ -6,4 +6,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Draggable();
 
     ConstructBoardInDOM();
+    // AddAntsToBoardInDOM();
 });

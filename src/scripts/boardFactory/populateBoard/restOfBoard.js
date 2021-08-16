@@ -12,7 +12,7 @@ export function RestOfBoard () {
     const board = [];
 
 
-    // Dependent on board being closed over:
+    // Below code is dependent on board being closed over:
     let fill = function () {
 
         for (let i = 0; i < height; i++) {
