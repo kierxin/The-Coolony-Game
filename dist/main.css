@@ -74,7 +74,8 @@ nav {
   z-index: 100;
   line-height: 450%;
   letter-spacing: 0.9rem;
-  color: #8dac6f;
+  color: #8f9d72;
+  user-select: none;
 }
 
 header img {
@@ -92,7 +93,7 @@ header img {
     width: 50%;
   }
   to {
-    margin-left: 20%;
+    margin-left: 18%;
     width: 50%;
   }
 }
@@ -143,10 +144,10 @@ header img {
   width: 40vw;
   min-width: 400px;
   height: 50px;
-  background-color: #8dac6f;
+  background-color: #8f9d72;
   background-image: url("../src/images/landing-btns-bg.png");
   background-size: 30vw;
-  border: 2px solid #83a369;
+  border: 2px solid #8f9d72;
   border-radius: 20px 20px 0 0;
   border-width: 2px 2px 0px 2px;
 }
@@ -154,7 +155,7 @@ header img {
 .landing-btn {
   width: 50%;
   height: 100%;
-  background: linear-gradient(transparent, #83a369);
+  background: linear-gradient(transparent, #8f9d72);
 }
 
 .landing-btn a {
@@ -173,7 +174,7 @@ header img {
 
 #how-to-btn {
   border-radius: 20px 0 0 0;
-  border-right: 2px solid #83a369;
+  border-right: 2px solid #8f9d72;
   height: 100%;
 }
 
@@ -195,10 +196,10 @@ header img {
 .how-to {
   height: 800px;
   width: 100%;
-  background-color: #8dac6f;
+  background-color: #8f9d72;
   z-index: 30;
-  background: linear-gradient(#83a369, #9c7c5b, #9c7c5b, #9c7c5b, #695042);
-  border-top: 1px solid #83a369;
+  background: linear-gradient(#8f9d72, #9c7c5b, #9c7c5b, #9c7c5b, #695042);
+  border-top: 1px solid #8f9d72;
 }
 
 .grid-section {
@@ -223,7 +224,7 @@ header img {
   display: block;
   font-size: 1.1rem;
   text-transform: uppercase;
-  font-family: "Chau Philomene One", sans-serif;
+  font-family: "Boogaloo", cursive;
   letter-spacing: 3px;
   padding: 5px;
   cursor: pointer;
@@ -277,6 +278,31 @@ header img {
   margin-right: auto;
   overflow: hidden;
   border-radius: 10px;
+}
+
+.resource-bar {
+  position: sticky;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  user-select: none;
+  border-bottom: 1px solid #503731;
+  background-color: #695042;
+  color: #8f9d72;
+}
+
+.resource-display {
+  width: calc(100% / 5);
+  height: 100%;
+  font-family: "Chau Philomene One", sans-serif;
+  margin: 0;
+  border: 0;
+  padding: 5px 4px 3px 5px;
+}
+
+.resource-display:hover {
+  background-color: #644c3e;
 }
 
 .grid-container {

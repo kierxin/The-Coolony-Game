@@ -12,8 +12,8 @@ $off-white: rgb(231, 231, 231);
 $grid-container-bg: rgb(105, 80, 66);
 $grid-container-bg-darkened: rgb(88, 68, 55);
 $site-title-bg: rgb(215, 233, 233);
-$how-to-bg: rgb(141, 172, 111);
-$how-to-bg-darkened: rgb(131, 163, 105);
+// $how-to-bg: rgb(141, 172, 111);
+$how-to-bg-darkened: #8f9d72;
 // $grid-window-bg: rgb(156, 119, 83);
 $grid-window-bg-darkened: rgb(143, 108, 74);
 
@@ -110,7 +110,8 @@ nav {
     z-index: 100;
     line-height: 450%;
     letter-spacing: .9rem;
-    color: $how-to-bg;
+    color: $how-to-bg-darkened;
+    user-select: none;
 }
 
 header img {
@@ -128,7 +129,7 @@ header img {
         width: 50%;
     }
     to {
-        margin-left: 20%;
+        margin-left: 18%;
         width: 50%;
     }
 }
@@ -184,7 +185,7 @@ header img {
     width: 40vw;
     min-width: 400px;
     height: 50px;
-    background-color: $how-to-bg;
+    background-color: $how-to-bg-darkened;
     background-image: url("../src/images/landing-btns-bg.png");
     background-size: 30vw;
     border: 2px solid $how-to-bg-darkened;
@@ -239,7 +240,7 @@ header img {
 .how-to {
     height: 800px;
     width: 100%;
-    background-color: $how-to-bg;
+    background-color: $how-to-bg-darkened;
     z-index: 30;
     background: linear-gradient($how-to-bg-darkened, $non-tunnel-bg, $non-tunnel-bg, $non-tunnel-bg, $grid-container-bg);
     border-top: 1px solid $how-to-bg-darkened;
@@ -271,7 +272,7 @@ header img {
     font-size: 1.1rem;
     text-transform: uppercase;
     // font-family: $kanit;
-    font-family: $chau-phil;
+    font-family: $boogaloo;
     letter-spacing: 3px;
     padding: 5px;
     cursor: pointer;
@@ -327,6 +328,31 @@ header img {
     margin-right: auto;
     overflow: hidden;
     border-radius: 10px;
+}
+
+.resource-bar {
+    position: sticky;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    user-select: none;
+    border-bottom: 1px solid $sides-bg;
+    background-color: $grid-container-bg;
+    color: $how-to-bg-darkened;
+}
+
+.resource-display {
+    width: calc(100% / 5);
+    height: 100%;
+    font-family: $chau-phil;
+    margin: 0;
+    border: 0;
+    padding: 5px 4px 3px 5px;
+}
+
+.resource-display:hover {
+    background-color: rgb(100, 76, 62);
 }
 
 .grid-container {

@@ -63,7 +63,7 @@
         <section class="landing">
 
             <header id="site-title">
-                <img src="./src/images/coolony-title-banner.png" alt="site title graphic">
+                <img src="./src/images/coolony-title-banner.png" alt="site title graphic" draggable="false">
             </header>
 
             <figure class="cloud-animations">
@@ -94,11 +94,11 @@
             <!-- game icons -->
             <nav class="game-icons-container">
                 <button class="game-icon"><img src="./src/images/resources-icon.png"
-                            alt="click to toggle resource display bar"></button>
+                            alt="click to toggle resource display bar" draggable="false"></button>
                 <button class="game-icon"><img src="./src/images/ant-overview-icon.png"
-                            alt="click to view ants overview"></button>
+                            alt="click to view ants overview" draggable="false"></button>
                 <button class="game-icon"><img src="./src/images/stats-icon.png"
-                            alt="click to view stats modal"></button>
+                            alt="click to view stats modal" draggable="false"></button>
                 <button class="game-icon"><img src="./src/images/quickview-icon.png"
                             alt="click to open quickview"></button>
 
@@ -107,13 +107,23 @@
 
             <!-- game (grid) window -->
             <div class="grid-window">
+
+                <div class="resource-bar">
+                    <li class="resource-display" id="loot-bar">LOOT</li>
+                    <li class="resource-display" id="food-bar">FOOD</li>
+                    <li class="resource-display" id="clay-bar">CLAY</li>
+                    <li class="resource-display" id="ore-bar">ORE</li>
+                    <li class="resource-display" id="gold-bar">GOLD</li>
+                </div>
+
                 <div class="grid-container">
                     <div class="grid">
                         <!-- <div id="draggable">Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)Placeholder(DonotDelete)</div> -->
                     </div>
                 </div>
-            </div>
 
+            </div>
+            
         </section>
     </body>
     </html>
