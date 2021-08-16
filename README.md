@@ -40,16 +40,40 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 - **`THU 8/19`** Deploy (GitHub Pages)
 
 ### Actual Implementation Timeline (Updating As I Go)
-- **✔ `FRI 8/13`** Landing page, how-to, & game container (HTML div), override ‘onscroll’ event in game container `hit a big roadblock here because I had trouble getting drag-and-drop events to be recognized; hindsight being 20/20, I've commented out all related code and put this on the back burner`, networking/social media links
-- **✔ `SAT 8/14`** Game (grid array `roadblock - spent several hours trying to figure out how to get my functions to return the results that I was logging to terminal but otherwise not receiving; the next morning I woke up and found the solution in 10 minutes: closure`)
-- **✔ `SUN 8/15`** Get grid array into DOM, ~~toggleable~~ collected resources ~~overlay~~ bar, right-hand icons (icons for resource modals, ants overview, stats, quickview), Coolony title graphic
-- **`MON 8/16`** Game (Ant instances, ants overview modal, resource deposits, resource modals)
-- **`TUE 8/17`** Game (Task cycles / time-based accumulation of resources, ant energy/appetite decay, new tunnel excavation / resource deposit discovery)
-- **`WED 8/18`** Write ‘how-to’, Game (new ant creation), add CSS media screen breakpoints, try to implement any functionality I didn't get around to; play catch-up
-- **`THU 8/19`** Deploy (GitHub Pages)
+#### FRI 8/13
+- ✔ Code HTML sections: landing page, how-to, & game container
+- ✔ override ‘onscroll’ event in game container `sort of did this, then scrapped it`
+- ✔ Code networking/social media links
+
+#### SAT 8/14
+- ✔ Code grid array `roadblock - spent several hours trying to figure out how to get my functions to return the results that I was logging to terminal but otherwise not receiving; the next morning I woke up and found the solution in 10 minutes: closure`
+
+#### SUN 8/15
+- ✔ Get grid array into DOM
+- ✔ Code HTML/CSS for collected resources bar
+- ✔ Draw game icons (resources, ants, stats, quickview)
+- ✔ Code HTML/CSS for game icons
+- ✔ Create Coolony title graphic & put it on landing page
+- ✔ Draw clouds, put them onto landing page, add subtle animation
+
+#### MON 8/16
+- Pseudocode (tile classes + tile creation function)
+- Code (tile classes + tile creation function)
+
+#### TUE 8/17
+- Finish coding tiles
+- Code ants
+- Pseudocode interaction between tiles & ants: task cycles / time-based accumulation of resources; ant energy/appetite decay; new tunnel excavation / tile discovery
+
+#### WED 8/18
+- Code interactions between ants & tiles
+- Render everything to page
+
+#### THU 8/19
+- Finish UI; deploy (GitHub Pages)
 
 ### Bonus Features (Future Goals)
-1. Nicer game tile graphics (including for nest and food)
-1. Ability for user to move nest & food storage locations
+1. Game tile graphics
+1. Animation of ants running between task sites (shortest-path algorithm)
 1. Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)
 1. Ability for user to log in & retrieve previous game data
