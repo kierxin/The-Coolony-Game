@@ -1,4 +1,4 @@
-// TEMPLATES; DO NOT EDIT
+// TEMPLATE; DO NOT EDIT
 
 
     // FOR 'hardcode more starter boards' IN: /boardFactory/starterBoard.js

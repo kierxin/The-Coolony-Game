@@ -44,7 +44,5 @@ export function BoardWithTilesProperties() {
         })
     }
 
-
-    console.log(board);
     return board;
 }

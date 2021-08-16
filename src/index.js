@@ -1,4 +1,4 @@
-const { ConstructBoardInDOM } = require("./scripts/boardFactory/constructBoardInDOM.js");
+const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
 // const { Draggable } = require("./scripts/draggable.js");
 
 
