@@ -1,0 +1,88 @@
+@use 'vars';
+
+.grid-cell {
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    color: transparent;
+    text-shadow: none;
+
+    // css trick to set height equal to whatever width is;
+    // padding-bottom % should be same as width %
+    height: 0;
+    padding-bottom: 10%;
+}
+
+.grid-cell::selection {
+    color: transparent;
+    background-color: transparent;
+}
+
+.discovered:hover {
+    cursor: pointer;
+}
+
+.hidden-from-player {
+    visibility: hidden;
+}
+
+.tile-type-food {
+    background-color: vars.$non-tunnel-bg;
+}
+
+.tile-type-nest {
+    background-color: vars.$non-tunnel-bg;
+}
+
+.tile-type-tunnel {
+    background-color: vars.$tunnel-bg;
+    box-shadow: 0 0 1px black inset;
+}
+
+.tile-type-tunnel:hover {
+    opacity: .9;
+    cursor: auto;
+}
+
+.tile-type-clay {
+    background-color: vars.$non-tunnel-bg;
+    background-image: url('../src/images/clay.png');
+    background-size: 100%;
+}
+
+.tile-type-clay:hover {
+    box-shadow: 0 0 6px vars.$clay-color inset;
+}
+
+.tile-type-ore {
+    background-color: vars.$non-tunnel-bg;
+    background-image: url('../src/images/ore.png');
+    background-size: 100%;
+}
+
+.tile-type-ore:hover {
+    box-shadow: 0 0 6px vars.$ore-color inset;
+}
+
+.tile-type-gold {
+    background-color: vars.$non-tunnel-bg;
+    background-image: url('../src/images/gold.png');
+    background-size: 100%;
+}
+
+.tile-type-gold:hover {
+    opacity: .9;
+    box-shadow: 0 0 6px vars.$gold-color inset;
+}
+
+.tile-type-excavate {
+    background-color: vars.$tunnel-bg;
+    box-shadow: 0 0 1px black inset;
+    background-image: url('../src/images/excavate.png');
+    background-size: 100%;
+}
+
+.tile-type-excavate:hover {
+    opacity: .9;
+}

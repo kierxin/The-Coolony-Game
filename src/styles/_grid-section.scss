@@ -1,0 +1,140 @@
+@use 'vars';
+
+@use 'grid-cell';
+
+.grid-section {
+    height: 100vh;
+    width: 100%;
+    background-color: vars.$grid-container-bg;
+    position: relative;
+}
+
+.back-to-how-to-container {
+    height: 7%;
+    min-height: 40px;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 4px;
+
+    a {
+        text-decoration: none;
+        color: vars.$off-white;
+        display: block;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        // font-family: vars.$kanit;
+        font-family: vars.$boogaloo;
+        letter-spacing: 3px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    a:hover {
+        letter-spacing: 4px;
+        color: white;
+    }
+
+    a:active {
+        color: vars.$off-white;
+    }
+}
+
+
+.game-icons-container {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 4vh;
+    z-index: 20;
+
+    //these should match .grid-window:
+    bottom: 20px;
+    height: 90%;
+
+    img {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    img:hover {
+        opacity: .8;
+        cursor: pointer;
+    }
+
+    img:active {
+        opacity: 1;
+    }
+}
+
+.grid-window {
+    position: absolute;
+    bottom: 20px;
+    height: 90%;
+    max-height: 900px;
+    width: 80%;
+    left: calc(20% / 2);
+    background-color: vars.$sides-bg;
+    background: linear-gradient(vars.$sides-bg-lightened, vars.$sides-bg);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 10px;
+
+    .resource-bar {
+        position: sticky;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        user-select: none;
+        border-bottom: 1px solid vars.$sides-bg;
+        background-color: vars.$grid-container-bg;
+        color: vars.$how-to-bg-darkened;
+
+        .resource-display {
+            width: calc(100% / 5);
+            height: 100%;
+            font-family: vars.$chau-phil;
+            margin: 0;
+            border: 0;
+            padding: 5px 4px 3px 5px;
+        }
+
+        .resource-display:hover {
+            background-color: rgb(100, 76, 62);
+        }
+
+    }
+}
+
+.grid-container {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    white-space: nowrap;
+    color: black;
+    position: relative;
+    // -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
+    // scrollbar-width: none;  /* Firefox hide scrollbar */
+}
+
+.grid {
+    margin-top: 1px;
+    width: 100%;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 white, 1px -1px 0 white, -1px 1px 0 white, -1px -1px 0 white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    // border: 1px solid vars.$grid-container-bg-darkened;
+    background: linear-gradient(transparent, vars.$sides-bg-darkened, black);
+}
+
+.grid-container::-webkit-scrollbar {
+    // display: none; /* Chrome, Safari, Opera */
+}

@@ -1,0 +1,27 @@
+@use 'vars';
+
+.networking-icons-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 4vh;
+    z-index: 25;
+
+    // should match .game-icons-container:
+    height: 90%;
+    bottom: 20px;
+
+    .networking-icon img {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .networking-icon img:hover {
+        opacity: .8;
+    }
+
+    .networking-icon img:active {
+        opacity: 1;
+    }
+}
