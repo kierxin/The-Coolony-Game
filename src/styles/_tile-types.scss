@@ -1,0 +1,51 @@
+@use 'vars';
+
+
+.tile-type-eat {
+}
+
+.tile-type-nurse {
+}
+
+.tile-type-tunnel {
+    background-color: vars.$tunnel-bg;
+}
+
+.tile-type-tunnel:hover {
+    opacity: .9;
+    cursor: auto;
+}
+
+.tile-type-clay {
+    background-image: url('../src/images/clay.png');
+    // background-size: 100%;
+}
+
+.tile-type-clay:hover {
+    box-shadow: 0 0 6px vars.$clay-color inset;
+}
+
+.tile-type-quartz {
+    background-image: url('../src/images/ore.png');
+}
+
+.tile-type-gold {
+    background-image: url('../src/images/gold.png');
+    // background-size: 100%;
+}
+
+.tile-type-gold:hover {
+    opacity: .9;
+    box-shadow: 0 0 6px vars.$gold-color inset;
+}
+
+.tile-type-excavate {
+    background-color: vars.$tunnel-bg;
+    box-shadow: 0 0 1px black inset;
+    background-image: url('../src/images/excavate.png');
+    // background-size: 100%;
+}
+
+.tile-type-excavate:hover {
+    opacity: .9;
+}

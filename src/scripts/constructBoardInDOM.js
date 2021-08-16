@@ -6,6 +6,7 @@ export function ConstructBoardInDOM() {
 
     const boardArr = BoardWithTilesProperties();
 
+    console.log(`console.log is in constructBoardInDOM`);
     console.log(boardArr);
 
     for (const key in boardArr) {
@@ -20,16 +21,17 @@ export function ConstructBoardInDOM() {
             gridCell.classList.add("hidden-from-player");
         }
 
-        if (type !== "-") {
-            gridCell.classList.add("discovered");
+        if (!type.includes("tunnel") && !type.includes("excavate")) {
+            gridCell.classList.add("non-tunnel");
+        }
+
+        if (tile.interactive === true) {
+            gridCell.classList.add("interactive");
         }
 
         gridCell.innerText = `${type}`;
         gridCell.classList.add(`tile-type-${type}`);
         grid.appendChild(gridCell);
-
-        // console.log(type);
-        // console.log(gridCell.classList);
     }
 
     return "";
