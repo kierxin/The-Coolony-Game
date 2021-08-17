@@ -1,10 +1,85 @@
 @use 'vars';
 
 
+// ALPHABETIZED
+
+.tile-type-above {
+    background-color: vars.$tunnel-bg;
+    background-image: url('../src/images/above.png');
+}
+
+.tile-type-above:hover {
+    box-shadow: 0 0 20px rgb(246, 218, 71, .5) inset;
+}
+
+.tile-type-beetle {
+    background-image: url('../src/images/beetle.png');
+}
+
+.tile-type-beetle:hover {
+    box-shadow: 0 0 6px vars.$hostile inset;
+}
+
+.tile-type-clay {
+    background-image: url('../src/images/clay.png');
+}
+
+.tile-type-clay:hover {
+    box-shadow: 0 0 6px vars.$clay inset;
+}
+
 .tile-type-eat {
+    background-image: url('../src/images/eat.png');
+}
+
+.tile-type-eat:hover {
+    box-shadow: 0 0 6px rgb(111, 138, 52) inset;
+}
+
+.tile-type-excavate {
+    background-color: vars.$tunnel-bg;
+    box-shadow: 0 0 1px black inset;
+    background-image: url('../src/images/excavate.png');
+}
+
+.tile-type-excavate:hover {
+    opacity: .9;
+}
+
+.tile-type-gold {
+    background-image: url('../src/images/gold.png');
+}
+
+.tile-type-gold:hover {
+    box-shadow: 0 0 6px vars.$gold inset;
+}
+
+.tile-type-mica {
+    background-image: url('../src/images/mica.png');
 }
 
 .tile-type-nurse {
+    background-image: url('../src/images/nursery.png');
+}
+
+.tile-type-nurse:hover {
+    box-shadow: 0 0 6px rgb(231, 213, 109) inset;
+}
+
+.tile-type-sleep {
+    background-image: url('../src/images/sleep.png');
+}
+
+.tile-type-sleep:hover {
+    box-shadow: 0 0 10px rgb(134, 110, 145) inset;
+}
+
+.tile-type-spider {
+    background-image: url('../src/images/spider.png');
+}
+
+.tile-type-spider:hover {
+    box-shadow: 0 0 6px vars.$hostile inset;
 }
 
 .tile-type-tunnel {
@@ -16,36 +91,6 @@
     cursor: auto;
 }
 
-.tile-type-clay {
-    background-image: url('../src/images/clay.png');
-    // background-size: 100%;
-}
-
-.tile-type-clay:hover {
-    box-shadow: 0 0 6px vars.$clay-color inset;
-}
-
 .tile-type-quartz {
     background-image: url('../src/images/ore.png');
-}
-
-.tile-type-gold {
-    background-image: url('../src/images/gold.png');
-    // background-size: 100%;
-}
-
-.tile-type-gold:hover {
-    opacity: .9;
-    box-shadow: 0 0 6px vars.$gold-color inset;
-}
-
-.tile-type-excavate {
-    background-color: vars.$tunnel-bg;
-    box-shadow: 0 0 1px black inset;
-    background-image: url('../src/images/excavate.png');
-    // background-size: 100%;
-}
-
-.tile-type-excavate:hover {
-    opacity: .9;
 }

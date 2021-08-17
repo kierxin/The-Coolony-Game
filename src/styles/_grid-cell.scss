@@ -6,8 +6,8 @@
     padding: 0;
     margin: 0;
     width: 10%;
-    // color: transparent;
-    color: vars.$test-color-2;
+    color: transparent;
+    // color: vars.$test-color-2;
     text-shadow: none;
     box-shadow: 0 0 1px black inset;
     background-size: 100%;
@@ -27,8 +27,12 @@
     cursor: pointer;
 }
 
+.interactive:active {
+    opacity: .9;
+}
+
 .hidden-from-player {
-    visibility: hidden;
+    // visibility: hidden;
 }
 
 .non-tunnel {

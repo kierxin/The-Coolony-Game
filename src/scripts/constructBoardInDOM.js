@@ -21,7 +21,7 @@ export function ConstructBoardInDOM() {
             gridCell.classList.add("hidden-from-player");
         }
 
-        if (!type.includes("tunnel") && !type.includes("excavate")) {
+        if (!type.includes("tunnel") && !type.includes("excavate") && !type.includes("above")) {
             gridCell.classList.add("non-tunnel");
         }
 
