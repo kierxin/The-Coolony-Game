@@ -11,6 +11,7 @@ export function AntsListModal(player) {
     antListItems.forEach(item => {
         antsList.appendChild(item);
     });
+
 }
 
 
@@ -27,18 +28,13 @@ function makeDOMListItem(ant) {
         function makeDOMItemColumn(property) {
             const div = document.createElement("div");
 
-            const propName = document.createElement("p");
-            propName.innerHTML = `${property[0]}`;
-            propName.classList.add("ant-list-property-name");
-
             const propVal = document.createElement("p");
             propVal.innerHTML = `${property[1]}`;
-            propVal.classList.add("ant-list-property-value");
+            propVal.classList.add("ants-list-property-value");
 
-            div.appendChild(propName);
             div.appendChild(propVal);
 
-            div.classList.add("ant-list-item-column");
+            div.classList.add("ants-list-item-column");
 
             return div;
         }
@@ -53,5 +49,6 @@ function makeDOMListItem(ant) {
         }
     })
 
+    a.classList.add("ensure-display-none-if-model-inactive");
     return a;
 }

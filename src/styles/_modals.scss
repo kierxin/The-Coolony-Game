@@ -29,10 +29,41 @@
 
 .ants-list-modal {
     @include modal();
+
+
 }
 
 .ants-list-modal-content {
     @include modal-content();
+    width: 80%;
+    height: 60%;
+    margin: 16% auto;
+
+    overflow: hidden;
+    border: 1px solid vars.$test-color-2;
+
+
+    #ants-list {
+        overflow: auto;
+        height: 100%;
+        
+        .ants-list-item {
+            color: vars.$test-color-3;
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            border: 1px solid vars.$test-color-3;
+            
+            .ants-list-item-column {
+                color: vars.$test-color-2;
+
+                .ants-list-property-name, .ants-list-property-value {
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
 }
 
 .game-stats-modal {
@@ -41,4 +72,11 @@
 
 .game-stats-modal-content {
     @include modal-content();
+}
+
+
+
+
+.ensure-display-none-if-model-inactive {
+    display: none;
 }

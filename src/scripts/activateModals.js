@@ -37,9 +37,13 @@ function toggleResourcesModal() {
     if (!this[0].classList.contains("resource-summary-modal")) {
         this[0].classList.add("resource-summary-modal");
         this[1].classList.add("resource-summary-modal-content");
+        this[0].classList.remove("ensure-display-none-if-model-inactive");
+        this[1].classList.remove("ensure-display-none-if-model-inactive");
     } else {
         this[0].classList.remove("resource-summary-modal");
         this[1].classList.remove("resource-summary-modal-content");
+        this[0].classList.add("ensure-display-none-if-model-inactive");
+        this[1].classList.add("ensure-display-none-if-model-inactive");
     }
 }
 
@@ -48,9 +52,13 @@ function toggleAntsModal() {
     if (!this[0].classList.contains("ants-list-modal")) {
         this[0].classList.add("ants-list-modal");
         this[1].classList.add("ants-list-modal-content");
+        this[0].classList.remove("ensure-display-none-if-model-inactive");
+        this[1].classList.remove("ensure-display-none-if-model-inactive");
     } else {
         this[0].classList.remove("ants-list-modal");
         this[1].classList.remove("ants-list-modal-content");
+        this[0].classList.add("ensure-display-none-if-model-inactive");
+        this[1].classList.add("ensure-display-none-if-model-inactive");
     }
     
 }
@@ -60,9 +68,13 @@ function toggleStatsModal() {
     if (!this[0].classList.contains("game-stats-modal")) {
         this[0].classList.add("game-stats-modal");
         this[1].classList.add("game-stats-modal-content");
+        this[0].classList.remove("ensure-display-none-if-model-inactive");
+        this[1].classList.remove("ensure-display-none-if-model-inactive");
     } else {
         this[0].classList.remove("game-stats-modal");
         this[1].classList.remove("game-stats-modal-content");
+        this[0].classList.add("ensure-display-none-if-model-inactive");
+        this[1].classList.add("ensure-display-none-if-model-inactive");
     }
 
 }

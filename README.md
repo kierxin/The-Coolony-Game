@@ -67,9 +67,9 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 - Code interaction between tiles & ants: `task cycles / time-based accumulation of resources; ant energy/appetite decay; new tunnel excavation / tile discovery; etc.`
 
 #### WED 8/18
+- Finish coding interactions
 - Code ant drag & drop
 - Finish UI
-- Code ant running animation (shortest-path alg)
 
 #### THU 8/19
 - Look to refactor/dry up any code that could use some cleaning (especially modals-related code)

@@ -528,6 +528,29 @@ nav {
   border-radius: 20px;
   overflow: auto;
   border: 1px solid #503731;
+  width: 80%;
+  height: 60%;
+  margin: 16% auto;
+  overflow: hidden;
+  border: 1px solid yellow;
+}
+.ants-list-modal-content #ants-list {
+  overflow: auto;
+  height: 100%;
+}
+.ants-list-modal-content #ants-list .ants-list-item {
+  color: lime;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid lime;
+}
+.ants-list-modal-content #ants-list .ants-list-item .ants-list-item-column {
+  color: yellow;
+}
+.ants-list-modal-content #ants-list .ants-list-item .ants-list-item-column .ants-list-property-name, .ants-list-modal-content #ants-list .ants-list-item .ants-list-item-column .ants-list-property-value {
+  font-size: 0.8rem;
 }
 
 .game-stats-modal {
@@ -547,6 +570,10 @@ nav {
   border-radius: 20px;
   overflow: auto;
   border: 1px solid #503731;
+}
+
+.ensure-display-none-if-model-inactive {
+  display: none;
 }
 
 .grid-section {
