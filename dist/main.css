@@ -231,6 +231,19 @@ nav {
   bottom: 20px;
   height: 90%;
 }
+.game-icons-container .game-icon:hover::before {
+  color: #e7e7e7;
+  font-family: "Chau Philomene One", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  content: attr(title);
+  z-index: 50;
+  right: 0;
+  margin-top: -50px;
+  text-align: right;
+}
 .game-icons-container img {
   width: 4vw;
   height: 4vw;
@@ -275,9 +288,6 @@ nav {
   margin: 0;
   border: 0;
   padding: 5px 4px 3px 5px;
-}
-.grid-window .resource-bar .resource-display:hover {
-  background-color: #644c3e;
 }
 
 .grid-container {

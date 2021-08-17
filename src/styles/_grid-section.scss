@@ -52,6 +52,21 @@
     bottom: 20px;
     height: 90%;
 
+    .game-icon:hover::before {
+        color: vars.$off-white;
+        font-family: vars.$chau-phil;
+        text-transform: uppercase;
+        position: absolute;
+        font-size: .8rem;
+        letter-spacing: 1px;
+        content: attr(title);
+        z-index: 50;
+        // margin-left: -10px;
+        right: 0;
+        margin-top: -50px;
+        text-align: right;
+    }
+
     img {
         width: 4vw;
         height: 4vw;
@@ -100,11 +115,7 @@
             border: 0;
             padding: 5px 4px 3px 5px;
         }
-
-        .resource-display:hover {
-            background-color: rgb(100, 76, 62);
-        }
-
+        
     }
 }
 
