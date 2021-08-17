@@ -3,10 +3,11 @@
 
 @mixin interactive-hover-before {
     color: vars.$how-to-bg-darkened;
-    position: absolute;
     font-family: vars.$chau-phil;
+    position: relative;
     font-size: 1rem;
-    margin-top: -19px;
+    top: -22px;
+    letter-spacing: 2px;
 }
 
 
@@ -23,11 +24,21 @@
 
 .tile-type-above:hover::before {
     @include interactive-hover-before();
+    color: vars.$gold;
+    top: 0;
+    left: 14px;
     content: "above";
 }
 
 .tile-type-beetle {
     background-image: url('../src/images/beetle.png');
+}
+
+.tile-type-beetle:hover::before {
+    @include interactive-hover-before();
+    color: vars.$hostile;
+    left: 14px;
+    content: "beetle";
 }
 
 .tile-type-beetle:hover {
@@ -42,12 +53,26 @@
     box-shadow: 0 0 6px vars.$clay inset;
 }
 
+.tile-type-clay:hover::before {
+    @include interactive-hover-before();
+    left: 12px;
+    color: rgb(238, 167, 101);
+    content: "clay";
+}
+
 .tile-type-eat {
     background-image: url('../src/images/eat.png');
 }
 
 .tile-type-eat:hover {
     box-shadow: 0 0 6px rgb(111, 138, 52) inset;
+}
+
+.tile-type-eat:hover::before {
+    @include interactive-hover-before();
+    color: rgb(140, 172, 73);
+    left: 10px;
+    content: "eat";
 }
 
 .tile-type-excavate {
@@ -60,12 +85,26 @@
     opacity: .9;
 }
 
+.tile-type-excavate:hover::before {
+    @include interactive-hover-before();
+    left: 25px;
+    color: rgb(70, 63, 54);
+    content: "dig";
+}
+
 .tile-type-gold {
     background-image: url('../src/images/gold.png');
 }
 
 .tile-type-gold:hover {
     box-shadow: 0 0 6px vars.$gold inset;
+}
+
+.tile-type-gold:hover::before {
+    @include interactive-hover-before();
+    left: 13px;
+    color: vars.$gold;
+    content: "gold!";
 }
 
 .tile-type-mica {
@@ -81,6 +120,13 @@
     box-shadow: 0 0 6px rgb(231, 213, 109) inset;
 }
 
+.tile-type-nurse:hover::before {
+    @include interactive-hover-before();
+    left: 5px;
+    color: rgb(207, 189, 111);
+    content: "nursery";
+}
+
 .tile-type-sleep {
     background-image: url('../src/images/sleep.png');
 }
@@ -89,12 +135,26 @@
     box-shadow: 0 0 10px rgb(134, 110, 145) inset;
 }
 
+.tile-type-sleep:hover::before {
+    @include interactive-hover-before();
+    left: 16px;
+    color: rgb(195, 181, 207);
+    content: "sleep";
+}
+
 .tile-type-spider {
     background-image: url('../src/images/spider.png');
 }
 
 .tile-type-spider:hover {
     box-shadow: 0 0 6px vars.$hostile inset;
+}
+
+.tile-type-spider:hover::before {
+    @include interactive-hover-before();
+    left: 12px;
+    color: vars.$hostile;
+    content: "spider";
 }
 
 .tile-type-tunnel {

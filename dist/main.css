@@ -327,6 +327,10 @@ nav {
   opacity: 0.9;
 }
 
+.hidden-from-player {
+  visibility: hidden;
+}
+
 .non-tunnel {
   background-color: #9c7c5b;
 }
@@ -342,15 +346,31 @@ nav {
 
 .tile-type-above:hover::before {
   color: #8f9d72;
-  position: absolute;
   font-family: "Chau Philomene One", sans-serif;
+  position: relative;
   font-size: 1rem;
-  margin-top: -19px;
+  top: -22px;
+  letter-spacing: 2px;
+  color: #ffc64a;
+  top: 0;
+  left: 14px;
   content: "above";
 }
 
 .tile-type-beetle {
   background-image: url("../src/images/beetle.png");
+}
+
+.tile-type-beetle:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  color: #9c2222;
+  left: 14px;
+  content: "beetle";
 }
 
 .tile-type-beetle:hover {
@@ -365,12 +385,36 @@ nav {
   box-shadow: 0 0 6px #df8832 inset;
 }
 
+.tile-type-clay:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 12px;
+  color: #eea765;
+  content: "clay";
+}
+
 .tile-type-eat {
   background-image: url("../src/images/eat.png");
 }
 
 .tile-type-eat:hover {
   box-shadow: 0 0 6px #6f8a34 inset;
+}
+
+.tile-type-eat:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  color: #8cac49;
+  left: 10px;
+  content: "eat";
 }
 
 .tile-type-excavate {
@@ -383,12 +427,36 @@ nav {
   opacity: 0.9;
 }
 
+.tile-type-excavate:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 25px;
+  color: #463f36;
+  content: "dig";
+}
+
 .tile-type-gold {
   background-image: url("../src/images/gold.png");
 }
 
 .tile-type-gold:hover {
   box-shadow: 0 0 6px #ffc64a inset;
+}
+
+.tile-type-gold:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 13px;
+  color: #ffc64a;
+  content: "gold!";
 }
 
 .tile-type-mica {
@@ -404,6 +472,18 @@ nav {
   box-shadow: 0 0 6px #e7d56d inset;
 }
 
+.tile-type-nurse:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 5px;
+  color: #cfbd6f;
+  content: "nursery";
+}
+
 .tile-type-sleep {
   background-image: url("../src/images/sleep.png");
 }
@@ -412,12 +492,36 @@ nav {
   box-shadow: 0 0 10px #866e91 inset;
 }
 
+.tile-type-sleep:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 16px;
+  color: #c3b5cf;
+  content: "sleep";
+}
+
 .tile-type-spider {
   background-image: url("../src/images/spider.png");
 }
 
 .tile-type-spider:hover {
   box-shadow: 0 0 6px #9c2222 inset;
+}
+
+.tile-type-spider:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 12px;
+  color: #9c2222;
+  content: "spider";
 }
 
 .tile-type-tunnel {
