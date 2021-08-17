@@ -532,25 +532,40 @@ nav {
   height: 60%;
   margin: 16% auto;
   overflow: hidden;
-  border: 1px solid yellow;
+  border: 1px solid #503731;
 }
 .ants-list-modal-content #ants-list {
   overflow: auto;
+  color: #e7e7e7;
   height: 100%;
 }
 .ants-list-modal-content #ants-list .ants-list-item {
-  color: lime;
-  font-size: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  border: 1px solid lime;
+  justify-content: space-around;
+  border: 1px solid #503731;
+  line-height: 150%;
 }
-.ants-list-modal-content #ants-list .ants-list-item .ants-list-item-column {
-  color: yellow;
+.ants-list-modal-content #ants-list .ants-list-item .ants-list-item-column .ants-list-property-value {
+  font-family: "Chau Philomene One", sans-serif;
+  font-size: 1rem;
 }
-.ants-list-modal-content #ants-list .ants-list-item .ants-list-item-column .ants-list-property-name, .ants-list-modal-content #ants-list .ants-list-item .ants-list-item-column .ants-list-property-value {
-  font-size: 0.8rem;
+.ants-list-modal-content #ants-list .ants-list-item .ants-list-property-name {
+  font-family: "Chau Philomene One", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+}
+.ants-list-modal-content #ants-list .underneath {
+  opacity: 0;
+}
+.ants-list-modal-content #ants-list .over {
+  text-shadow: 5px 5px 0 blue;
+  color: orange;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .game-stats-modal {

@@ -1,15 +1,18 @@
+const { BoardWithTilesProperties } = require("./scripts/boardFactory/boardWithTilesProperties.js");
 const { ActivateModals } = require("./scripts/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
 const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
 const { AntsListModal } = require("./scripts/modals/antsListModal.js");
+
 // const { Draggable } = require("./scripts/draggable.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const board = BoardWithTilesProperties();
 
-    ConstructBoardInDOM();
+    ConstructBoardInDOM(board);
     ActivateModals();
 
     const player = new Player();
@@ -17,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ant2 = new Ant(player);
 
 
-    AntsListModal(player);
+    AntsListModal(player, board);
 
     // window.setInterval(update.bind(player), 2000);
     

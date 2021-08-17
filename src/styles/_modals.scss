@@ -40,30 +40,52 @@
     margin: 16% auto;
 
     overflow: hidden;
-    border: 1px solid vars.$test-color-2;
+    border: 1px solid vars.$sides-bg;
 
 
     #ants-list {
         overflow: auto;
+                    color: vars.$off-white;
         height: 100%;
         
         .ants-list-item {
-            color: vars.$test-color-3;
-            font-size: 20px;
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
-            border: 1px solid vars.$test-color-3;
+            justify-content: space-around;
+            border: 1px solid vars.$sides-bg;
+            line-height: 150%;
+            // margin: 10px 0;
+            // padding: 10px 0;
             
             .ants-list-item-column {
-                color: vars.$test-color-2;
-
-                .ants-list-property-name, .ants-list-property-value {
-                    font-size: .8rem;
+                .ants-list-property-value {
+                    font-family: vars.$chau-phil;
+                    font-size: 1rem;
                 }
             }
+
+            .ants-list-property-name {
+                font-family: vars.$chau-phil;
+                color: white;
+                font-size: 1.5rem;
+                font-variant: small-caps;
+            }
         }
+
+
+            .underneath {
+                opacity: 0;
+            }
+
+            .over {
+                text-shadow: 5px 5px 0 blue;
+                color: orange;
+            }
     }
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .game-stats-modal {

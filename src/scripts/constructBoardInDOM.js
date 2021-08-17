@@ -1,10 +1,7 @@
-const { BoardWithTilesProperties } = require("./boardFactory/boardWithTilesProperties.js");
-
-
-export function ConstructBoardInDOM() {
+export function ConstructBoardInDOM(board) {
     const grid = document.querySelector(".grid");
 
-    const boardArr = BoardWithTilesProperties();
+    const boardArr = board;
 
     for (const key in boardArr) {
         const tile = boardArr[key];
