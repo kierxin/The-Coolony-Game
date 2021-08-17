@@ -304,6 +304,10 @@ nav {
   opacity: 0.9;
 }
 
+.hidden-from-player {
+  visibility: hidden;
+}
+
 .non-tunnel {
   background-color: #9c7c5b;
 }
