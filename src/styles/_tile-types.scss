@@ -88,7 +88,7 @@
 .tile-type-excavate:hover::before {
     @include interactive-hover-before();
     left: 25px;
-    color: rgb(70, 63, 54);
+    color: rgb(224, 211, 194);
     content: "dig";
 }
 
