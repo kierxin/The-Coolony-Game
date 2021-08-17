@@ -2,18 +2,22 @@ const { ActivateModals } = require("./scripts/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
 const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
+const { AntsListModal } = require("./scripts/modals/antsListModal.js");
 // const { Draggable } = require("./scripts/draggable.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    ActivateModals();
 
     ConstructBoardInDOM();
+    ActivateModals();
+
     const player = new Player();
     const ant1 = new Ant(player);
     const ant2 = new Ant(player);
 
+
+    AntsListModal(player);
 
     // window.setInterval(update.bind(player), 2000);
     

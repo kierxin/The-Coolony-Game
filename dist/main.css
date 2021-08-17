@@ -499,11 +499,10 @@ nav {
   height: 100%;
   overflow: hidden;
   background-color: rgba(94, 83, 73, 0.3);
-  border: 1px solid yellow;
 }
 
 .resource-summary-modal-content {
-  background-color: #816249;
+  background-color: #664d41;
   height: 76%;
   width: 60%;
   margin: 10% auto;
@@ -519,11 +518,10 @@ nav {
   height: 100%;
   overflow: hidden;
   background-color: rgba(94, 83, 73, 0.3);
-  border: 1px solid yellow;
 }
 
 .ants-list-modal-content {
-  background-color: #816249;
+  background-color: #664d41;
   height: 76%;
   width: 60%;
   margin: 10% auto;
@@ -539,11 +537,10 @@ nav {
   height: 100%;
   overflow: hidden;
   background-color: rgba(94, 83, 73, 0.3);
-  border: 1px solid yellow;
 }
 
 .game-stats-modal-content {
-  background-color: #816249;
+  background-color: #664d41;
   height: 76%;
   width: 60%;
   margin: 10% auto;

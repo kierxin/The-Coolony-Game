@@ -1,5 +1,6 @@
 export function ActivateModals () {
-    
+
+
     // RESOURCE SUMMARY
     const resourceSummaryModal = document.getElementById("resource-summary-modal");
     const resourceSummaryModalContent = document.getElementById("resource-summary-modal-content");
@@ -15,16 +16,22 @@ export function ActivateModals () {
     const gameStatsModalContent = document.getElementById("game-stats-modal-content");
     const stats = [gameStatsModal, gameStatsModalContent];
 
+
+
     // ICONS FOR EACH
     const resIcon = document.querySelector('[title="resource summary"]');
     const antsIcon = document.querySelector('[title="ants list"]');
     const statsIcon = document.querySelector('[title="game stats"]');
 
+
+
     // LISTENERS FOR EACH
     resIcon.addEventListener('click', toggleResourcesModal.bind(resource));
     antsIcon.addEventListener('click', toggleAntsModal.bind(ants));
     statsIcon.addEventListener('click', toggleStatsModal.bind(stats));
+
 }
+
 
 function toggleResourcesModal() {
     if (!this[0].classList.contains("resource-summary-modal")) {
@@ -59,3 +66,19 @@ function toggleStatsModal() {
     }
 
 }
+
+
+
+// function toggleModal(node, child, modal) {
+
+//     if (node.classList.contains(`${modal}`)) {
+//         console.log('contains');
+//         node.classList.remove(`${modal}`);
+//         child.classList.remove(`${modal}-content`);
+//     } else {
+//         console.log("doesn't contain");
+//         node.classList.add(`${modal}`);
+//         child.classList.add(`${modal}-content`);
+//     }
+
+// }

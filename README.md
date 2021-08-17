@@ -72,7 +72,7 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 - Code ant running animation (shortest-path alg)
 
 #### THU 8/19
-- Look to refactor/dry up any code that could use some cleaning
+- Look to refactor/dry up any code that could use some cleaning (especially modals-related code)
 - Deploy (GitHub Pages)
 
 ### Bonus Features (Future Goals)
