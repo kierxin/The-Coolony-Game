@@ -1,3 +1,4 @@
+const { ActivateModals } = require("./scripts/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
 const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
@@ -5,6 +6,8 @@ const { Ant } = require("./scripts/ant.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    ActivateModals();
 
     ConstructBoardInDOM();
     const player = new Player();

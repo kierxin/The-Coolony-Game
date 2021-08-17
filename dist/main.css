@@ -492,55 +492,64 @@ nav {
   background: linear-gradient(transparent, #3a2823, black);
 }
 
-#resource-summary-modal {
+.resource-summary-modal {
   position: absolute;
   z-index: 100;
-  width: 100%;
+  width: 98%;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(177, 167, 157, 0.3);
+  background-color: rgba(94, 83, 73, 0.3);
+  border: 1px solid yellow;
 }
 
-#resource-summary-modal-content {
-  background-color: #8f6c4a;
-  height: 60vh;
-  width: 60vw;
-  margin: auto;
+.resource-summary-modal-content {
+  background-color: #816249;
+  height: 76%;
+  width: 60%;
+  margin: 10% auto;
   border-radius: 20px;
+  overflow: auto;
+  border: 1px solid #503731;
 }
 
-#ants-list-modal {
+.ants-list-modal {
   position: absolute;
   z-index: 100;
-  width: 100%;
+  width: 98%;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(177, 167, 157, 0.3);
+  background-color: rgba(94, 83, 73, 0.3);
+  border: 1px solid yellow;
 }
 
-#ants-list-modal-content {
-  background-color: #8f6c4a;
-  height: 60vh;
-  width: 60vw;
-  margin: auto;
+.ants-list-modal-content {
+  background-color: #816249;
+  height: 76%;
+  width: 60%;
+  margin: 10% auto;
   border-radius: 20px;
+  overflow: auto;
+  border: 1px solid #503731;
 }
 
-#game-stats-modal {
+.game-stats-modal {
   position: absolute;
   z-index: 100;
-  width: 100%;
+  width: 98%;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(177, 167, 157, 0.3);
+  background-color: rgba(94, 83, 73, 0.3);
+  border: 1px solid yellow;
 }
 
-#game-stats-modal-content {
-  background-color: #8f6c4a;
-  height: 60vh;
-  width: 60vw;
-  margin: auto;
+.game-stats-modal-content {
+  background-color: #816249;
+  height: 76%;
+  width: 60%;
+  margin: 10% auto;
   border-radius: 20px;
+  overflow: auto;
+  border: 1px solid #503731;
 }
 
 .grid-section {
