@@ -1,0 +1,42 @@
+@use './vars';
+
+@mixin modal {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(177, 167, 157, .3);
+}
+
+@mixin modal-content {
+    background-color: vars.$grid-window-bg-darkened;
+    height: 60vh;
+    width: 60vw;
+    margin: auto;
+    border-radius: 20px;
+}
+
+#resource-summary-modal {
+    @include modal();
+}
+
+#resource-summary-modal-content {
+    @include modal-content();
+}
+
+#ants-list-modal {
+    @include modal();
+}
+
+#ants-list-modal-content {
+    @include modal-content();
+}
+
+#game-stats-modal {
+    @include modal();
+}
+
+#game-stats-modal-content {
+    @include modal-content();
+}

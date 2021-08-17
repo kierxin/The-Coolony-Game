@@ -186,74 +186,241 @@ nav {
   border-top: 1px solid #8f9d72;
 }
 
-.grid-section {
-  height: 100vh;
-  width: 100%;
-  background-color: #695042;
-  position: relative;
+.tile-type-above {
+  background-color: #816249;
+  background-image: url("../src/images/above.png");
 }
 
-.back-to-how-to-container {
-  height: 7%;
-  min-height: 40px;
-  width: 30%;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 4px;
-}
-.back-to-how-to-container a {
-  text-decoration: none;
-  color: #e7e7e7;
-  display: block;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  font-family: "Boogaloo", cursive;
-  letter-spacing: 3px;
-  padding: 5px;
-  cursor: pointer;
-}
-.back-to-how-to-container a:hover {
-  letter-spacing: 4px;
-  color: white;
-}
-.back-to-how-to-container a:active {
-  color: #e7e7e7;
+.tile-type-above:hover {
+  box-shadow: 0 0 20px rgba(246, 218, 71, 0.5) inset;
 }
 
-.game-icons-container {
-  position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0 4vh;
-  z-index: 20;
-  bottom: 20px;
-  height: 90%;
-}
-.game-icons-container .game-icon:hover::before {
-  color: #e7e7e7;
+.tile-type-above:hover::before {
+  color: #8f9d72;
   font-family: "Chau Philomene One", sans-serif;
-  text-transform: uppercase;
-  position: absolute;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  content: attr(title);
-  z-index: 50;
-  right: 0;
-  margin-top: -50px;
-  text-align: right;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  color: #ffc64a;
+  top: 0;
+  left: 14px;
+  content: "above";
 }
-.game-icons-container img {
-  width: 4vw;
-  height: 4vw;
+
+.tile-type-beetle {
+  background-image: url("../src/images/beetle.png");
 }
-.game-icons-container img:hover {
-  opacity: 0.8;
+
+.tile-type-beetle:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  color: #9c2222;
+  left: 14px;
+  content: "beetle";
+}
+
+.tile-type-beetle:hover {
+  box-shadow: 0 0 6px #9c2222 inset;
+}
+
+.tile-type-clay {
+  background-image: url("../src/images/clay.png");
+}
+
+.tile-type-clay:hover {
+  box-shadow: 0 0 6px #df8832 inset;
+}
+
+.tile-type-clay:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 12px;
+  color: #f8b575;
+  content: "clay";
+}
+
+.tile-type-eat {
+  background-image: url("../src/images/eat.png");
+}
+
+.tile-type-eat:hover {
+  box-shadow: 0 0 6px #6f8a34 inset;
+}
+
+.tile-type-eat:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  color: #c0dd81;
+  left: 10px;
+  content: "eat";
+}
+
+.tile-type-excavate {
+  background-color: #816249;
+  box-shadow: 0 0 1px black inset;
+  background-image: url("../src/images/excavate.png");
+}
+
+.tile-type-excavate:hover {
+  opacity: 0.9;
+}
+
+.tile-type-excavate:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 25px;
+  color: #e0d3c2;
+  content: "dig";
+}
+
+.tile-type-gold {
+  background-image: url("../src/images/gold.png");
+}
+
+.tile-type-gold:hover {
+  box-shadow: 0 0 6px #ffc64a inset;
+}
+
+.tile-type-gold:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 13px;
+  color: #ffc64a;
+  content: "gold!";
+}
+
+.tile-type-mica {
+  background-color: #816249;
+  background-image: url("../src/images/mica.png");
+}
+
+.tile-type-nurse {
+  background-image: url("../src/images/nursery.png");
+}
+
+.tile-type-nurse:hover {
+  box-shadow: 0 0 6px #e7d56d inset;
+}
+
+.tile-type-nurse:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 5px;
+  color: #e7d37b;
+  content: "nursery";
+}
+
+.tile-type-sleep {
+  background-image: url("../src/images/sleep.png");
+}
+
+.tile-type-sleep:hover {
+  box-shadow: 0 0 10px #866e91 inset;
+}
+
+.tile-type-sleep:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 16px;
+  color: #d4c8df;
+  content: "sleep";
+}
+
+.tile-type-spider {
+  background-image: url("../src/images/spider.png");
+}
+
+.tile-type-spider:hover {
+  box-shadow: 0 0 6px #9c2222 inset;
+}
+
+.tile-type-spider:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  left: 12px;
+  color: #9c2222;
+  content: "spider";
+}
+
+.tile-type-tunnel {
+  background-color: #816249;
+}
+
+.tile-type-tunnel:hover {
+  opacity: 0.9;
+  cursor: auto;
+}
+
+.tile-type-quartz {
+  background-color: #816249;
+  background-image: url("../src/images/ore.png");
+}
+
+.grid-cell {
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  color: transparent;
+  text-shadow: none;
+  box-shadow: 0 0 1px black inset;
+  background-size: 100%;
+  height: 0;
+  padding-bottom: 10%;
+}
+
+.grid-cell::selection {
+  color: transparent;
+  background-color: transparent;
+}
+
+.interactive:hover {
   cursor: pointer;
 }
-.game-icons-container img:active {
-  opacity: 1;
+
+.interactive:active {
+  opacity: 0.9;
+}
+
+.hidden-from-player {
+  visibility: hidden;
+}
+
+.non-tunnel {
+  background-color: #9c7c5b;
 }
 
 .grid-window {
@@ -325,239 +492,123 @@ nav {
   background: linear-gradient(transparent, #3a2823, black);
 }
 
-.grid-cell {
-  line-height: 1;
-  padding: 0;
-  margin: 0;
-  width: 10%;
-  color: transparent;
-  text-shadow: none;
-  box-shadow: 0 0 1px black inset;
-  background-size: 100%;
-  height: 0;
-  padding-bottom: 10%;
+#resource-summary-modal {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(177, 167, 157, 0.3);
 }
 
-.grid-cell::selection {
-  color: transparent;
-  background-color: transparent;
+#resource-summary-modal-content {
+  background-color: #8f6c4a;
+  height: 60vh;
+  width: 60vw;
+  margin: auto;
+  border-radius: 20px;
 }
 
-.interactive:hover {
+#ants-list-modal {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(177, 167, 157, 0.3);
+}
+
+#ants-list-modal-content {
+  background-color: #8f6c4a;
+  height: 60vh;
+  width: 60vw;
+  margin: auto;
+  border-radius: 20px;
+}
+
+#game-stats-modal {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(177, 167, 157, 0.3);
+}
+
+#game-stats-modal-content {
+  background-color: #8f6c4a;
+  height: 60vh;
+  width: 60vw;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.grid-section {
+  height: 100vh;
+  width: 100%;
+  background-color: #695042;
+  position: relative;
+}
+
+.back-to-how-to-container {
+  height: 7%;
+  min-height: 40px;
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 4px;
+}
+.back-to-how-to-container a {
+  text-decoration: none;
+  color: #e7e7e7;
+  display: block;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-family: "Boogaloo", cursive;
+  letter-spacing: 3px;
+  padding: 5px;
   cursor: pointer;
 }
-
-.interactive:active {
-  opacity: 0.9;
+.back-to-how-to-container a:hover {
+  letter-spacing: 4px;
+  color: white;
+}
+.back-to-how-to-container a:active {
+  color: #e7e7e7;
 }
 
-.hidden-from-player {
-  visibility: hidden;
+.game-icons-container {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 4vh;
+  z-index: 20;
+  bottom: 20px;
+  height: 90%;
 }
-
-.non-tunnel {
-  background-color: #9c7c5b;
-}
-
-.tile-type-above {
-  background-color: #816249;
-  background-image: url("../src/images/above.png");
-}
-
-.tile-type-above:hover {
-  box-shadow: 0 0 20px rgba(246, 218, 71, 0.5) inset;
-}
-
-.tile-type-above:hover::before {
-  color: #8f9d72;
+.game-icons-container .game-icon:hover::before {
+  color: #e7e7e7;
   font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  color: #ffc64a;
-  top: 0;
-  left: 14px;
-  content: "above";
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  content: attr(title);
+  z-index: 50;
+  right: 0;
+  margin-top: -50px;
+  text-align: right;
 }
-
-.tile-type-beetle {
-  background-image: url("../src/images/beetle.png");
+.game-icons-container img {
+  width: 4vw;
+  height: 4vw;
 }
-
-.tile-type-beetle:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  color: #9c2222;
-  left: 14px;
-  content: "beetle";
+.game-icons-container img:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
-
-.tile-type-beetle:hover {
-  box-shadow: 0 0 6px #9c2222 inset;
-}
-
-.tile-type-clay {
-  background-image: url("../src/images/clay.png");
-}
-
-.tile-type-clay:hover {
-  box-shadow: 0 0 6px #df8832 inset;
-}
-
-.tile-type-clay:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  left: 12px;
-  color: #eea765;
-  content: "clay";
-}
-
-.tile-type-eat {
-  background-image: url("../src/images/eat.png");
-}
-
-.tile-type-eat:hover {
-  box-shadow: 0 0 6px #6f8a34 inset;
-}
-
-.tile-type-eat:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  color: #8cac49;
-  left: 10px;
-  content: "eat";
-}
-
-.tile-type-excavate {
-  background-color: #816249;
-  box-shadow: 0 0 1px black inset;
-  background-image: url("../src/images/excavate.png");
-}
-
-.tile-type-excavate:hover {
-  opacity: 0.9;
-}
-
-.tile-type-excavate:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  left: 25px;
-  color: #e0d3c2;
-  content: "dig";
-}
-
-.tile-type-gold {
-  background-image: url("../src/images/gold.png");
-}
-
-.tile-type-gold:hover {
-  box-shadow: 0 0 6px #ffc64a inset;
-}
-
-.tile-type-gold:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  left: 13px;
-  color: #ffc64a;
-  content: "gold!";
-}
-
-.tile-type-mica {
-  background-color: #816249;
-  background-image: url("../src/images/mica.png");
-}
-
-.tile-type-nurse {
-  background-image: url("../src/images/nursery.png");
-}
-
-.tile-type-nurse:hover {
-  box-shadow: 0 0 6px #e7d56d inset;
-}
-
-.tile-type-nurse:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  left: 5px;
-  color: #cfbd6f;
-  content: "nursery";
-}
-
-.tile-type-sleep {
-  background-image: url("../src/images/sleep.png");
-}
-
-.tile-type-sleep:hover {
-  box-shadow: 0 0 10px #866e91 inset;
-}
-
-.tile-type-sleep:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  left: 16px;
-  color: #c3b5cf;
-  content: "sleep";
-}
-
-.tile-type-spider {
-  background-image: url("../src/images/spider.png");
-}
-
-.tile-type-spider:hover {
-  box-shadow: 0 0 6px #9c2222 inset;
-}
-
-.tile-type-spider:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  left: 12px;
-  color: #9c2222;
-  content: "spider";
-}
-
-.tile-type-tunnel {
-  background-color: #816249;
-}
-
-.tile-type-tunnel:hover {
-  opacity: 0.9;
-  cursor: auto;
-}
-
-.tile-type-quartz {
-  background-color: #816249;
-  background-image: url("../src/images/ore.png");
+.game-icons-container img:active {
+  opacity: 1;
 }

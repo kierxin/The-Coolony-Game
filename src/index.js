@@ -5,13 +5,11 @@ const { Ant } = require("./scripts/ant.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Draggable();
 
     ConstructBoardInDOM();
-    // AddAntsToBoardInDOM();
-
     const player = new Player();
-    const ant = new Ant(player);
+    const ant1 = new Ant(player);
+    const ant2 = new Ant(player);
 
 
     // window.setInterval(update.bind(player), 2000);
@@ -20,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function update() {
+    console.log(this);
     temp(this);
     this.updateResourceBar();
 }

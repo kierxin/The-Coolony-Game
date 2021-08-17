@@ -93,10 +93,9 @@
 
             <!-- game icons -->
             <nav class="game-icons-container">
-                <!-- (titles for 'resources' & 'ants' use whitespace char) -->
-                <button class="game-icon" title=" ‎‏‏‎ ‎‏‏‎  resources"><img src="./src/images/resources-icon.png"
+                <button class="game-icon" title="resource summary"><img src="./src/images/resources-icon.png"
                             alt="click to toggle resource display bar" draggable="false"></button>
-                <button class="game-icon" title="‏‏‎  ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎  ‎‏‏‎ ‎ants"><img src="./src/images/ant-overview-icon.png"
+                <button class="game-icon" title="‏‏‎‎ants list"><img src="./src/images/ant-overview-icon.png"
                             alt="click to view ants overview" draggable="false"></button> 
                 <button class="game-icon" title="game stats"><img src="./src/images/stats-icon.png"
                             alt="click to view stats modal" draggable="false"></button>
@@ -108,6 +107,9 @@
 
             <!-- game (grid) window -->
             <div class="grid-window">
+                <div id="resource-summary-modal">
+                    <div id="resource-summary-modal-content"></div>
+                </div>
 
                 <div class="resource-bar">
                     <li class="resource-display">LOOT <p id="loot-val">0</p></li>
