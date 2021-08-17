@@ -6,9 +6,6 @@ export function ConstructBoardInDOM() {
 
     const boardArr = BoardWithTilesProperties();
 
-    console.log(`console.log is in constructBoardInDOM`);
-    console.log(boardArr);
-
     for (const key in boardArr) {
         const tile = boardArr[key];
         const type = tile.tileType;
