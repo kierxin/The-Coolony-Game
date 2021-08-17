@@ -1,5 +1,5 @@
 @use 'vars';
-@use 'tile-types';
+@use 'grid-section';
 
 .grid-cell {
     line-height: 1;
@@ -32,7 +32,7 @@
 }
 
 .hidden-from-player {
-    visibility: hidden;
+    // visibility: hidden;
 }
 
 .non-tunnel {

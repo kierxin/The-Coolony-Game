@@ -57,8 +57,8 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 - ✔ Draw clouds, put them onto landing page, add subtle animation
 
 #### MON 8/16
-- Complete board factory (including all tile-related functions)
-- Put revised board into DOM
+- ✔ Complete board factory (including all tile-related functions)
+- ✔ Put revised board into DOM
 
 #### TUE 8/17
 - Code player class

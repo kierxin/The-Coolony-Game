@@ -1,4 +1,13 @@
 @use 'vars';
+@use 'grid-cell';
+
+@mixin interactive-hover-before {
+    color: vars.$how-to-bg-darkened;
+    position: absolute;
+    font-family: vars.$chau-phil;
+    font-size: 1rem;
+    margin-top: -19px;
+}
 
 
 // ALPHABETIZED
@@ -10,6 +19,11 @@
 
 .tile-type-above:hover {
     box-shadow: 0 0 20px rgb(246, 218, 71, .5) inset;
+}
+
+.tile-type-above:hover::before {
+    @include interactive-hover-before();
+    content: "above";
 }
 
 .tile-type-beetle {
@@ -55,6 +69,7 @@
 }
 
 .tile-type-mica {
+    background-color: vars.$tunnel-bg;
     background-image: url('../src/images/mica.png');
 }
 
@@ -92,5 +107,6 @@
 }
 
 .tile-type-quartz {
+    background-color: vars.$tunnel-bg;
     background-image: url('../src/images/ore.png');
 }
