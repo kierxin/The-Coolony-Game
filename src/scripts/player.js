@@ -1,11 +1,12 @@
 export function Player () {
 
-    this.name = null;
+    // this.name = null;
     this.loot = 0;
     this.food = 10;
     this.wood = 10;
     this.clay = 1000;
     this.gold = 0;
+    this.ants = [];
 
 }
 
