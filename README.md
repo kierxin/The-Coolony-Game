@@ -68,16 +68,15 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 
 #### WED 8/18
 - Finish coding interactions
-- Code ant drag & drop
 - Finish UI
 
 #### THU 8/19
-- Rename 'lameNamedCallback'
 - Look to refactor/dry up any code that could use some cleaning (especially modals-related code)
 - Deploy (GitHub Pages)
 
 ### Bonus Features (Future Goals)
 1. ✔ Game tile graphics
+1. Ant drag & drop
 1. Animation of ants running between task sites (shortest-path algorithm)
 1. Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)
 1. Ability for user to log in & retrieve previous game data
