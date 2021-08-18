@@ -5,7 +5,7 @@ const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
 const { AntsListModal } = require("./scripts/modals/antsListModal/antsListModal.js");
 const { ListClickEvents } = require("./scripts/modals/antsListModal/listClickEvents.js");
-const { AntsListAssignTask } = require("./scripts/updateHelpers/antsListAssignTask.js");
+const { AntsListSubmitListener } = require("./scripts/updateHelpers/antsListSubmitListener.js");
 const { HandleCompletedTasks } = require("./scripts/updateHelpers/handleCompletedTasks.js");
 
 // const { Draggable } = require("./scripts/draggable.js");
@@ -21,48 +21,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const player = new Player();
     const ant1 = new Ant(player);
     const ant2 = new Ant(player);
-    const interval = 5000;
+    const interval = 2000;
 
     AntsListModal(player, board);
 
     ListClickEvents();
 
-    AntsListAssignTask(player, board);
+    const antsList = AntsListSubmitListener.bind(player, board);
+    antsList(board);
 
-    window.setInterval(update.bind(player, interval), interval);
+    window.setInterval(update.bind(player, interval, board), interval);
     
 });
 
 
-function update(interval) {
-    let completers = [];
+function update(interval, board) {
 
-    const decr = decrementAntDurations.bind(this, interval);
-    // const check = checkForAntsNearCompletion.bind(this, interval);
+    const decr = decrementAntDurations.bind(this, interval, board);
+    decr(interval);
 
-    completers = decr();
-    // nearlyDoneAnts = check();
-    completers = HandleCompletedTasks(completers, this);
-    console.log(`completers after handled: ${completers}`);
+    // const antsList = AntsListSubmitListener.bind(this, board);
+    // antsList(board);
+
     this.updateResourceBar();
-    // this.updateAntsList
+
 }
 
 
-function decrementAntDurations(interval) {
+function decrementAntDurations(interval, board) {
     const completers = [];
 
-    this.ants.forEach(ant => {
+    for (const antIdx in this.ants) {
+        const ant = this.ants[antIdx];
+
         if (ant.duration > 0) {
             ant.duration -= interval;
-        } else if (ant.status !== 'idle') {
-            ant.status = 'idle';
-            ant.duration = null;
-            completers.push(ant);
-        }
-    })
 
-    return completers;
+            if (ant.duration <= 0) {
+                completers.push(ant)
+                ant.duration = null;
+            }
+        }
+    }
+
+    if (completers.length > 0) {
+        const handle = HandleCompletedTasks.bind(this, completers, board);
+        handle(completers, board);
+    }
 }
 
 

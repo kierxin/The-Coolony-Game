@@ -1,10 +1,11 @@
-export function AntsListAssignTask(player, board) {
+export function AntsListSubmitListener(board) {
 
     const overs = document.querySelectorAll(".over");
 
+    // determine which ant to update
     overs.forEach((over, idx) => {
         over.addEventListener("click", () => {
-            player.lastAnt = idx;
+            this.lastAnt = idx;
         });
     });
 
@@ -16,8 +17,15 @@ export function AntsListAssignTask(player, board) {
     formInputs.forEach(input => {
         input.addEventListener("click", (e) => {
             e.preventDefault();
-            
-            const ant = player.lastAnt;
+
+            const ant = this.lastAnt;
+
+
+            // close ants list under-item; this is required to ensure that the player re-opens a list under-item every time they try to assign a task; this re-opened under-item is how the 'last ant' determined, which determines which ant's status is updated
+            const unders = document.querySelectorAll(".under");
+            unders[ant].style.display = "none";
+            unders[ant].setAttribute("display", "none");
+
 
             const strings = form.name.split(",");
             let pos = strings.map(coord => parseInt(coord));
@@ -32,13 +40,13 @@ export function AntsListAssignTask(player, board) {
                 }
             }
 
+            place.currentAnts.ant = this.ants[ant];
 
-            place.currentAnts.ant = player.ants[ant];
-
-            player.ants[ant].position = pos;
-            player.ants[ant].status = place.tileType;
-            player.ants[ant].duration = place.durationInMinutes * 60000;
+            this.ants[ant].position = pos;
+            this.ants[ant].status = place.tileType;
+            this.ants[ant].duration = place.durationInMinutes * 60000;
         });
     });
+
 }
 

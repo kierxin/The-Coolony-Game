@@ -13,7 +13,6 @@ export function Player () {
 
 
 Player.prototype.updateResourceBar = function() {
-    console.log('updated');
 
     const lootVal = document.querySelector("#loot-val");
     const foodVal = document.querySelector("#food-val");
