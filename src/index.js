@@ -5,7 +5,7 @@ const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
 const { AntsListModal } = require("./scripts/modals/antsListModal/antsListModal.js");
 const { ListClickEvents } = require("./scripts/modals/antsListModal/listClickEvents.js");
-const { AntsListAssignTask } = require("./scripts/updatingEvents/antsListAssignTask.js");
+const { AntsListAssignTask } = require("./scripts/updateHelpers/antsListAssignTask.js");
 
 // const { Draggable } = require("./scripts/draggable.js");
 

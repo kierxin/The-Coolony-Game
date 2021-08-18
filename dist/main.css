@@ -560,6 +560,8 @@ nav {
   color: white;
   font-size: 1.5rem;
   font-variant: small-caps;
+  cursor: auto;
+  user-select: none;
 }
 .ants-list-modal-content #ants-list .ants-list-item:hover {
   color: #ebc599;
@@ -579,7 +581,7 @@ nav {
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form {
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 40px;
   overflow: hidden;
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form select {
@@ -595,7 +597,7 @@ nav {
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form label {
   display: inline-block;
-  width: 120px;
+  width: 50px;
   height: 30px;
   margin-top: 8px;
   margin-right: 5px;

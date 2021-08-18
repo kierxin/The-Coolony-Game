@@ -8,7 +8,7 @@ export function CreateFormForAntsList (potentialTasks) {
     select.setAttribute("onchange", 'form.name = `${this.value}`');
     const formLabel = document.createElement("label");
     formLabel.setAttribute("for", "assign-task-form");
-    formLabel.innerText = "Assign Task: ";
+    formLabel.innerText = "Task: ";
 
     potentialTasks.forEach(task => {
         const opt = document.createElement("option");

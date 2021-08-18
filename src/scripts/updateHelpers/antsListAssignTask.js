@@ -14,7 +14,8 @@ export function AntsListAssignTask(player, board) {
 
 
     formInputs.forEach(input => {
-        input.addEventListener("click", () => {
+        input.addEventListener("click", (e) => {
+            e.preventDefault();
             
             const ant = player.lastAnt;
 

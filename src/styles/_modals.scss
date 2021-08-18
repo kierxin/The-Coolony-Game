@@ -69,6 +69,8 @@
                 color: white;
                 font-size: 1.5rem;
                 font-variant: small-caps;
+                cursor: auto;
+                user-select: none;
             }
         }
             
@@ -92,7 +94,7 @@
 
             #assign-task-form {
                 display: inline-block;
-                margin-left: 50px;
+                margin-left: 40px;
                 overflow: hidden;
             }
 
@@ -110,7 +112,7 @@
 
             #assign-task-form label {
                 display: inline-block;
-                width: 120px;
+                width: 50px;
                 height: 30px;
                 margin-top: 8px;
                 margin-right: 5px;
