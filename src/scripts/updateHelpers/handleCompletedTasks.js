@@ -23,16 +23,22 @@ export function HandleCompletedTasks() {
                 foodAdder(this);
             } else if (task === "eat") {
                 foodSubtracter(this);
+                appetiteSubtracter(ant);
             } else if (task === "wood") {
                 woodAdder(this);
             } else if (task === "clay") {
                 clayAdder(this);
             } else if (task === "gold") {
                 goldAdder(this);
+            } else if (task === "sleep") {
+                energyAdder(ant);
             }
 
             lootRoller(this);
 
+            if (ant.energy > 0) {
+                ant.energy -= Math.floor(Math.random() * 2);
+            }
             ant.status = "idle";
             ant.duration = null;
 
@@ -49,20 +55,41 @@ export function HandleCompletedTasks() {
 
 
 function lootRoller(player) {
-    player.loot += Math.round(Math.random(15));
+    player.loot += Math.round(Math.random() * 15);
 }
+
 function foodAdder(player) {
-    player.food += 17 + Math.round(Math.random(3));
+    player.food += 17 + Math.round(Math.random() * 3);
 }
+
 function foodSubtracter(player) {
-    player.food -= 3 + Math.floor(Math.random(2));
+    player.food -= 3 + Math.floor(Math.random() * 2);
 }
+
+function appetiteSubtracter(ant) {
+    if (ant.appetite <= 40) {
+        ant.appetite = 1 + Math.floor(Math.random() * 5);
+    } else {
+        ant.appetite -= 70 + Math.floor(Math.random() * 10);
+    }
+}
+
 function woodAdder(player) {
-    player.wood += 10 + Math.round(Math.random(5));
+    player.wood += 10 + Math.round(Math.random() * 5);
 }
+
 function clayAdder(player) {
-    player.clay += 10 + Math.round(Math.random(5));
+    player.clay += 10 + Math.round(Math.random() * 5);
 }
+
 function goldAdder(player) {
-    player.gold += 1 + Math.round(Math.random(3));
+    player.gold += 1 + Math.round(Math.random() * 3);
+}
+
+function energyAdder(ant) {
+    if (ant.energy >= 40) {
+        ant.energy = 99 - Math.floor(Math.random() * 5);
+    } else {
+        ant.energy += 70 + Math.floor(Math.random() * 10);
+    }
 }

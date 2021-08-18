@@ -5,8 +5,8 @@ export function Ant(player) {
     this.position = [2,5];
     this.status = 'idle';
     this.duration = null;
-    this.energy = 10; // from 1 to 10
-    this.appetite = 1; // from 1 to 10
+    this.energy = 90; // from 1 to 100
+    this.appetite = 10; // from 1 to 100
     this.cumulativeWork = {
         loot: 0,
         food: 0,

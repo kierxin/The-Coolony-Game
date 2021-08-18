@@ -22,7 +22,7 @@ export function UpdateAntsList () {
         for (let j = 0; j < properties.length; j++) {
             item.children[j].children[0].innerHTML = this.ants[i][properties[j]];
 
-            //hard-coded to parse position:
+            //parse position:
             item.children[1].children[0].innerHTML = this.ants[i][properties[1]].join(",");
         }
     });
