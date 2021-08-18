@@ -1,22 +1,8 @@
-import { CreateFormForAntsList } from "./createFormForAntsList";
+import { CreateFormForAntsList } from "./createFormForAntsList.js";
 
-const { reateFormForAntsList } = "./createFormForAntsList.js";
-
-
-export function LameNamedCallback (item, board) {
+export function PutAntRowsIntoDOM (item, board) {
 
     const antsList = document.querySelector("#ants-list");
-
-    item[0].classList.add("over");
-    item[0].addEventListener("click", () => {
-        if (item[0].classList.contains("underneath")) {
-            item[0].classList.add("over");
-            item[0].classList.remove("underneath");
-        } else {
-            item[0].classList.add("underneath");
-            item[0].classList.remove("over");
-        }
-    });
 
     const potentialTasks = [];
 
@@ -34,18 +20,16 @@ export function LameNamedCallback (item, board) {
     const pos = item[0].children[1].children[0].innerHTML;
     const status = item[0].children[2].children[0].innerHTML;
 
-    item[1].innerHTML = `Ant ${id} at [${pos.split(",").join(", ")}]: ${status}    Assign Task: `;
+    item[1].innerHTML = `Ant ${id} at [${pos.split(",").join(", ")}]: ${status}`;
 
 
-    // console.log(CreateFormForAntsList);
     const form = CreateFormForAntsList(potentialTasks);
-    
-
     item[1].appendChild(form);
 
-    console.log(item[1]);
+    item[0].classList.add("over");
+    item[1].classList.add("under");
+
 
     antsList.appendChild(item[0]);
     antsList.appendChild(item[1]);
-
 }

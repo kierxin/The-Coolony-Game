@@ -1,5 +1,5 @@
 const { MakeDOMListItem } = require("./makeDOMListItem.js");
-const { LameNamedCallback } = require("./lameNamedCallback.js");
+const { PutAntRowsIntoDOM } = require("./putAntRowsIntoDOM.js");
 
 
 export function AntsListModal(player, board) {
@@ -11,6 +11,6 @@ export function AntsListModal(player, board) {
         antListItems.push(MakeDOMListItem(ant));
     });
 
-    antListItems.forEach(item => LameNamedCallback(item, board));
+    antListItems.forEach(item => PutAntRowsIntoDOM(item, board));
 
 }

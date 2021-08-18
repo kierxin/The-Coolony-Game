@@ -538,13 +538,17 @@ nav {
   overflow: auto;
   color: #e7e7e7;
   height: 100%;
+  position: relative;
 }
 .ants-list-modal-content #ants-list .ants-list-item {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   border: 1px solid #503731;
-  line-height: 150%;
+  line-height: 70%;
+  background-color: #695042;
+  position: relative;
+  z-index: 1;
 }
 .ants-list-modal-content #ants-list .ants-list-item .ants-list-item-column .ants-list-property-value {
   font-family: "Chau Philomene One", sans-serif;
@@ -556,12 +560,52 @@ nav {
   font-size: 1.5rem;
   font-variant: small-caps;
 }
-.ants-list-modal-content #ants-list .underneath {
+.ants-list-modal-content #ants-list .ants-list-under-item {
+  display: block;
+  border: 1px solid lime;
+  font-size: 1rem;
+  margin-top: -49px;
+  text-transform: uppercase;
+  font-family: Arial;
+  padding-left: 7px;
   opacity: 0;
 }
-.ants-list-modal-content #ants-list .over {
-  text-shadow: 5px 5px 0 blue;
-  color: orange;
+.ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form {
+  display: inline-block;
+  margin-left: 30px;
+  overflow: hidden;
+}
+.ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form select {
+  width: 150px;
+  height: 46px;
+  font-size: 1rem;
+  color: #e7e7e7;
+  background-color: #503731;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+}
+.ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form label {
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+}
+.ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form input {
+  background-color: #503731;
+  color: #e7e7e7;
+  height: 30px;
+  text-transform: uppercase;
+  font-family: "Kanit", sans-serif;
+  margin-left: 10px;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 5px;
+  border: none;
+}
+.ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form input:hover {
+  opacity: 0.9;
 }
 
 .hidden {

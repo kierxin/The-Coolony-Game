@@ -60,7 +60,7 @@ function toggleAntsModal() {
         this[0].classList.add("ensure-display-none-if-model-inactive");
         this[1].classList.add("ensure-display-none-if-model-inactive");
     }
-    
+
 }
 
 function toggleStatsModal() {

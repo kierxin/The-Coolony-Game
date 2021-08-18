@@ -29,8 +29,6 @@
 
 .ants-list-modal {
     @include modal();
-
-
 }
 
 .ants-list-modal-content {
@@ -42,20 +40,21 @@
     overflow: hidden;
     border: 1px solid vars.$sides-bg;
 
-
     #ants-list {
         overflow: auto;
-                    color: vars.$off-white;
+        color: vars.$off-white;
         height: 100%;
+        position: relative;
         
         .ants-list-item {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             border: 1px solid vars.$sides-bg;
-            line-height: 150%;
-            // margin: 10px 0;
-            // padding: 10px 0;
+            line-height: 70%;
+            background-color: vars.$grid-container-bg;
+            position: relative;
+            z-index: 1;
             
             .ants-list-item-column {
                 .ants-list-property-value {
@@ -72,14 +71,57 @@
             }
         }
 
-
-            .underneath {
+            .ants-list-under-item {
+                display: block;
+                border: 1px solid vars.$test-color-3;
+                font-size: 1rem;
+                margin-top: -49px;
+                text-transform: uppercase;
+                font-family: Arial;
+                padding-left: 7px;
                 opacity: 0;
-            }
 
-            .over {
-                text-shadow: 5px 5px 0 blue;
-                color: orange;
+                #assign-task-form {
+                    display: inline-block;
+                    margin-left: 30px;
+                    overflow: hidden;
+                }
+
+                #assign-task-form select {
+                    width: 150px;
+                    height: 46px;
+                    font-size: 1rem;
+                    color: vars.$off-white;
+                    background-color: vars.$sides-bg;
+                    text-transform: uppercase;
+                    font-family: vars.$kanit;
+                }
+
+                #assign-task-form label {
+                    display: inline-block;
+                    width: 120px;
+                    height: 30px;
+                    font-size: .9rem;
+                    text-transform: uppercase;
+                    font-family: vars.$kanit;
+                }
+
+                #assign-task-form input {
+                    background-color: vars.$sides-bg;
+                    color: vars.$off-white;
+                    height: 30px;
+                    text-transform: uppercase;
+                    font-family: vars.$kanit;
+                    margin-left: 10px;
+                    box-shadow: none;
+                    text-shadow: none;
+                    border-radius: 5px;
+                    border: none;
+                }
+
+                #assign-task-form input:hover {
+                    opacity: .9;
+                }
             }
     }
 }
