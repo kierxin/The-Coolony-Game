@@ -10,6 +10,15 @@ export function CreateFormForAntsList (potentialTasks) {
     formLabel.setAttribute("for", "assign-task-form");
     formLabel.innerText = "Task: ";
 
+
+    const defaultVal = document.createElement("option");
+    defaultVal.setAttribute("value", "task location");
+    defaultVal.setAttribute("disabled", "disabled");
+    defaultVal.setAttribute("selected", "selected");
+    defaultVal.setAttribute("hidden", "hidden");
+    select.appendChild(defaultVal);
+
+
     potentialTasks.forEach(task => {
         const opt = document.createElement("option");
         opt.setAttribute("value", `${task[0]}`);

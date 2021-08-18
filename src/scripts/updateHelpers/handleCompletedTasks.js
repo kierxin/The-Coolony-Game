@@ -17,8 +17,6 @@ export function HandleCompletedTasks() {
             }
 
 
-            console.log(this);
-
             const task = ant.status;
 
             if (task === "food") {
