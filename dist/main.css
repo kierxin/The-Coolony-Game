@@ -578,6 +578,7 @@ nav {
   font-family: "Kanit", sans-serif;
   font-size: 1rem;
   margin: 0 15px;
+  word-spacing: 3px;
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form {
   display: inline-block;
@@ -585,7 +586,7 @@ nav {
   overflow: hidden;
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form select {
-  width: 150px;
+  width: 200px;
   height: 46px;
   font-size: 1rem;
   color: #e7e7e7;

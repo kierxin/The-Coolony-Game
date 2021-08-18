@@ -8,6 +8,7 @@ const { AntsListModal } = require("./scripts/modals/antsListModal/antsListModal.
 const { ListClickEvents } = require("./scripts/modals/antsListModal/listClickEvents.js");
 const { AntsListSubmitListener } = require("./scripts/updateHelpers/antsListSubmitListener.js");
 const { HandleCompletedTasks } = require("./scripts/updateHelpers/handleCompletedTasks.js");
+const { UpdateAntsList } = require("./scripts/updateHelpers/updateAntsList.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const antsList = AntsListSubmitListener.bind(player, board);
     antsList(board);
 
+
+
+    // const updateAntsList = UpdateAntsList.bind(player);
+    // updateAntsList();
+
     window.setInterval(update.bind(player, interval), interval);
     
 });
@@ -43,6 +49,11 @@ function update(interval) {
     handle();
 
     this.updateResourceBar();
+
+    const updateAntsList = UpdateAntsList.bind(this);
+    updateAntsList();
+
+
 }
 
 

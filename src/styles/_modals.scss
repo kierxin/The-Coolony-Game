@@ -90,6 +90,7 @@
                 font-family: vars.$kanit;
                 font-size: 1rem;
                 margin: 0 15px;
+                word-spacing: 3px;
             }
 
             #assign-task-form {
@@ -99,7 +100,7 @@
             }
 
             #assign-task-form select {
-                width: 150px;
+                width: 200px;
                 height: 46px;
                 font-size: 1rem;
                 color: vars.$off-white;
