@@ -55,6 +55,7 @@
             background-color: vars.$grid-container-bg;
             position: relative;
             z-index: 1;
+            flex-wrap: nowrap;
             
             .ants-list-item-column {
                 .ants-list-property-value {
@@ -72,14 +73,11 @@
         }
 
             .ants-list-under-item {
-                display: block;
-                border: 1px solid vars.$test-color-3;
+                display: none;
                 font-size: 1rem;
-                margin-top: -49px;
                 text-transform: uppercase;
                 font-family: Arial;
                 padding-left: 7px;
-                opacity: 0;
 
                 #assign-task-form {
                     display: inline-block;
