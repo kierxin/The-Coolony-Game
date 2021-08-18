@@ -72,6 +72,7 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 - Finish UI
 
 #### THU 8/19
+- Rename 'lameNamedCallback'
 - Look to refactor/dry up any code that could use some cleaning (especially modals-related code)
 - Deploy (GitHub Pages)
 

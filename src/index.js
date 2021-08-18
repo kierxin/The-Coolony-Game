@@ -3,7 +3,7 @@ const { ActivateModals } = require("./scripts/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
 const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
-const { AntsListModal } = require("./scripts/modals/antsListModal.js");
+const { AntsListModal } = require("./scripts/modals/antsListModal/antsListModal.js");
 
 // const { Draggable } = require("./scripts/draggable.js");
 

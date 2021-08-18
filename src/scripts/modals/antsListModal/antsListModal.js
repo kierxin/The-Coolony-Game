@@ -1,9 +1,9 @@
-const { MakeDOMListItem } = require("./makeDOMListItem");
+const { MakeDOMListItem } = require("./makeDOMListItem.js");
+const { LameNamedCallback } = require("./lameNamedCallback.js");
 
 
 export function AntsListModal(player, board) {
 
-    const antsList = document.getElementById("ants-list");
     const ants = player.ants;
 
     const antListItems = [];
