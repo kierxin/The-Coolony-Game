@@ -7,6 +7,7 @@ export function Player () {
     this.clay = 60;
     this.gold = 0;
     this.ants = [];
+    this.lastAnt = null;
 
 }
 

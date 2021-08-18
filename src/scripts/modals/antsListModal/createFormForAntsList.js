@@ -14,10 +14,7 @@ export function CreateFormForAntsList (potentialTasks) {
         const opt = document.createElement("option");
         opt.setAttribute("value", `${task[0]}`);
         opt.innerHTML = `[${task[0]}]: ${task[1]}`;
-        // opt.addEventListener("click", function() {
-        //     console.log("selected");
-        //     form.setAttribute("name", `${task[0]}`);
-        // }.bind(opt));
+        
         select.appendChild(opt);
     })
 

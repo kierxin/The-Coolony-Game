@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ListClickEvents();
 
-    AntsListAssignTask();
+    AntsListAssignTask(player, board);
 
     // window.setInterval(update.bind(player), 2000);
     

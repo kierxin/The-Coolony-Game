@@ -24,6 +24,7 @@ export function BoardWithTilesProperties() {
         const tileName = `tile${position[0]}${position[1]}`;
 
         board[tileName] = {};
+        board[tileName].coordinates = [position[1], position[0]];
         board[tileName].tileType = type[0];
         board[tileName].visibility = DetermineVisibility(type);
         board[tileName].resourceType = DetermineResourceType(board[tileName].tileType);
