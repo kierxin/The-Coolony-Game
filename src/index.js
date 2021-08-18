@@ -6,6 +6,7 @@ const { Ant } = require("./scripts/ant.js");
 const { AntsListModal } = require("./scripts/modals/antsListModal/antsListModal.js");
 const { ListClickEvents } = require("./scripts/modals/antsListModal/listClickEvents.js");
 const { AntsListAssignTask } = require("./scripts/updateHelpers/antsListAssignTask.js");
+const { HandleCompletedTasks } = require("./scripts/updateHelpers/handleCompletedTasks.js");
 
 // const { Draggable } = require("./scripts/draggable.js");
 
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const player = new Player();
     const ant1 = new Ant(player);
     const ant2 = new Ant(player);
+    const interval = 5000;
 
     AntsListModal(player, board);
 
@@ -27,32 +29,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     AntsListAssignTask(player, board);
 
-    // window.setInterval(update.bind(player), 2000);
+    window.setInterval(update.bind(player, interval), interval);
     
 });
 
 
-function update() {
-    console.log(this);
-    temp(this);
+function update(interval) {
+    let completers = [];
+
+    const decr = decrementAntDurations.bind(this, interval);
+    // const check = checkForAntsNearCompletion.bind(this, interval);
+
+    completers = decr();
+    // nearlyDoneAnts = check();
+    completers = HandleCompletedTasks(completers, this);
+    console.log(`completers after handled: ${completers}`);
     this.updateResourceBar();
+    // this.updateAntsList
 }
 
 
-function temp(player) {
-    player.loot += 100;
-    player.wood += 30;
-    player.clay += 20;
-    player.gold += 1;
+function decrementAntDurations(interval) {
+    const completers = [];
+
+    this.ants.forEach(ant => {
+        if (ant.duration > 0) {
+            ant.duration -= interval;
+        } else if (ant.status !== 'idle') {
+            ant.status = 'idle';
+            ant.duration = null;
+            completers.push(ant);
+        }
+    })
+
+    return completers;
 }
 
 
 // UPDATE FUNCTION (INTERVAL CALLBACK)
 
-//      subtracts 5 from all ants' duration 
-//          (when an ant is given a new task, set that ant's duration to the duration of the task, & set the ant's status to that task)
-
-//      for each ant whose duration <= 0, call the completion function of the association task; for a resource task like clay, for example,  the completion function for clay would add (Math.floor(Math.random*5)) clay to Player.clay
+//      for each ant whose duration <= 0, call the completion function, passing in the corresponding task; for a resource task like clay, for example,  the completion function would add (Math.floor(Math.random*5)) clay to Player.clay
 //      and set the ant's status back to idle
-
-//      calls updateResourceBar
