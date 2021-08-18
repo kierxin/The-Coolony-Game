@@ -16,22 +16,14 @@ export function UpdateAntsList () {
         }
     });
 
-    console.log(this.ants);
-    // console.log(properties);
 
     items.forEach((item, i) => {
 
-        // console.log(this.ants[i]);
         for (let j = 0; j < properties.length; j++) {
             item.children[j].children[0].innerHTML = this.ants[i][properties[j]];
 
             //hard-coded to parse position:
             item.children[1].children[0].innerHTML = this.ants[i][properties[1]].join(",");
-
-
-            // item.children[1].children[0].innerHTML = this.ants[i][properties[1]].split("").join(", ");
-
-            // console.log(item.children[i].children[0].innerHTML);
         }
     });
 }

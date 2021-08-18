@@ -1,6 +1,6 @@
 export function IsInteractive(tileType) {
 
-    const canBeInteractedWith = ["above", "beetle", "spider", "clay", "gold", "eat", "sleep", "nurse", "excavate"];
+    const canBeInteractedWith = ["food", "wood", "beetle", "spider", "clay", "gold", "eat", "sleep", "nurse", "excavate"];
 
     if (!canBeInteractedWith.includes(tileType)) {
         return false;

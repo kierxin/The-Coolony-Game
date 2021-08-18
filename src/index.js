@@ -32,9 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // const updateAntsList = UpdateAntsList.bind(player);
-    // updateAntsList();
-
     window.setInterval(update.bind(player, interval), interval);
     
 });
@@ -52,8 +49,6 @@ function update(interval) {
 
     const updateAntsList = UpdateAntsList.bind(this);
     updateAntsList();
-
-
 }
 
 

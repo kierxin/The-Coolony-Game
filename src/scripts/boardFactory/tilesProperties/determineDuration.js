@@ -1,10 +1,12 @@
 export function DetermineDuration(tileType) {
     
-    const typesThatHaveDuration = ["above", "clay", "gold", "excavate", "eat", "sleep", "nurse"];
+    const typesThatHaveDuration = ["food", "wood", "clay", "gold", "excavate", "eat", "sleep", "nurse"];
 
     if (!typesThatHaveDuration.includes(tileType)) {
         return null;
-    } else if (tileType === "above") {
+    } else if (tileType === "food") {
+        return .2;  // 3; // minutes
+    } else if (tileType === "wood") {
         return .2;  // 3; // minutes
     } else if (tileType === "clay") {
         return .2;  // 5;

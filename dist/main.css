@@ -186,16 +186,16 @@ nav {
   border-top: 1px solid #8f9d72;
 }
 
-.tile-type-above {
+.tile-type-wood {
   background-color: #816249;
   background-image: url("../src/images/above.png");
 }
 
-.tile-type-above:hover {
+.tile-type-wood:hover {
   box-shadow: 0 0 20px rgba(246, 218, 71, 0.5) inset;
 }
 
-.tile-type-above:hover::before {
+.tile-type-wood:hover::before {
   color: #8f9d72;
   font-family: "Chau Philomene One", sans-serif;
   position: relative;
@@ -205,7 +205,29 @@ nav {
   color: #ffc64a;
   top: 0;
   left: 14px;
-  content: "above";
+  content: "wood";
+}
+
+.tile-type-food {
+  background-color: #816249;
+  background-image: url("../src/images/above.png");
+}
+
+.tile-type-food:hover {
+  box-shadow: 0 0 20px rgba(246, 218, 71, 0.5) inset;
+}
+
+.tile-type-food:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  color: #ffc64a;
+  top: 0;
+  left: 14px;
+  content: "food";
 }
 
 .tile-type-beetle {

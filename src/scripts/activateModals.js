@@ -84,11 +84,9 @@ function toggleStatsModal() {
 // function toggleModal(node, child, modal) {
 
 //     if (node.classList.contains(`${modal}`)) {
-//         console.log('contains');
 //         node.classList.remove(`${modal}`);
 //         child.classList.remove(`${modal}-content`);
 //     } else {
-//         console.log("doesn't contain");
 //         node.classList.add(`${modal}`);
 //         child.classList.add(`${modal}-content`);
 //     }

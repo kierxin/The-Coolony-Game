@@ -19,7 +19,6 @@ export function Draggable() {
     // visuallyShiftGrid(e);
     function calculateMouseMoveDistance(e) {
         scrollPositions.push([e.clientX, e.clientY]);
-        // console.log(scrollPositions[scrollPositions.length - 2]);
     }
 
     function visuallyShiftGrid(e) {

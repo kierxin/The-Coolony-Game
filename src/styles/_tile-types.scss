@@ -9,25 +9,49 @@
     letter-spacing: 2px;
 }
 
-
-// ALPHABETIZED
-
-.tile-type-above {
+@mixin tile-type-above {
     background-color: vars.$tunnel-bg;
     background-image: url('../src/images/above.png');
 }
 
-.tile-type-above:hover {
+@mixin tile-type-above-hover {
     box-shadow: 0 0 20px rgb(246, 218, 71, .5) inset;
 }
 
-.tile-type-above:hover::before {
+@mixin tile-type-above-hover-before {
     @include interactive-hover-before();
     color: vars.$gold;
     top: 0;
     left: 14px;
-    content: "above";
 }
+
+// ALPHABETIZED
+.tile-type-wood {
+    @include tile-type-above();
+}
+
+.tile-type-wood:hover {
+    @include tile-type-above-hover();
+}
+
+.tile-type-wood:hover::before {
+    @include tile-type-above-hover-before();
+    content: "wood";
+}
+
+.tile-type-food {
+    @include tile-type-above();
+}
+
+.tile-type-food:hover {
+    @include tile-type-above-hover();
+}
+
+.tile-type-food:hover::before {
+    @include tile-type-above-hover-before();
+    content: "food";
+}
+
 
 .tile-type-beetle {
     background-image: url('../src/images/beetle.png');
