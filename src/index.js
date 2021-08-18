@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     antsList(board);
 
 
-
     window.setInterval(update.bind(player, interval), interval);
     
 });
