@@ -20,7 +20,7 @@ export function PutAntRowsIntoDOM (item, board) {
     const pos = item[0].children[1].children[0].innerHTML;
     const status = item[0].children[2].children[0].innerHTML;
 
-    item[1].innerHTML = `Ant ${id} at [${pos.split(",").join(", ")}]: ${status}`;
+    item[1].innerHTML = `<p id="under-pre-form">Ant ${id} at [${pos.split(",").join(", ")}]: ${status}</p>`;
 
 
     const form = CreateFormForAntsList(potentialTasks);

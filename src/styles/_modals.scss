@@ -71,56 +71,74 @@
                 font-variant: small-caps;
             }
         }
+            
+        .ants-list-item:hover {
+            color: rgb(235, 197, 153);
+            cursor: pointer;
+        }
 
-            .ants-list-under-item {
-                display: none;
+        .ants-list-under-item {
+            display: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding-left: 7px;
+
+            #under-pre-form {
+                display: inline-block;
+                font-family: vars.$kanit;
+                font-size: 1rem;
+                margin: 0 15px;
+            }
+
+            #assign-task-form {
+                display: inline-block;
+                margin-left: 50px;
+                overflow: hidden;
+            }
+
+            #assign-task-form select {
+                width: 150px;
+                height: 46px;
+                font-size: 1rem;
+                color: vars.$off-white;
+                background-color: vars.$sides-bg;
+                text-transform: uppercase;
+                font-family: vars.$kanit;
+                margin: 0 5px;
+                cursor: pointer;
+            }
+
+            #assign-task-form label {
+                display: inline-block;
+                width: 120px;
+                height: 30px;
+                margin-top: 8px;
+                margin-right: 5px;
                 font-size: 1rem;
                 text-transform: uppercase;
-                font-family: Arial;
-                padding-left: 7px;
-
-                #assign-task-form {
-                    display: inline-block;
-                    margin-left: 30px;
-                    overflow: hidden;
-                }
-
-                #assign-task-form select {
-                    width: 150px;
-                    height: 46px;
-                    font-size: 1rem;
-                    color: vars.$off-white;
-                    background-color: vars.$sides-bg;
-                    text-transform: uppercase;
-                    font-family: vars.$kanit;
-                }
-
-                #assign-task-form label {
-                    display: inline-block;
-                    width: 120px;
-                    height: 30px;
-                    font-size: .9rem;
-                    text-transform: uppercase;
-                    font-family: vars.$kanit;
-                }
-
-                #assign-task-form input {
-                    background-color: vars.$sides-bg;
-                    color: vars.$off-white;
-                    height: 30px;
-                    text-transform: uppercase;
-                    font-family: vars.$kanit;
-                    margin-left: 10px;
-                    box-shadow: none;
-                    text-shadow: none;
-                    border-radius: 5px;
-                    border: none;
-                }
-
-                #assign-task-form input:hover {
-                    opacity: .9;
-                }
+                font-family: vars.$kanit;
             }
+
+            #assign-task-form input {
+                background-color: vars.$sides-bg;
+                color: vars.$off-white;
+                height: 30px;
+                text-transform: uppercase;
+                font-family: vars.$kanit;
+                margin-left: 10px;
+                box-shadow: none;
+                text-shadow: none;
+                border-radius: 5px;
+                border: none;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                cursor: pointer;
+            }
+
+            #assign-task-form input:hover {
+                opacity: .9;
+            }
+        }
     }
 }
 

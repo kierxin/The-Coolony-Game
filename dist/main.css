@@ -561,16 +561,25 @@ nav {
   font-size: 1.5rem;
   font-variant: small-caps;
 }
+.ants-list-modal-content #ants-list .ants-list-item:hover {
+  color: #ebc599;
+  cursor: pointer;
+}
 .ants-list-modal-content #ants-list .ants-list-under-item {
   display: none;
   font-size: 1rem;
   text-transform: uppercase;
-  font-family: Arial;
   padding-left: 7px;
+}
+.ants-list-modal-content #ants-list .ants-list-under-item #under-pre-form {
+  display: inline-block;
+  font-family: "Kanit", sans-serif;
+  font-size: 1rem;
+  margin: 0 15px;
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form {
   display: inline-block;
-  margin-left: 30px;
+  margin-left: 50px;
   overflow: hidden;
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form select {
@@ -581,12 +590,16 @@ nav {
   background-color: #503731;
   text-transform: uppercase;
   font-family: "Kanit", sans-serif;
+  margin: 0 5px;
+  cursor: pointer;
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form label {
   display: inline-block;
   width: 120px;
   height: 30px;
-  font-size: 0.9rem;
+  margin-top: 8px;
+  margin-right: 5px;
+  font-size: 1rem;
   text-transform: uppercase;
   font-family: "Kanit", sans-serif;
 }
@@ -601,6 +614,9 @@ nav {
   text-shadow: none;
   border-radius: 5px;
   border: none;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form input:hover {
   opacity: 0.9;

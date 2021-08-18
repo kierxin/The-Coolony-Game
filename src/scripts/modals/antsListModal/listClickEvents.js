@@ -15,7 +15,6 @@ export function ListClickEvents () {
             } else {
                 under[i].style.display = "block";
                 under[i].setAttribute("display", "block");
-                console.log(under[i].getAttribute("display"));
             }
 
             under[i].style.opacity = 1;
