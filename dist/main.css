@@ -202,6 +202,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   color: #ffc64a;
   top: 0;
   left: 14px;
@@ -224,6 +225,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   color: #ffc64a;
   top: 0;
   left: 14px;
@@ -241,6 +243,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   color: #9c2222;
   left: 14px;
   content: "beetle";
@@ -265,6 +268,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   left: 12px;
   color: #f8b575;
   content: "clay";
@@ -285,6 +289,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   color: #c0dd81;
   left: 10px;
   content: "eat";
@@ -307,6 +312,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   left: 25px;
   color: #e0d3c2;
   content: "dig";
@@ -327,6 +333,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   left: 13px;
   color: #ffc64a;
   content: "gold!";
@@ -352,6 +359,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   left: 5px;
   color: #e7d37b;
   content: "nursery";
@@ -372,6 +380,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   left: 16px;
   color: #d4c8df;
   content: "sleep";
@@ -392,6 +401,7 @@ nav {
   font-size: 1rem;
   top: -22px;
   letter-spacing: 2px;
+  pointer-events: none;
   left: 12px;
   color: #9c2222;
   content: "spider";
