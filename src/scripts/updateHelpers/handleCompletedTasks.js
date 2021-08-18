@@ -12,6 +12,11 @@ export function HandleCompletedTasks(completers, board) {
 
             this[task] += 10;
             ant.status = "idle";
+
+            // re-enable click event on the ants list modal for this ant:
+            const overs = document.querySelectorAll(".over");
+            overs[antIdx].style.pointerEvents = "auto";
+            overs[antIdx].style.opacity = "1";
         }
     }
 
