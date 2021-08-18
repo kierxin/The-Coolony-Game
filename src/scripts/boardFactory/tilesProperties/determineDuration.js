@@ -5,18 +5,18 @@ export function DetermineDuration(tileType) {
     if (!typesThatHaveDuration.includes(tileType)) {
         return null;
     } else if (tileType === "above") {
-        return .3;  // 3; // minutes
+        return .2;  // 3; // minutes
     } else if (tileType === "clay") {
-        return .3;  // 5;
+        return .2;  // 5;
     } else if (tileType === "gold") {
-        return .3;  // 15;
+        return .2;  // 15;
     } else if (tileType === "excavate") {
-        return .3;  // 120;
+        return .2;  // 120;
     } else if (tileType === "eat") {
-        return .3;  // 3;
+        return .2;  // 3;
     } else if (tileType === "sleep") {
-        return .3;  // 60;
+        return .2;  // 60;
     } else if (tileType === "nurse") {
-        return .3;  // 360;
+        return .2;  // 360;
     }
 }

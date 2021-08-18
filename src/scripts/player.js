@@ -8,6 +8,7 @@ export function Player () {
     this.gold = 0;
     this.ants = [];
     this.lastAnt = null;
+    this.completers = [];
 
 }
 

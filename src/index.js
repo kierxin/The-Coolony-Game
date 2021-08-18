@@ -1,3 +1,4 @@
+// const { Draggable } = require("./scripts/draggable.js");
 const { BoardWithTilesProperties } = require("./scripts/boardFactory/boardWithTilesProperties.js");
 const { ActivateModals } = require("./scripts/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
@@ -7,8 +8,6 @@ const { AntsListModal } = require("./scripts/modals/antsListModal/antsListModal.
 const { ListClickEvents } = require("./scripts/modals/antsListModal/listClickEvents.js");
 const { AntsListSubmitListener } = require("./scripts/updateHelpers/antsListSubmitListener.js");
 const { HandleCompletedTasks } = require("./scripts/updateHelpers/handleCompletedTasks.js");
-
-// const { Draggable } = require("./scripts/draggable.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const player = new Player();
     const ant1 = new Ant(player);
     const ant2 = new Ant(player);
-    const interval = 2000;
+    const interval = 5000;
 
     AntsListModal(player, board);
 
@@ -30,48 +29,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const antsList = AntsListSubmitListener.bind(player, board);
     antsList(board);
 
-    window.setInterval(update.bind(player, interval, board), interval);
+    window.setInterval(update.bind(player, interval), interval);
     
 });
 
 
-function update(interval, board) {
+function update(interval) {
 
-    const decr = decrementAntDurations.bind(this, interval, board);
+    const decr = decrementAntDurations.bind(this, interval);
     decr(interval);
 
-    // const antsList = AntsListSubmitListener.bind(this, board);
-    // antsList(board);
+    const handle = HandleCompletedTasks.bind(this);
+    handle();
 
     this.updateResourceBar();
-
 }
 
 
-function decrementAntDurations(interval, board) {
-    const completers = [];
+function decrementAntDurations(interval) {
 
     for (const antIdx in this.ants) {
         const ant = this.ants[antIdx];
-
-        if (ant.duration > 0) {
-            ant.duration -= interval;
-
-            if (ant.duration <= 0) {
-                completers.push(ant)
-                ant.duration = null;
-            }
-        }
+        if (ant.duration > 0) ant.duration -= interval; 
     }
 
-    if (completers.length > 0) {
-        const handle = HandleCompletedTasks.bind(this, completers, board);
-        handle(completers, board);
+    for (const antIdx in this.ants) {
+        const ant = this.ants[antIdx];
+        if (ant.duration <= 0 && ant.status !== 'idle') this.completers.push(ant);
     }
 }
-
-
-// UPDATE FUNCTION (INTERVAL CALLBACK)
-
-//      for each ant whose duration <= 0, call the completion function, passing in the corresponding task; for a resource task like clay, for example,  the completion function would add (Math.floor(Math.random*5)) clay to Player.clay
-//      and set the ant's status back to idle

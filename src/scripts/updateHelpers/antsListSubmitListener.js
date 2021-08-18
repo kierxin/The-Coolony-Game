@@ -48,16 +48,9 @@ export function AntsListSubmitListener(board) {
 
             place.currentAnts.ant = this.ants[ant];
 
-            console.log(this.ants[ant])
-
-            if (this.ants[ant].status === 'idle' || this.ants[ant].status === null) {
-                this.ants[ant].status = place.tileType;
-                this.ants[ant].position = pos;
-                this.ants[ant].duration = place.durationInMinutes * 60000;
-            } else {
-                console.log("occupied!");
-            }
-
+            this.ants[ant].status = place.tileType;
+            this.ants[ant].position = pos;
+            this.ants[ant].duration = place.durationInMinutes * 60000;
         });
     });
 

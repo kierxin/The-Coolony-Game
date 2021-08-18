@@ -1,24 +1,30 @@
-export function HandleCompletedTasks(completers, board) {
-    console.log(completers);
-    // console.log(this);
+export function HandleCompletedTasks() {
+    const completers = this.completers;
 
     if (completers.length > 0) {
 
         for (const antIdx in completers) {
-            const ant = this.ants[antIdx];
-            const task = ant.status;
+            const antId = completers[antIdx].id;
+            let ant;
 
-            console.log(ant);
+            for (let playerAnt in this.ants) {
+                if (this.ants[playerAnt].id === antId) {
+                    ant = this.ants[playerAnt];
+                }
+            }
+
+            const task = ant.status;
 
             this[task] += 10;
             ant.status = "idle";
+            ant.duration = null;
 
             // re-enable click event on the ants list modal for this ant:
             const overs = document.querySelectorAll(".over");
-            overs[antIdx].style.pointerEvents = "auto";
-            overs[antIdx].style.opacity = "1";
+            overs[ant.id - 1].style.pointerEvents = "auto";
+            overs[ant.id - 1].style.opacity = "1";
         }
     }
 
-    return [];
+    this.completers = [];
 }

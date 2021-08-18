@@ -3,7 +3,6 @@ export function ListClickEvents () {
     const over = document.querySelectorAll(".over");
     const under = document.querySelectorAll(".under");
 
-
     for (let i = 0; i < over.length; i++) {
         over[i].addEventListener("click", overListener);
 
