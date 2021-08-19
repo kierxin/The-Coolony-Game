@@ -508,6 +508,22 @@ nav {
   cursor: pointer;
 }
 
+.cancel-btn {
+  color: #e7e7e7;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -300px;
+  width: 300px;
+  height: 30px;
+  background-color: #8f9d72;
+  border: 1px solid #5c7253;
+  font-size: 1rem;
+}
+
+.cancel-btn:hover {
+  cursor: pointer;
+}
+
 .grid-window {
   position: absolute;
   bottom: 20px;

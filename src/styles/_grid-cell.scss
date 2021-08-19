@@ -66,3 +66,19 @@
 .confirm-btn:hover {
     cursor: pointer;
 }
+
+.cancel-btn {
+    color: vars.$off-white;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -300px;
+    width: 300px;
+    height: 30px;
+    background-color: vars.$how-to-bg-darkened;
+    border: 1px solid rgb(92, 114, 83);
+    font-size: 1rem;
+}
+
+.cancel-btn:hover {
+    cursor: pointer;
+}

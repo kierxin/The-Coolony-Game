@@ -2,7 +2,6 @@ export function Diggable(diggables, player) {
 
     console.log("hi");
 
-
     const verifyExacavation = document.createElement("div");
     verifyExacavation.classList.add("verify-excavation");
 
@@ -15,20 +14,30 @@ export function Diggable(diggables, player) {
     const confirmButton = document.createElement("button");
     confirmButton.classList = "confirm-btn";
     confirmButton.innerHTML = "confirm new excavation";
-    confirmButton.addEventListener("click", confirmHandler.bind(player), {once: true});
+    confirmButton.addEventListener("click", confirmHandler.bind(player));
 
-
-    this.appendChild(verifyExacavation);
-    this.appendChild(confirmButton);
+    const cancelButton = document.createElement("button");
+    cancelButton.classList = "cancel-btn";
+    cancelButton.innerHTML = "cancel";
+    cancelButton.addEventListener("click", cancelHandler.bind(player));
+    
+    if (this.children.length === 0){
+        this.appendChild(verifyExacavation);
+        this.appendChild(confirmButton);
+        this.appendChild(cancelButton);
+    }
 
 }
 
 
 
 function confirmHandler(e) {
-    console.log(this);
+
+
+    console.log("HI");
 
     if (this.loot >= 50 && this.wood >= 150 && this.clay >= 150) {
+
         this.loot -= 50;
         this.wood -= 150;
         this.clay -= 150;
@@ -38,10 +47,18 @@ function confirmHandler(e) {
         e.currentTarget.parentNode.classList.add("never-again-diggable");
 
     } else {
-        window.confirm("You can't afford this expansion yet.");
+        // window.confirm("You can't afford this expansion yet.");
     }
 
-    e.currentTarget.parentNode.removeChild(e.currentTarget.parentNode.children[0]);
-    e.currentTarget.parentNode.removeChild(e.currentTarget.parentNode.children[0]);
-    
+    e.currentTarget.parentNode.children[2].remove();
+    e.currentTarget.parentNode.children[0].remove();
+    e.currentTarget.parentNode.children[0].remove();
+}
+
+
+function cancelHandler(e) {
+    console.log("BYE");
+    e.currentTarget.parentNode.children[0].remove();
+    e.currentTarget.parentNode.children[0].remove();
+    e.currentTarget.parentNode.children[0].remove();
 }
