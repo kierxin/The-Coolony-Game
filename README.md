@@ -73,13 +73,15 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 #### THU 8/19
 - ✔ Deploy (GitHub Pages)
 - If user's resources all === starting values, then have graphic prompting user to assign a task
-- Attempt to put little ant icons onto tiles
-- Add hover & click event (quick assign) to ant icons
+- Write how-to
+- Hover a tile to see a basic list of the ants on that tile (ID, progress)
 - Enable user to click the nursery to upgrade it or view larvae progress
 
 ### Bonus Features (Future Goals)
 1. ✔ Game tile graphics
 1. Look to refactor/dry up any code that could use some cleaning (especially modals-related code)
+1. Attempt to put little ant icons onto tiles
+1. Add hover & click event (quick assign) to ant icons
 1. Ant drag & drop
 1. Animation of ants running between task sites (shortest-path algorithm)
 1. Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)

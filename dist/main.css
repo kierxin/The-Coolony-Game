@@ -199,7 +199,7 @@ nav {
   letter-spacing: 2px;
   pointer-events: none;
   color: #9c2222;
-  left: 14px;
+  left: 18px;
   content: "beetle";
 }
 
@@ -314,7 +314,7 @@ nav {
   top: -22px;
   letter-spacing: 2px;
   pointer-events: none;
-  left: 5px;
+  left: 8px;
   color: #e7d37b;
   content: "nursery";
 }
@@ -356,7 +356,7 @@ nav {
   top: -22px;
   letter-spacing: 2px;
   pointer-events: none;
-  left: 12px;
+  left: 15px;
   color: #9c2222;
   content: "spider";
 }
@@ -416,9 +416,18 @@ nav {
   top: -22px;
   letter-spacing: 2px;
   pointer-events: none;
-  left: 25px;
+  left: 30px;
   color: #e0d3c2;
   content: "dig";
+}
+
+.diggable {
+  border: 1px solid yellow;
+  background-color: #e7e7e7;
+}
+
+.diggable:hover {
+  opacity: 0.9;
 }
 
 .grid-cell {
@@ -752,4 +761,10 @@ nav {
 }
 .game-icons-container img:active {
   opacity: 1;
+}
+.game-icons-container #build-mode {
+  border-radius: 6px;
+  background-color: #e2d9d1;
+  box-shadow: 0 0 3px #503731 inset;
+  border: 1px solid #503731;
 }

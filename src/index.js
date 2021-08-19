@@ -11,6 +11,7 @@ const { HandleCompletedTasks } = require("./scripts/updateHelpers/handleComplete
 const { UpdateAntsListOvers } = require("./scripts/updateHelpers/updateAntsListOvers.js");
 const { DecayEnergyAppetite } = require("./scripts/updateHelpers/decayEnergyAppetite.js");
 const { EnergyAppetiteDepletion } = require("./scripts/updateHelpers/energyAppetiteDepletion.js");
+const { BuildModeListener } = require("./scripts/buildModeListener.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ConstructBoardInDOM(board);
     ActivateModals();
+    const activateBuildListener = BuildModeListener.bind(this, board);
+    activateBuildListener(board);
 
     const player = new Player();
     const ant1 = new Ant(player);

@@ -34,7 +34,7 @@
 .tile-type-beetle:hover::before {
     @include interactive-hover-before();
     color: vars.$hostile;
-    left: 14px;
+    left: 18px;
     content: "beetle";
 }
 
@@ -115,7 +115,7 @@
 
 .tile-type-nurse:hover::before {
     @include interactive-hover-before();
-    left: 5px;
+    left: 8px;
     color: rgb(231, 211, 123);
     content: "nursery";
 }
@@ -145,7 +145,7 @@
 
 .tile-type-spider:hover::before {
     @include interactive-hover-before();
-    left: 12px;
+    left: 15px;
     color: vars.$hostile;
     content: "spider";
 }
@@ -178,6 +178,7 @@
 }
 
 
+
 // the excavate-related rules must go last to override other tileTypes
 //      so that the other tileType can be retained but the tile
 //      appears as an 'excavate' tile
@@ -193,7 +194,21 @@
 
 .tile-type-excavate:hover::before {
     @include interactive-hover-before();
-    left: 25px;
+    left: 30px;
     color: rgb(224, 211, 194);
     content: "dig";
+}
+
+
+
+// the diggable-related rules must go last to override other tileTypes
+//      so that the other tileType can be retained but the tile
+//      appears as a 'diggable' tile
+.diggable {
+    border: 1px solid vars.$test-color-2;
+    background-color: vars.$off-white;
+}
+
+.diggable:hover {
+    opacity: .9;
 }

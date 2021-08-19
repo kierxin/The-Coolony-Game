@@ -83,4 +83,11 @@
     img:active {
         opacity: 1;
     }
+
+    #build-mode {
+        border-radius: 6px;
+        background-color: vars.$off-white-darkened;
+        box-shadow: 0 0 3px vars.$sides-bg inset;
+        border: 1px solid vars.$sides-bg;
+    }
 }
