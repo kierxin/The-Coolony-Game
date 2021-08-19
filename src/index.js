@@ -12,6 +12,7 @@ const { UpdateAntsListOvers } = require("./scripts/updateHelpers/updateAntsListO
 const { DecayEnergyAppetite } = require("./scripts/updateHelpers/decayEnergyAppetite.js");
 const { EnergyAppetiteDepletion } = require("./scripts/updateHelpers/energyAppetiteDepletion.js");
 const { BuildModeListener } = require("./scripts/buildModeListener.js");
+const { Diggable } = require("./scripts/diggable.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.setInterval(update.bind(player, interval, board), interval);
     
+
 });
 
 

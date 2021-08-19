@@ -204,11 +204,19 @@
 // the diggable-related rules must go last to override other tileTypes
 //      so that the other tileType can be retained but the tile
 //      appears as a 'diggable' tile
-.diggable {
-    border: 1px solid vars.$test-color-2;
-    background-color: vars.$off-white;
+.tile-type-diggable {
+    background-color: vars.$sides-bg !important;
+    background-image: url('../src/images/excavate.png');
 }
 
-.diggable:hover {
+.tile-type-diggable:hover {
     opacity: .9;
+    cursor: pointer;
+}
+.tile-type-diggable:hover::before {
+    @include interactive-hover-before();
+    top: 28px;
+    left: 2px;
+    content: "choose";
+    color: vars.$off-white;
 }

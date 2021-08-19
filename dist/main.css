@@ -421,13 +421,28 @@ nav {
   content: "dig";
 }
 
-.diggable {
-  border: 1px solid yellow;
-  background-color: #e7e7e7;
+.tile-type-diggable {
+  background-color: #503731 !important;
+  background-image: url("../src/images/excavate.png");
 }
 
-.diggable:hover {
+.tile-type-diggable:hover {
   opacity: 0.9;
+  cursor: pointer;
+}
+
+.tile-type-diggable:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  pointer-events: none;
+  top: 28px;
+  left: 2px;
+  content: "choose";
+  color: #e7e7e7;
 }
 
 .grid-cell {
