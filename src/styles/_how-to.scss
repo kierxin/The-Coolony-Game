@@ -1,10 +1,38 @@
 @use 'vars';
 
 .how-to {
-    height: 800px;
+    // height: 800px;
     width: 100%;
     background-color: vars.$how-to-bg-darkened;
     z-index: 30;
     background: linear-gradient(vars.$how-to-bg-darkened, vars.$non-tunnel-bg, vars.$non-tunnel-bg, vars.$non-tunnel-bg, vars.$grid-container-bg);
     border-top: 1px solid vars.$how-to-bg-darkened;
+
+    h1 {
+        font-size: 3rem;
+        font-family: vars.$boogaloo;
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 90px;
+        color: vars.$off-white;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-family: vars.$boogaloo;
+        text-align: justify;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 30px;
+        color: vars.$sides-bg-darkened;
+    }
+
+    p:first-child {
+        padding-top: 40px;
+    }
+
+    p:last-child {
+        padding-bottom: 90px;
+    }
 }

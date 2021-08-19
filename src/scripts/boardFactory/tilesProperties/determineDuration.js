@@ -19,6 +19,6 @@ export function DetermineDuration(tileType) {
     } else if (tileType === "nurse") {
         return 60;
     } else if (tileType === "excavate") {
-        return .1; //when changing, also change antsSubmitListener.js
+        return 120; //when changing, also change antsSubmitListener.js
     }
 }

@@ -47,7 +47,7 @@ function confirmHandler(e) {
         e.currentTarget.parentNode.classList.add("never-again-diggable");
 
     } else {
-        // window.confirm("You can't afford this expansion yet.");
+        window.confirm("You can't afford this expansion yet.");
     }
 
     e.currentTarget.parentNode.children[2].remove();

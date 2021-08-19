@@ -178,12 +178,35 @@ nav {
 }
 
 .how-to {
-  height: 800px;
   width: 100%;
   background-color: #8f9d72;
   z-index: 30;
   background: linear-gradient(#8f9d72, #9c7c5b, #9c7c5b, #9c7c5b, #695042);
   border-top: 1px solid #8f9d72;
+}
+.how-to h1 {
+  font-size: 3rem;
+  font-family: "Boogaloo", cursive;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 90px;
+  color: #e7e7e7;
+  text-align: center;
+}
+.how-to p {
+  font-size: 1.2rem;
+  font-family: "Boogaloo", cursive;
+  text-align: justify;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #3a2823;
+}
+.how-to p:first-child {
+  padding-top: 40px;
+}
+.how-to p:last-child {
+  padding-bottom: 90px;
 }
 
 .tile-type-beetle {
