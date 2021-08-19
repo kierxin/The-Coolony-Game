@@ -37,3 +37,32 @@
 .non-tunnel {
     background-color: vars.$non-tunnel-bg;
 }
+
+.verify-excavation {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 30px;
+    border: 1px solid rgb(92, 114, 83);
+    pointer-events: none;
+    background-color: vars.$how-to-bg-darkened;
+    font-size: .9rem;
+    padding-top: 5px;
+}
+
+.excavate-cost {
+    color: vars.$off-white;
+}
+
+.confirm-btn {
+    color: vars.$off-white;
+    width: 300px;
+    height: 30px;
+    background-color: vars.$how-to-bg-darkened;
+    border: 1px solid rgb(92, 114, 83);
+    font-size: 1rem;
+}
+
+.confirm-btn:hover {
+    cursor: pointer;
+}

@@ -78,13 +78,15 @@ export function BuildModeListener(board) {
                 grid.children[gridCellPosition].classList.add("hidden-from-player");
 
             } else {
+                if (!grid.children[gridCellPosition].classList.contains("never-again-diggable")) {
+                    grid.children[gridCellPosition].classList.add("tile-type-diggable");
 
-                grid.children[gridCellPosition].classList.add("tile-type-diggable");
+                    grid.children[gridCellPosition].addEventListener("click", Diggable.bind(grid.children[gridCellPosition], grid.children), { once: true });
 
-                grid.children[gridCellPosition].addEventListener("click", Diggable.bind(grid.children[gridCellPosition]));
-
-                grid.children[gridCellPosition].classList.remove("hidden-from-player");
+                    grid.children[gridCellPosition].classList.remove("hidden-from-player");
+                }
             }
+            
         }
     });
 }

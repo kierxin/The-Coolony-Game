@@ -479,6 +479,35 @@ nav {
   background-color: #9c7c5b;
 }
 
+.verify-excavation {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 30px;
+  border: 1px solid #5c7253;
+  pointer-events: none;
+  background-color: #8f9d72;
+  font-size: 0.9rem;
+  padding-top: 5px;
+}
+
+.excavate-cost {
+  color: #e7e7e7;
+}
+
+.confirm-btn {
+  color: #e7e7e7;
+  width: 300px;
+  height: 30px;
+  background-color: #8f9d72;
+  border: 1px solid #5c7253;
+  font-size: 1rem;
+}
+
+.confirm-btn:hover {
+  cursor: pointer;
+}
+
 .grid-window {
   position: absolute;
   bottom: 20px;
