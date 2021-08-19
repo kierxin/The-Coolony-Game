@@ -45,7 +45,6 @@ export function BuildModeListener(board) {
 
                     if (tileType.includes("diggable")) {
                         if (tileType.includes("tunnel")) board[tile].tileType[0] === "-";
-                        // console.log(board[tile].tileType); // HERE
                         board[tile].tileType.split(",").pop();
                     } else {
                         if (tileType === "-") tileType = "tunnel";
@@ -81,12 +80,12 @@ export function BuildModeListener(board) {
                 if (!grid.children[gridCellPosition].classList.contains("never-again-diggable")) {
                     grid.children[gridCellPosition].classList.add("tile-type-diggable");
 
-                    grid.children[gridCellPosition].addEventListener("click", Diggable.bind(grid.children[gridCellPosition], grid.children), { once: true });
+                    grid.children[gridCellPosition].addEventListener("click", Diggable.bind(grid.children[gridCellPosition], grid.children, this), { once: true });
 
                     grid.children[gridCellPosition].classList.remove("hidden-from-player");
                 }
             }
-            
+
         }
     });
 }

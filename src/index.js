@@ -21,13 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     ConstructBoardInDOM(board);
     ActivateModals();
-    const activateBuildListener = BuildModeListener.bind(this, board);
-    activateBuildListener(board);
 
     const player = new Player();
     const ant1 = new Ant(player);
     const ant2 = new Ant(player);
     const interval = 500;
+
+    const activateBuildListener = BuildModeListener.bind(player, board);
+    activateBuildListener(board);
+
 
     AntsListModal(player, board);
 
