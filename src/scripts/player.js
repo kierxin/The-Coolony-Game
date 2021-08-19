@@ -4,7 +4,7 @@ export function Player () {
     this.loot = 0;
     this.food = 10;
     this.wood = 10;
-    this.clay = 60;
+    this.clay = 10;
     this.gold = 0;
     this.ants = [];
     this.lastAnt = null;
