@@ -27,6 +27,10 @@
         color: vars.$sides-bg-darkened;
     }
 
+    p#conclude-intro {
+        color: #ded2c2;
+    }
+
     p:first-child {
         padding-top: 40px;
     }
@@ -38,4 +42,5 @@
     p::selection {
         background: vars.$how-to-bg-darkened;
     }
+    
 }

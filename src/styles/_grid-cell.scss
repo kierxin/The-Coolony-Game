@@ -38,25 +38,22 @@
     display: block;
     position: relative;
     width: 300px;
-    height: 30px;
     border: 1px solid rgb(92, 114, 83);
     pointer-events: none;
     background-color: vars.$how-to-bg-darkened;
     font-size: .9rem;
-    padding-top: 5px;
-}
-
-.excavate-cost {
     color: vars.$off-white;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px 5px;
 }
 
 .confirm-btn {
     color: vars.$off-white;
     width: 300px;
-    height: 30px;
     background-color: vars.$how-to-bg-darkened;
     border: 1px solid rgb(92, 114, 83);
     font-size: 1rem;
+    padding: 10px 5px;
 }
 
 .confirm-btn:hover {
@@ -66,13 +63,14 @@
 .cancel-btn {
     color: vars.$off-white;
     position: absolute;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-left: -300px;
     width: 300px;
-    height: 30px;
     background-color: vars.$how-to-bg-darkened;
     border: 1px solid rgb(92, 114, 83);
     font-size: 1rem;
+    border-radius: 0 0 5px 5px;
+    padding: 10px 5px;
 }
 
 .cancel-btn:hover {
