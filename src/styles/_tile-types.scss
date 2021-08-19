@@ -27,33 +27,6 @@
 }
 
 // ALPHABETIZED
-.tile-type-wood {
-    @include tile-type-above();
-}
-
-.tile-type-wood:hover {
-    @include tile-type-above-hover();
-}
-
-.tile-type-wood:hover::before {
-    @include tile-type-above-hover-before();
-    content: "wood";
-}
-
-.tile-type-food {
-    @include tile-type-above();
-}
-
-.tile-type-food:hover {
-    @include tile-type-above-hover();
-}
-
-.tile-type-food:hover::before {
-    @include tile-type-above-hover-before();
-    content: "food";
-}
-
-
 .tile-type-beetle {
     background-image: url('../src/images/beetle.png');
 }
@@ -99,21 +72,17 @@
     content: "eat";
 }
 
-.tile-type-excavate {
-    background-color: vars.$tunnel-bg;
-    box-shadow: 0 0 1px black inset;
-    background-image: url('../src/images/excavate.png');
+.tile-type-food {
+    @include tile-type-above();
 }
 
-.tile-type-excavate:hover {
-    opacity: .9;
+.tile-type-food:hover {
+    @include tile-type-above-hover();
 }
 
-.tile-type-excavate:hover::before {
-    @include interactive-hover-before();
-    left: 25px;
-    color: rgb(224, 211, 194);
-    content: "dig";
+.tile-type-food:hover::before {
+    @include tile-type-above-hover-before();
+    content: "food";
 }
 
 .tile-type-gold {
@@ -193,4 +162,38 @@
 .tile-type-quartz {
     background-color: vars.$tunnel-bg;
     background-image: url('../src/images/ore.png');
+}
+
+.tile-type-wood {
+    @include tile-type-above();
+}
+
+.tile-type-wood:hover {
+    @include tile-type-above-hover();
+}
+
+.tile-type-wood:hover::before {
+    @include tile-type-above-hover-before();
+    content: "wood";
+}
+
+
+// the excavate-related rules must go last to override other tileTypes
+//      so that the other tileType can be retained but the tile
+//      appears as an 'excavate' tile
+.tile-type-excavate {
+    background-color: vars.$tunnel-bg;
+    box-shadow: 0 0 1px black inset;
+    background-image: url('../src/images/excavate.png');
+}
+
+.tile-type-excavate:hover {
+    opacity: .9;
+}
+
+.tile-type-excavate:hover::before {
+    @include interactive-hover-before();
+    left: 25px;
+    color: rgb(224, 211, 194);
+    content: "dig";
 }

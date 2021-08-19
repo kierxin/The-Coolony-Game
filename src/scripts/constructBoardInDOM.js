@@ -27,6 +27,11 @@ export function ConstructBoardInDOM(board) {
 
         gridCell.innerText = `${type}`;
         gridCell.classList.add(`tile-type-${type}`);
+
+        if (tile.excavated === false) {
+            gridCell.classList.add("tile-type-excavate");
+        }
+
         grid.appendChild(gridCell);
     }
 

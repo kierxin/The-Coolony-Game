@@ -1,4 +1,4 @@
-export function DetermineVisibility(type) {
+export function IsVisible(type) {
     if (type.includes("-") || type.includes("hidden")) {
         return false;
     }

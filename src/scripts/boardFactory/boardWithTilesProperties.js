@@ -1,8 +1,10 @@
+import { IsExcavated } from "./tilesProperties/isExcavated.js";
+
 // from BoardFactory:
 const { WholeBoardArr } = require("./populateBoard/wholeBoardArr.js");
 
 // from TilesProperties:
-const { DetermineVisibility } = require("./tilesProperties/determineVisibility.js");
+const { IsVisible } = require("./tilesProperties/isVisible.js");
 const { DetermineResourceType } = require("./tilesProperties/determineResourceType.js");
 const { IsInteractive } = require("./tilesProperties/isInteractive.js");
 const { DetermineNeighborTiles } = require("./tilesProperties/determineNeighborTiles.js");
@@ -26,7 +28,8 @@ export function BoardWithTilesProperties() {
         board[tileName] = {};
         board[tileName].coordinates = [position[1], position[0]];
         board[tileName].tileType = type[0];
-        board[tileName].visibility = DetermineVisibility(type);
+        board[tileName].visibility = IsVisible(type);
+        board[tileName].excavated = IsExcavated(type);
         board[tileName].resourceType = DetermineResourceType(board[tileName].tileType);
         board[tileName].interactive = IsInteractive(board[tileName].tileType);
         board[tileName].neighborTiles = DetermineNeighborTiles(position);

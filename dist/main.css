@@ -186,52 +186,6 @@ nav {
   border-top: 1px solid #8f9d72;
 }
 
-.tile-type-wood {
-  background-color: #816249;
-  background-image: url("../src/images/above.png");
-}
-
-.tile-type-wood:hover {
-  box-shadow: 0 0 20px rgba(246, 218, 71, 0.5) inset;
-}
-
-.tile-type-wood:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  pointer-events: none;
-  color: #ffc64a;
-  top: 0;
-  left: 14px;
-  content: "wood";
-}
-
-.tile-type-food {
-  background-color: #816249;
-  background-image: url("../src/images/above.png");
-}
-
-.tile-type-food:hover {
-  box-shadow: 0 0 20px rgba(246, 218, 71, 0.5) inset;
-}
-
-.tile-type-food:hover::before {
-  color: #8f9d72;
-  font-family: "Chau Philomene One", sans-serif;
-  position: relative;
-  font-size: 1rem;
-  top: -22px;
-  letter-spacing: 2px;
-  pointer-events: none;
-  color: #ffc64a;
-  top: 0;
-  left: 14px;
-  content: "food";
-}
-
 .tile-type-beetle {
   background-image: url("../src/images/beetle.png");
 }
@@ -295,17 +249,16 @@ nav {
   content: "eat";
 }
 
-.tile-type-excavate {
+.tile-type-food {
   background-color: #816249;
-  box-shadow: 0 0 1px black inset;
-  background-image: url("../src/images/excavate.png");
+  background-image: url("../src/images/above.png");
 }
 
-.tile-type-excavate:hover {
-  opacity: 0.9;
+.tile-type-food:hover {
+  box-shadow: 0 0 20px rgba(246, 218, 71, 0.5) inset;
 }
 
-.tile-type-excavate:hover::before {
+.tile-type-food:hover::before {
   color: #8f9d72;
   font-family: "Chau Philomene One", sans-serif;
   position: relative;
@@ -313,9 +266,10 @@ nav {
   top: -22px;
   letter-spacing: 2px;
   pointer-events: none;
-  left: 25px;
-  color: #e0d3c2;
-  content: "dig";
+  color: #ffc64a;
+  top: 0;
+  left: 14px;
+  content: "food";
 }
 
 .tile-type-gold {
@@ -419,6 +373,52 @@ nav {
 .tile-type-quartz {
   background-color: #816249;
   background-image: url("../src/images/ore.png");
+}
+
+.tile-type-wood {
+  background-color: #816249;
+  background-image: url("../src/images/above.png");
+}
+
+.tile-type-wood:hover {
+  box-shadow: 0 0 20px rgba(246, 218, 71, 0.5) inset;
+}
+
+.tile-type-wood:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  pointer-events: none;
+  color: #ffc64a;
+  top: 0;
+  left: 14px;
+  content: "wood";
+}
+
+.tile-type-excavate {
+  background-color: #816249;
+  box-shadow: 0 0 1px black inset;
+  background-image: url("../src/images/excavate.png");
+}
+
+.tile-type-excavate:hover {
+  opacity: 0.9;
+}
+
+.tile-type-excavate:hover::before {
+  color: #8f9d72;
+  font-family: "Chau Philomene One", sans-serif;
+  position: relative;
+  font-size: 1rem;
+  top: -22px;
+  letter-spacing: 2px;
+  pointer-events: none;
+  left: 25px;
+  color: #e0d3c2;
+  content: "dig";
 }
 
 .grid-cell {

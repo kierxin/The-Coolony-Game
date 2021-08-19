@@ -1,6 +1,6 @@
 // const { Draggable } = require("./scripts/draggable.js");
 const { BoardWithTilesProperties } = require("./scripts/boardFactory/boardWithTilesProperties.js");
-const { ActivateModals } = require("./scripts/activateModals.js");
+const { ActivateModals } = require("./scripts/modals/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
 const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const antsList = AntsListSubmitListener.bind(player, board);
     antsList(board);
 
+    console.log(board);
 
     window.setInterval(update.bind(player, interval), interval);
     
