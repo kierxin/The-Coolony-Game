@@ -59,8 +59,6 @@
     overflow-y: scroll;
     white-space: nowrap;
     color: black;
-    // -ms-overflow-style: none;  /* IE, Edge hide scrollbar */
-    // scrollbar-width: none;  /* Firefox hide scrollbar */
 }
 
 .grid {
@@ -74,8 +72,4 @@
     flex-wrap: wrap;
     align-content: flex-start;
     background: linear-gradient(transparent, vars.$sides-bg-darkened, black);
-}
-
-.grid-container::-webkit-scrollbar {
-    // display: none; /* Chrome, Safari, Opera */
 }

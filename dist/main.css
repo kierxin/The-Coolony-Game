@@ -1,6 +1,7 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+@charset "UTF-8";
 html {
   background-color: #503731;
   scroll-behavior: smooth;
@@ -750,6 +751,27 @@ nav {
 }
 .ants-list-modal-content #ants-list .ants-list-under-item #assign-task-form input:hover {
   opacity: 0.9;
+}
+.ants-list-modal-content .blinker {
+  display: block;
+  width: 10px;
+  height: 10px;
+}
+.ants-list-modal-content #choose-ant-blinker::after {
+  position: absolute;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 78%;
+  cursor: pointer;
+  pointer-events: none;
+  text-transform: uppercase;
+  font-family: "Boogaloo", cursive;
+  color: #f6efdd;
+  padding: 10px 5px;
+  border-radius: 20px;
+  margin-top: -70px;
+  content: "▲ choose an ant in this list ▲";
+  animation: blink 2s linear infinite;
 }
 
 .hidden {

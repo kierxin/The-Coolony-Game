@@ -32,6 +32,7 @@
 }
 
 .ants-list-modal-content {
+
     @include modal-content();
     width: 80%;
     height: 60%;
@@ -39,6 +40,7 @@
 
     overflow: hidden;
     border: 1px solid vars.$sides-bg;
+
 
     #ants-list {
         overflow: auto;
@@ -73,7 +75,7 @@
                 user-select: none;
             }
         }
-            
+        
         .ants-list-item:hover {
             color: rgb(235, 197, 153);
             cursor: pointer;
@@ -143,6 +145,31 @@
             }
         }
     }
+
+        .blinker {
+            display: block;
+            width: 10px;
+            height: 10px;
+        }
+
+        #choose-ant-blinker::after {
+            position: absolute;
+            font-size: 1.5rem;
+            text-align: center;
+            width: 78%;
+            cursor: pointer;
+            pointer-events: none;
+            text-transform: uppercase;
+            font-family: vars.$boogaloo;
+            color: #f6efdd;
+            // border: 1px solid #f6efdd;
+            padding: 10px 5px;
+            border-radius: 20px;
+            margin-top: -70px;
+            
+            content: "▲ choose an ant in this list ▲";
+            animation: blink 2s linear infinite;
+        }
 }
 
 .hidden {
@@ -156,8 +183,6 @@
 .game-stats-modal-content {
     @include modal-content();
 }
-
-
 
 
 .ensure-display-none-if-model-inactive {

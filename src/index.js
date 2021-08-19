@@ -13,6 +13,7 @@ const { DecayEnergyAppetite } = require("./scripts/updateHelpers/decayEnergyAppe
 const { EnergyAppetiteDepletion } = require("./scripts/updateHelpers/energyAppetiteDepletion.js");
 const { BuildModeListener } = require("./scripts/buildModeListener.js");
 const { Diggable } = require("./scripts/diggable.js");
+const { InstructionBlinkers } = require("./scripts/instructionBlinkers.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,11 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const activateBuildListener = BuildModeListener.bind(player, board);
     activateBuildListener(board);
 
-    const assignTaskBlinker = document.getElementById("assign-task-prompt");
-    const antsListIcon = document.getElementById("ants-list-icon");
-    antsListIcon.addEventListener("click", () => {
-        assignTaskBlinker.remove();
-    })
+    InstructionBlinkers();
 
     AntsListModal(player, board);
 
