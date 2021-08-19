@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const player = new Player();
     const ant1 = new Ant(player);
     const ant2 = new Ant(player);
-    const interval = 500;
+    const interval = 300;
 
     const activateBuildListener = BuildModeListener.bind(player, board);
     activateBuildListener(board);

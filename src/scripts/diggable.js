@@ -36,11 +36,11 @@ function confirmHandler(e) {
 
     console.log("HI");
 
-    if (this.loot >= 50 && this.wood >= 150 && this.clay >= 150) {
+    if (this.loot >= 5 && this.wood >= 5 && this.clay >= 5) {
 
-        this.loot -= 50;
-        this.wood -= 150;
-        this.clay -= 150;
+        this.loot -= 5;
+        this.wood -= 5;
+        this.clay -= 5;
 
         e.currentTarget.parentNode.classList.add("tile-type-excavate");
         e.currentTarget.parentNode.classList.remove("tile-type-diggable");

@@ -5,20 +5,20 @@ export function DetermineDuration(tileType) {
     if (!typesThatHaveDuration.includes(tileType)) {
         return null;
     } else if (tileType === "food") {
-        return 1;  // 3; // minutes
+        return .15;  // 3; // minutes
     } else if (tileType === "wood") {
-        return 1;  // 3; // minutes
+        return .15;  // 3; // minutes
     } else if (tileType === "clay") {
-        return 2;  // 5;
+        return .2;  // 5;
     } else if (tileType === "gold") {
-        return 5;  // 15;
+        return .3;  // 15;
     } else if (tileType === "eat") {
-        return 1;
+        return .1;
     } else if (tileType === "sleep") {
-        return 10;
+        return .3;
     } else if (tileType === "nurse") {
-        return 60;
+        return 6;
     } else if (tileType === "excavate") {
-        return 120; //when changing, also change antsSubmitListener.js
+        return 1; //when changing, also change antsSubmitListener.js
     }
 }

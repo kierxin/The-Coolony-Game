@@ -30,10 +30,6 @@
     opacity: .9;
 }
 
-.hidden-from-player {
-    visibility: hidden;
-}
-
 .non-tunnel {
     background-color: vars.$non-tunnel-bg;
 }
@@ -81,4 +77,8 @@
 
 .cancel-btn:hover {
     cursor: pointer;
+}
+
+.hidden-from-player {
+    visibility: hidden;
 }
