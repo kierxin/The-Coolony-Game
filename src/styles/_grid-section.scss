@@ -90,4 +90,22 @@
         box-shadow: 0 0 3px vars.$sides-bg inset;
         border: 1px solid vars.$sides-bg;
     }
+
+    #assign-task-prompt {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: -30px;
+        width: 200%;
+        height: auto;
+        user-select: none;
+
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: .5;
+        }
+    }
+
 }

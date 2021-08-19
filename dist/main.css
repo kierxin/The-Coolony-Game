@@ -208,6 +208,9 @@ nav {
 .how-to p:last-child {
   padding-bottom: 90px;
 }
+.how-to p::selection {
+  background: #8f9d72;
+}
 
 .tile-type-beetle {
   background-image: url("../src/images/beetle.png");
@@ -850,4 +853,18 @@ nav {
   background-color: #e2d9d1;
   box-shadow: 0 0 3px #503731 inset;
   border: 1px solid #503731;
+}
+.game-icons-container #assign-task-prompt {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: -30px;
+  width: 200%;
+  height: auto;
+  user-select: none;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
 }

@@ -35,4 +35,8 @@
     p:last-child {
         padding-bottom: 90px;
     }
+
+    p::selection {
+        background: vars.$how-to-bg-darkened;
+    }
 }

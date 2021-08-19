@@ -82,9 +82,7 @@
         <!-- H O W   T O -->
         <section class="how-to" id="how-to-anchor">
             <h1>Game Instructions</h1>
-
-            <p>Check back later for an actual how-to!</p>
-
+            
             <p>Welcome to The Coolony Game! In this game, you're in charge of a colony of ants. Your colony already has some basic necessities set up, including a place for your ants to SLEEP, a place for them to EAT, and a NURSERY so your colony's population can continue to grow.</p>
             
             <p>Everything in the colony doesn't just happen automatically, though. In the ANTS LIST, you can delegate tasks for each of your ants to carry out. These include harvesting FOOD, harvesting WOOD, harvesting CLAY, and a few other things you'll discover along the way.</p>
@@ -111,10 +109,17 @@
             <nav class="game-icons-container">
                 <button class="game-icon" title="resource summary"><img src="./src/images/resources-icon.png"
                             alt="click to toggle resource display bar" draggable="false"></button>
-                <button class="game-icon" title="ants list"><img src="./src/images/ant-overview-icon.png"
-                            alt="click to view ants overview" draggable="false"></button> 
+
+                <button class="game-icon" title="ants list" id="ants-list-icon"><img src="./src/images/ant-overview-icon.png"
+                            alt="click to view ants overview" draggable="false">
+                                <figure>
+                                    <img src="./src/images/assign-task-prompt.png" alt="drawn words prompting player to click the 'ants list' icon to assign tasks" id="assign-task-prompt">
+                                </figure>
+                            </button> 
+
                 <button class="game-icon" title="game stats"><img src="./src/images/stats-icon.png"
                             alt="click to view stats modal" draggable="false"></button>
+
                 <button class="game-icon" title="build mode" id="build-mode"><img src="./src/images/excavate.png"
                             alt="click to be able to choose where to dig next"></button>
 

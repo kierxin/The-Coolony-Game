@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const activateBuildListener = BuildModeListener.bind(player, board);
     activateBuildListener(board);
 
+    const assignTaskBlinker = document.getElementById("assign-task-prompt");
+    const antsListIcon = document.getElementById("ants-list-icon");
+    antsListIcon.addEventListener("click", () => {
+        assignTaskBlinker.remove();
+    })
 
     AntsListModal(player, board);
 
