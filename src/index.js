@@ -8,7 +8,7 @@ const { AntsListModal } = require("./scripts/modals/antsListModal/antsListModal.
 const { ListClickEvents } = require("./scripts/modals/antsListModal/listClickEvents.js");
 const { AntsListSubmitListener } = require("./scripts/updateHelpers/antsListSubmitListener.js");
 const { HandleCompletedTasks } = require("./scripts/updateHelpers/handleCompletedTasks.js");
-const { UpdateAntsList } = require("./scripts/updateHelpers/updateAntsList.js");
+const { UpdateAntsListOvers } = require("./scripts/updateHelpers/updateAntsListOvers.js");
 const { DecayEnergyAppetite } = require("./scripts/updateHelpers/decayEnergyAppetite.js");
 const { EnergyAppetiteDepletion } = require("./scripts/updateHelpers/energyAppetiteDepletion.js");
 
@@ -32,15 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const antsList = AntsListSubmitListener.bind(player, board);
     antsList(board);
 
-    console.log(board);
-
-    window.setInterval(update.bind(player, interval), interval);
+    window.setInterval(update.bind(player, interval, board), interval);
     
 });
 
 
 let decayDelay = 0;
-function update(interval) {
+function update(interval, board) {
 
     const energyAppetiteDepletion = EnergyAppetiteDepletion.bind(this);
     energyAppetiteDepletion();
@@ -48,7 +46,7 @@ function update(interval) {
     const decr = decrementAntDurations.bind(this, interval);
     decr(interval);
 
-    const handle = HandleCompletedTasks.bind(this);
+    const handle = HandleCompletedTasks.bind(this, board);
     handle();
 
     this.updateResourceBar();
@@ -60,8 +58,9 @@ function update(interval) {
         decayDelay = 0;
     }
 
-    const updateAntsList = UpdateAntsList.bind(this);
-    updateAntsList();
+    const updateAntsListOvers = UpdateAntsListOvers.bind(this);
+    updateAntsListOvers();
+
 }
 
 

@@ -27,7 +27,7 @@ export function AntsListSubmitListener(board) {
             unders[ant].setAttribute("display", "none");
 
 
-            // ensure that 'last ant' can only become an idle/unoccupied ant 
+            // ensure that 'last ant' can only be an ant that's yet to be assigned a task 
             const overs = document.querySelectorAll(".over");
             overs[ant].style.pointerEvents = "none";
             overs[ant].style.opacity = ".5";
@@ -48,9 +48,18 @@ export function AntsListSubmitListener(board) {
 
             place.currentAnts.ant = this.ants[ant];
 
-            this.ants[ant].status = place.tileType;
+            if (place.excavate === true) {
+                this.ants[ant].status = "excavate";
+
+                // excavate duration (see determineDuration.js):
+                this.ants[ant].duration = .1 * 60000;
+
+            } else {
+                this.ants[ant].status = place.tileType;
+                this.ants[ant].duration = place.durationInMinutes * 60000;
+            }
+
             this.ants[ant].position = pos;
-            this.ants[ant].duration = place.durationInMinutes * 60000;
         });
     });
 

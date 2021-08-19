@@ -3,6 +3,7 @@ export function ConstructBoardInDOM(board) {
 
     const boardArr = board;
 
+    let i = 0;
     for (const key in boardArr) {
         const tile = boardArr[key];
         const type = tile.tileType;
@@ -28,11 +29,13 @@ export function ConstructBoardInDOM(board) {
         gridCell.innerText = `${type}`;
         gridCell.classList.add(`tile-type-${type}`);
 
-        if (tile.excavated === false) {
+        if (tile.excavate === true) {
             gridCell.classList.add("tile-type-excavate");
+            gridCell.innerHTML = `excavate${i}`
         }
 
         grid.appendChild(gridCell);
+        i++;
     }
 
     return "";

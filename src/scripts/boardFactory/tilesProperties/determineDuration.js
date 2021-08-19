@@ -12,13 +12,13 @@ export function DetermineDuration(tileType) {
         return 2;  // 5;
     } else if (tileType === "gold") {
         return 5;  // 15;
-    } else if (tileType === "excavate") {
-        return 30;
     } else if (tileType === "eat") {
         return 1;
     } else if (tileType === "sleep") {
         return 10;
     } else if (tileType === "nurse") {
         return 60;
+    } else if (tileType === "excavate") {
+        return .1; //when changing, also change antsSubmitListener.js
     }
 }

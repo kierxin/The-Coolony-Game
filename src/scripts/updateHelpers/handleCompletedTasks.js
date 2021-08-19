@@ -1,4 +1,6 @@
-export function HandleCompletedTasks() {
+import { FinishExcavateTask } from "./finishExcavateTask";
+
+export function HandleCompletedTasks(board) {
 
     const completers = this.completers;
 
@@ -10,12 +12,10 @@ export function HandleCompletedTasks() {
             let ant;
 
             for (let playerAnt in this.ants) {
-
                 if (this.ants[playerAnt].id === antId) {
                     ant = this.ants[playerAnt];
                 }
             }
-
 
             const task = ant.status;
 
@@ -32,6 +32,9 @@ export function HandleCompletedTasks() {
                 goldAdder(this);
             } else if (task === "sleep") {
                 energyAdder(ant);
+            } else if (task === "excavate") {
+                const finishExcavation = FinishExcavateTask.bind(this, ant, board);
+                finishExcavation();
             }
 
             lootRoller(this);

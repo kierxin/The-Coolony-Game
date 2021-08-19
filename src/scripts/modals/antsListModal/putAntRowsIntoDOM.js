@@ -7,14 +7,17 @@ export function PutAntRowsIntoDOM (item, board) {
     const potentialTasks = [];
 
     for (const tile in board) {
-        if (board[tile].interactive === true && board[tile].visibility === true) {
+        if (board[tile].interactive === true && board[tile].visibility === true && board[tile].excavate === false) {
             const pos = board[tile].coordinates;
             const task = board[tile].tileType;
             
             potentialTasks.push([pos, task]);
         }
-    }
 
+        if (board[tile].excavate === true) {
+            potentialTasks.push([board[tile].coordinates, "excavate"]);
+        }
+    }
 
     // CREATE TEXT OF LIST ITEM UNDERNEATH
     const id = item[0].children[0].children[0].innerHTML;

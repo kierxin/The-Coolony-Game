@@ -1,4 +1,4 @@
-export function UpdateAntsList () {
+export function UpdateAntsListOvers () {
 
     const antsList = document.querySelector("#ants-list");
     const properties = [];
