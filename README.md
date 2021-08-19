@@ -63,19 +63,23 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 #### TUE 8/17
 - ✔ Code player class
 - ✔ Code ant class
-- Code modals / click events
-- Code interaction between tiles & ants: `task cycles / time-based accumulation of resources; ant energy/appetite decay; new tunnel excavation / tile discovery; etc.`
+- ✔ Code ants list: enables player to assign tasks
 
 #### WED 8/18
-- Finish coding interactions
-- Finish UI
+- ✔ Fix / finish ants list modal
+- ✔ Code ant energy/appetite decay
+- Enable new tunnel excavation / tile discovery
+- Attempt to put little ant icons onto tiles
 
 #### THU 8/19
-- Look to refactor/dry up any code that could use some cleaning (especially modals-related code)
-- Deploy (GitHub Pages)
+- ✔ Deploy (GitHub Pages)
+- If user's resources all === starting values, then have graphic prompting user to assign a task
+- Add hover & click event (quick assign) to ant icons
+- Enable user to click the nursery to upgrade it or view larvae progress
 
 ### Bonus Features (Future Goals)
 1. ✔ Game tile graphics
+1. Look to refactor/dry up any code that could use some cleaning (especially modals-related code)
 1. Ant drag & drop
 1. Animation of ants running between task sites (shortest-path algorithm)
 1. Separate ‘quickview’ page that allows player to play a text-only version of the game, where they have a list of their available resources, resource deposits, ants, and tasks (later, this could be adapted to a mobile format)
