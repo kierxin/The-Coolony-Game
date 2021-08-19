@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const player = new Player();
     const ant1 = new Ant(player);
     const ant2 = new Ant(player);
-    const interval = 5000;
+    const interval = 500;
 
     AntsListModal(player, board);
 
@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+let decayDelay = 0;
 function update(interval) {
 
     const energyAppetiteDepletion = EnergyAppetiteDepletion.bind(this);
@@ -51,8 +52,12 @@ function update(interval) {
 
     this.updateResourceBar();
 
+    decayDelay += 1;
     const decay = DecayEnergyAppetite.bind(this);
-    decay();
+    if (decayDelay >= 50) {
+        decay();
+        decayDelay = 0;
+    }
 
     const updateAntsList = UpdateAntsList.bind(this);
     updateAntsList();

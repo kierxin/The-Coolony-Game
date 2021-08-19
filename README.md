@@ -69,11 +69,11 @@ Ideally, I will also enable users to click and drag around the game board (JavaS
 - ✔ Fix / finish ants list modal
 - ✔ Code ant energy/appetite decay
 - Enable new tunnel excavation / tile discovery
-- Attempt to put little ant icons onto tiles
 
 #### THU 8/19
 - ✔ Deploy (GitHub Pages)
 - If user's resources all === starting values, then have graphic prompting user to assign a task
+- Attempt to put little ant icons onto tiles
 - Add hover & click event (quick assign) to ant icons
 - Enable user to click the nursery to upgrade it or view larvae progress
 
