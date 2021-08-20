@@ -62,7 +62,7 @@
             top: 0vh;
             left: 20vw;
 
-            animation-duration: 30s;
+            animation-duration: 200s;
             animation-name: slideleft;
             z-index: 4;
         }
@@ -73,7 +73,7 @@
             left: 10vw;
             z-index: 5;
 
-            animation-duration: 20s;
+            animation-duration: 120s;
             animation-name: slideleft;
         }
 
@@ -83,7 +83,7 @@
             right: 10vw;
             z-index: 6;
 
-            animation-duration: 40s;
+            animation-duration: 160s;
             animation-name: slideright;
         }
     }
