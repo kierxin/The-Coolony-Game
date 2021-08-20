@@ -51,8 +51,8 @@ export function AntsListSubmitListener(board) {
             if (place.excavate === true) {
                 this.ants[ant].status = "excavate";
 
-                // excavate duration (see determineDuration.js):
-                this.ants[ant].duration = .1 * 60000;
+                // excavate duration (should match determineDuration.js):
+                this.ants[ant].duration = 5 * 60000;
 
             } else {
                 this.ants[ant].status = place.tileType;
