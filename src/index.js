@@ -1,4 +1,3 @@
-// const { Draggable } = require("./scripts/draggable.js");
 const { BoardWithTilesProperties } = require("./scripts/boardFactory/boardWithTilesProperties.js");
 const { ActivateModals } = require("./scripts/modals/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
@@ -13,7 +12,6 @@ const { DecayEnergyAppetite } = require("./scripts/updateHelpers/decayEnergyAppe
 const { EnergyAppetiteDepletion } = require("./scripts/updateHelpers/energyAppetiteDepletion.js");
 const { BuildModeListener } = require("./scripts/buildModeListener.js");
 const { InstructionBlinkers } = require("./scripts/instructionBlinkers.js");
-const { GameSpeedListener } = require("./scripts/gameSpeedListener.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
