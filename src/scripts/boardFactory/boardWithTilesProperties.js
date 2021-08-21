@@ -7,7 +7,6 @@ const { WholeBoardArr } = require("./populateBoard/wholeBoardArr.js");
 const { IsVisible } = require("./tilesProperties/isVisible.js");
 const { DetermineResourceType } = require("./tilesProperties/determineResourceType.js");
 const { IsInteractive } = require("./tilesProperties/isInteractive.js");
-const { DetermineNeighborTiles } = require("./tilesProperties/determineNeighborTiles.js");
 const { DetermineDuration } = require("./tilesProperties/determineDuration.js");
 const { DetermineHealth } = require("./tilesProperties/determineHealth.js");
 
@@ -32,21 +31,49 @@ export function BoardWithTilesProperties(multiplier) {
         board[tileName].excavate = IsExcavate(type);
         board[tileName].resourceType = DetermineResourceType(board[tileName].tileType);
         board[tileName].interactive = IsInteractive(board[tileName].tileType);
-        board[tileName].neighborTiles = DetermineNeighborTiles(position);
         board[tileName].currentAnts = {};
         board[tileName].currentLarvae = {};
         board[tileName].durationInMinutes = DetermineDuration(board[tileName].tileType, multiplier);
         board[tileName].health = DetermineHealth(board[tileName].tileType);
-        addSelfAsNeighborToNeighbors(position, board[tileName].neighborTiles);
 
+        const neighborTiles = determineNeighborTiles.bind(board, board[tileName].coordinates, position);
+        board[tileName].neighborTiles = neighborTiles(board[tileName].coordinates, position);
     }
+
+
+    function determineNeighborTiles(coordinates, position) {
+        const X = coordinates[0];
+        const Y = coordinates[1];
+
+        const neighbors = [];
+
+        if (X > 0 && Y > 0) {
+            neighbors.push([(X - 1), Y]);
+            neighbors.push([X, (Y - 1)]);
+
+        } else if (X === 0 && Y === 0) {
+            //don't add any neighbors
+
+        } else if (X === 0) {
+            neighbors.push([X, (Y - 1)]);
+
+        } else if (Y === 0) {
+            neighbors.push([(X - 1), Y]);
+        }
+
+        addSelfAsNeighborToNeighbors.bind(this, position, neighbors);
+
+        return neighbors;
+    }
+
 
     function addSelfAsNeighborToNeighbors(position, neighbors) {
         neighbors.forEach(neighbor => {
             const nameOfNeighbor = `tile${neighbor[0]}${neighbor[1]}`;
-            board[nameOfNeighbor].neighborTiles.push(position);
+            this[nameOfNeighbor].neighborTiles.push(position);
         })
     }
+
 
     return board;
 }

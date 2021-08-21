@@ -48,12 +48,10 @@ function confirmHandler(e) {
     e.currentTarget.parentNode.children[2].remove();
     e.currentTarget.parentNode.children[0].remove();
     e.currentTarget.parentNode.children[0].remove();
-    
 }
 
 
 function cancelHandler(e) {
-    console.log("BYE");
     e.currentTarget.parentNode.children[0].remove();
     e.currentTarget.parentNode.children[0].remove();
     e.currentTarget.parentNode.children[0].remove();

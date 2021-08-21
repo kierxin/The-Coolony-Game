@@ -10,7 +10,6 @@ export function UpdateAntsListUnders(coordinates, tileType) {
         options.forEach(option => {
             if (JSON.stringify(option.innerHTML).includes(pos)) {
                 option.innerHTML = `${pos}: ${tileType}`;
-                console.log(option.innerHTML);
             };
         });
     });
