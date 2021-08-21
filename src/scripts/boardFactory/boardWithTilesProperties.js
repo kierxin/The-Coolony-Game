@@ -36,44 +36,42 @@ export function BoardWithTilesProperties(multiplier) {
         board[tileName].durationInMinutes = DetermineDuration(board[tileName].tileType, multiplier);
         board[tileName].health = DetermineHealth(board[tileName].tileType);
 
-        const neighborTiles = determineNeighborTiles.bind(board, board[tileName].coordinates, position);
-        board[tileName].neighborTiles = neighborTiles(board[tileName].coordinates, position);
-    }
+        board[tileName].neighborTiles = determineNeighborTiles(board, board[tileName].coordinates, position);
 
 
-    function determineNeighborTiles(coordinates, position) {
-        const X = coordinates[0];
-        const Y = coordinates[1];
+        function determineNeighborTiles(board, coordinates, position) {
 
-        const neighbors = [];
+            const X = coordinates[0];
+            const Y = coordinates[1];
 
-        if (X > 0 && Y > 0) {
-            neighbors.push([(X - 1), Y]);
-            neighbors.push([X, (Y - 1)]);
+            const neighbors = [];
 
-        } else if (X === 0 && Y === 0) {
-            //don't add any neighbors
+            if (X > 0 && Y > 0) {
+                neighbors.push([(X - 1), Y]);
+                neighbors.push([X, (Y - 1)]);
 
-        } else if (X === 0) {
-            neighbors.push([X, (Y - 1)]);
+            } else if (X === 0 && Y === 0) {
+                //don't add any neighbors
 
-        } else if (Y === 0) {
-            neighbors.push([(X - 1), Y]);
+            } else if (X === 0) {
+                neighbors.push([X, (Y - 1)]);
+
+            } else if (Y === 0) {
+                neighbors.push([(X - 1), Y]);
+            }
+
+            addSelfAsNeighborToNeighbors(board, position, neighbors);
+            return neighbors;
         }
 
-        addSelfAsNeighborToNeighbors.bind(this, position, neighbors);
 
-        return neighbors;
+        function addSelfAsNeighborToNeighbors(board, position, neighbors) {
+            neighbors.forEach(neighbor => {
+                const nameOfNeighbor = `tile${neighbor[1]}${neighbor[0]}`;
+                board[nameOfNeighbor].neighborTiles.push([position[1], position[0]]);
+            })
+        }
     }
-
-
-    function addSelfAsNeighborToNeighbors(position, neighbors) {
-        neighbors.forEach(neighbor => {
-            const nameOfNeighbor = `tile${neighbor[0]}${neighbor[1]}`;
-            this[nameOfNeighbor].neighborTiles.push(position);
-        })
-    }
-
 
     return board;
 }

@@ -28,6 +28,7 @@ export function BuildModeListener(board) {
             });
         });
 
+
         // access the board array's key/value pairs that correspond with each diggable tile
         const diggables = [];
         for (const tile in board) {
