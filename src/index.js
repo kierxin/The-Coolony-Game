@@ -13,41 +13,53 @@ const { DecayEnergyAppetite } = require("./scripts/updateHelpers/decayEnergyAppe
 const { EnergyAppetiteDepletion } = require("./scripts/updateHelpers/energyAppetiteDepletion.js");
 const { BuildModeListener } = require("./scripts/buildModeListener.js");
 const { InstructionBlinkers } = require("./scripts/instructionBlinkers.js");
+const { GameSpeedListener } = require("./scripts/gameSpeedListener.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const setGameSpeed = () => {
-        const userSpeedPreference = prompt("Hello! Please type in which game speed would you prefer:\n\nFAST or SLOW\n\n(Fast for getting a quicker look at all of the project's features.\nSlow for enjoying the game at a more leisurely pace.)");
-        return (userSpeedPreference.toLowerCase() === "slow") ? 2 : .3;
+    function getGameSpeedFromPlayer() {
+        const slowButton = document.getElementById("slow-btn");
+        const fastButton = document.getElementById("fast-btn");
+        const gameSpeedWindow = document.querySelector(".game-speed");
+
+        slowButton.addEventListener("click", () => {
+            gameSpeedWindow.style.display = "none";
+            runGame(2);
+        });
+
+        fastButton.addEventListener("click", () => {
+            gameSpeedWindow.style.display = "none";
+            runGame(.5);
+        });
+    };
+
+    getGameSpeedFromPlayer();
+
+    function runGame(gameSpeed) {
+        const board = BoardWithTilesProperties(gameSpeed);
+
+        ConstructBoardInDOM(board);
+        ActivateModals();
+
+        const player = new Player();
+        const ant1 = new Ant(player);
+        const ant2 = new Ant(player);
+        const interval = 400;
+
+        const activateBuildListener = BuildModeListener.bind(player, board);
+        activateBuildListener(board);
+
+        InstructionBlinkers();
+
+        AntsListModal(player, board);
+        ListClickEvents();
+
+        const antsList = AntsListSubmitListener.bind(player, board);
+        antsList(board);
+
+        window.setInterval(update.bind(player, interval, board), interval);
     }
-
-    const multiplier = setGameSpeed();
-    const board = BoardWithTilesProperties(multiplier);
-
-    ConstructBoardInDOM(board);
-    ActivateModals();
-
-    const player = new Player();
-    const ant1 = new Ant(player);
-    const ant2 = new Ant(player);
-    const interval = 400;
-
-    const activateBuildListener = BuildModeListener.bind(player, board);
-    activateBuildListener(board);
-
-    InstructionBlinkers();
-
-    AntsListModal(player, board);
-
-    ListClickEvents();
-
-    const antsList = AntsListSubmitListener.bind(player, board);
-    antsList(board);
-
-    window.setInterval(update.bind(player, interval, board), interval);
-    
-
 });
 
 
@@ -74,12 +86,10 @@ function update(interval, board) {
 
     const updateAntsListOvers = UpdateAntsListOvers.bind(this);
     updateAntsListOvers();
-
 }
 
 
 function decrementAntDurations(interval) {
-
     for (const antIdx in this.ants) {
         const ant = this.ants[antIdx];
         if (ant.duration > 0) ant.duration -= interval; 

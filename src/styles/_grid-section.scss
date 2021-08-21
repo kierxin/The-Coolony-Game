@@ -41,6 +41,52 @@
 }
 
 
+.game-speed {
+    position: absolute;
+    margin: auto;
+    border: 2px solid vars.$sides-bg;
+    background-color: vars.$tunnel-bg;
+    color: vars.$cream;
+    width: 40%;
+    left: 30%;
+    top: 35%;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 500;
+    font-size: 1.5rem;
+    font-family: vars.$chau-phil;
+    letter-spacing: 1px;
+
+    .speed-btns-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .speed-btns {
+            text-transform: uppercase;
+            font-family: vars.$boogaloo;
+            background-color: vars.$non-tunnel-bg;
+            border: 1px solid vars.$non-tunnel-bg;
+            margin-top: 20px;
+            font-size: 1.8rem;
+            padding: 10px;
+            letter-spacing: 2px;
+            border-radius: 5px;
+
+            &:hover {
+                cursor: pointer;
+                opacity: .9;
+                border: 1px solid vars.$sides-bg;
+            }
+
+            &:active {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
 .game-icons-container {
     position: absolute;
     right: 0;
