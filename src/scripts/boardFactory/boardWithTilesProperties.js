@@ -12,7 +12,7 @@ const { DetermineDuration } = require("./tilesProperties/determineDuration.js");
 const { DetermineHealth } = require("./tilesProperties/determineHealth.js");
 
 
-export function BoardWithTilesProperties() {
+export function BoardWithTilesProperties(multiplier) {
     const boardArr = WholeBoardArr();
 
     const board = {};
@@ -35,7 +35,7 @@ export function BoardWithTilesProperties() {
         board[tileName].neighborTiles = DetermineNeighborTiles(position);
         board[tileName].currentAnts = {};
         board[tileName].currentLarvae = {};
-        board[tileName].durationInMinutes = DetermineDuration(board[tileName].tileType);
+        board[tileName].durationInMinutes = DetermineDuration(board[tileName].tileType, multiplier);
         board[tileName].health = DetermineHealth(board[tileName].tileType);
         addSelfAsNeighborToNeighbors(position, board[tileName].neighborTiles);
 

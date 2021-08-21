@@ -12,13 +12,18 @@ const { UpdateAntsListOvers } = require("./scripts/updateHelpers/updateAntsListO
 const { DecayEnergyAppetite } = require("./scripts/updateHelpers/decayEnergyAppetite.js");
 const { EnergyAppetiteDepletion } = require("./scripts/updateHelpers/energyAppetiteDepletion.js");
 const { BuildModeListener } = require("./scripts/buildModeListener.js");
-const { Diggable } = require("./scripts/diggable.js");
 const { InstructionBlinkers } = require("./scripts/instructionBlinkers.js");
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const board = BoardWithTilesProperties();
+    const setGameSpeed = () => {
+        const userSpeedPreference = prompt("Hello! Please type in which game speed would you prefer:\n\nFAST or SLOW\n\n(Fast for getting a quicker look at all of the project's features.\nSlow for enjoying the game at a more leisurely pace.)");
+        return (userSpeedPreference.toLowerCase() === "slow") ? 2 : .3;
+    }
+
+    const multiplier = setGameSpeed();
+    const board = BoardWithTilesProperties(multiplier);
 
     ConstructBoardInDOM(board);
     ActivateModals();
@@ -26,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const player = new Player();
     const ant1 = new Ant(player);
     const ant2 = new Ant(player);
-    const interval = 300;
+    const interval = 400;
 
     const activateBuildListener = BuildModeListener.bind(player, board);
     activateBuildListener(board);
