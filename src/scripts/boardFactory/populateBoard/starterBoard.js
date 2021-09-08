@@ -1,6 +1,6 @@
 export function StarterBoard() {
 
-    // tunnel template for new starterBoard is available in templates.js
+    // the template for new starterBoard is available in template.js
 
     const starterBoard1 = [[["-"], ["food"], ["wood"], ["-"], ["-"], ["-"], ["quartz", "hidden"], ["-"], ["-"], ["-"]], [["-"], ["tunnel"], ["-"], ["-"], ["tunnel"], ["-"], ["-"], ["-"], ["-"], ["beetle", "hidden"]], [["tunnel"], ["tunnel"], ["-"], ["tunnel"], ["sleep"], ["-"], ["-"], ["clay", "hidden"], ["-"], ["-"]], [["-"], ["clay"], ["tunnel"], ["tunnel"], ["tunnel"], ["-"], ["-"], ["-"], ["tunnel"], ["-"]], [["-"], ["-"], ["-"], ["tunnel"], ["clay"], ["tunnel"], ["tunnel"], ["tunnel"], ["nurse"], ["tunnel"]], [["-"], ["quartz", "hidden"], ["quartz"], ["eat"], ["-"], ["-"], ["gold", "excavate"], ["-"], ["-"], ["tunnel"]]];
 
@@ -11,11 +11,10 @@ export function StarterBoard() {
 
     const potentialStarterBoards = [starterBoard1, starterBoard2, starterBoard3];
 
-    // choose 1 of tunnel the 3 available starter boards:
+    // choose 1 of the 3 available starter boards:
     const randomized = () => {
         return Math.floor(Math.random() * 3);
     }
-
 
     return potentialStarterBoards[randomized()];
 }

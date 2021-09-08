@@ -212,6 +212,7 @@
 .tile-type-diggable:hover {
     opacity: .9;
     cursor: pointer;
+    box-shadow: none;
 }
 .tile-type-diggable:hover::before {
     @include interactive-hover-before();
