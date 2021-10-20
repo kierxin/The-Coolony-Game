@@ -21,13 +21,14 @@ export function CreateFormForAntsList (potentialTasks) {
 
     potentialTasks.forEach(task => {
         const opt = document.createElement("option");
+        const coords = task[0];
 
         if (task[1] === "excavate") {
-            opt.setAttribute("value", `${task[0]}`);
-            opt.innerHTML = `[${task[0]}]: excavate`;
+            opt.setAttribute("value", `${coords}`);
+            opt.innerHTML = `[${coords}]: excavate`;
         } else {
-            opt.setAttribute("value", `${task[0]}`);
-            opt.innerHTML = `[${task[0]}]: ${task[1]}`;
+            opt.setAttribute("value", `${coords}`);
+            opt.innerHTML = `[${coords}]: ${task[1]}`;
         }
         
         select.appendChild(opt);
