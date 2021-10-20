@@ -90,17 +90,21 @@
 
     .how-to-and-play-btns-container {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        width: 40vw;
+        min-width: 200px;
+        height: 50px;
+
         position: absolute;
         bottom: -1px;
         left: calc((100vw - 40vw) / 2);
-        flex-direction: row;
-        justify-content: center;
-        width: 40vw;
-        min-width: 400px;
-        height: 50px;
+
         background-color: vars.$how-to-bg-darkened;
         background-image: url("../src/images/landing-btns-bg.png");
         background-size: 30vw;
+        
         border: 2px solid vars.$how-to-bg-darkened;
         border-radius: 20px 20px 0 0;
         border-width: 2px 2px 0px 2px;

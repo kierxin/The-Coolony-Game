@@ -25,6 +25,13 @@
 
 .resource-summary-modal-content {
     @include modal-content();
+
+    display: block;
+    padding: 15px;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    font-family: vars.$boogaloo;
+    color: white;
 }
 
 .ants-list-modal {
@@ -182,6 +189,13 @@
 
 .game-stats-modal-content {
     @include modal-content();
+
+    display: block;
+    padding: 15px;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    font-family: vars.$boogaloo;
+    color: white;
 }
 
 

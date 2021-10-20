@@ -1,14 +1,13 @@
 export function Player () {
 
-    // this.name = null;
     this.loot = 0;
     this.food = 10;
     this.wood = 10;
     this.clay = 10;
     this.gold = 0;
     this.ants = [];
-    this.lastAnt = null;
-    this.completers = [];
+    this.lastAnt = null;    // player's most recently selected ant
+    this.completers = [];   // ants that have just finished a task
 
 }
 

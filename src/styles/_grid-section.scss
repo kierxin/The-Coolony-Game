@@ -96,11 +96,10 @@
     margin: 0 4vh;
     z-index: 20;
 
-    //these should match .grid-window:
-    bottom: 20px;
-    height: 90%;
+    bottom: 0;
+    height: 90vh;
 
-    .game-icon:hover::before {
+    .game-icon::before {
         color: vars.$off-white;
         font-family: vars.$chau-phil;
         text-transform: uppercase;
@@ -110,8 +109,14 @@
         content: attr(title);
         z-index: 50;
         right: 0;
-        margin-top: -50px;
+        margin-top: -2.3rem;
         text-align: right;
+        opacity: .5;
+    }
+
+    .game-icon:hover::before {
+        opacity: 1;
+        cursor: pointer;
     }
 
     img {
@@ -120,7 +125,6 @@
     }
 
     img:hover {
-        opacity: .8;
         cursor: pointer;
     }
 

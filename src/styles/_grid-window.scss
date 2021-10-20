@@ -4,8 +4,6 @@
 
 .grid-window {
     position: absolute;
-    bottom: 20px;
-    height: 90%;
     max-height: 900px;
     width: 80%;
     left: calc(20% / 2);
@@ -15,6 +13,9 @@
     margin-right: auto;
     overflow: hidden;
     border-radius: 10px;
+
+    bottom: 20px;
+    height: 90%;
 
     .resource-bar {
         position: sticky;
