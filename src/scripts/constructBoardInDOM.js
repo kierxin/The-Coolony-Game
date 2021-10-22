@@ -11,6 +11,7 @@ export function ConstructBoardInDOM(board) {
         const gridCell = document.createElement("button");
         gridCell.innerText = `${type}`;
         gridCell.classList.add("grid-cell");
+        gridCell.classList.add(`${tile.coordinates[0]}${tile.coordinates[1]}`);
         
         if (tile.visibility === false) {
             gridCell.classList.add("hidden-from-player");

@@ -2,7 +2,7 @@ export function Ant(player) {
 
     player.ants.length < 1 ? this.id = 1 : this.id = player.ants.length + 1;
 
-    this.position = [2,5];
+    this.position = [5, 2];
     this.status = 'idle';
     this.duration = null;
     this.energy = 90; // from 1 to 100

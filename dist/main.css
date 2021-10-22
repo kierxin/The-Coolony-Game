@@ -495,6 +495,17 @@ nav {
   background-color: transparent;
 }
 
+.contains-ants {
+  background-image: url("../src/images/ANT.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 10px;
+}
+.contains-ants:hover {
+  cursor: pointer;
+}
+
 .interactive:hover {
   cursor: pointer;
 }
