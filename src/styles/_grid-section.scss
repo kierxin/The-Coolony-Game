@@ -157,3 +157,75 @@
     }
 
 }
+
+.tile-info-hidden {
+    display: none;
+}
+
+.tile-info {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    margin-left: 30%;
+    margin-top: 5%;
+    padding: .6rem;
+    overflow: auto;
+    border-radius: 1rem;
+    background-color: vars.$grid-container-bg;
+    border: 1px solid vars.$tunnel-bg;
+    opacity: .95;
+
+    h1 {
+        width: 100%;
+        margin-top: .3rem;
+        text-align: center;
+        font-family: vars.$boogaloo;
+        text-transform: uppercase;
+        font-size: 2rem;
+        letter-spacing: .15rem;
+    }
+
+    p {
+        padding-top: .4rem;
+        white-space: normal;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        line-height: 140%;
+        font-size: 1.1rem;
+        text-shadow: none;
+        color: vars.$cream;
+    }
+}
+
+#clay-info {
+    h1 { color: vars.$clay; }
+}
+
+#battle-info {
+    h1 { color: vars.$hostile; }
+}
+
+#nursery-info {
+    h1 { color: vars.$nursery; }
+}
+
+#eat-info {
+    h1 { color: vars.$eat; }
+}
+
+#sleep-info {
+    h1 { color: vars.$sleep; }
+}
+
+#food-info {
+    h1 { color: vars.$food; }
+}
+
+#wood-info {
+    h1 { color: vars.$wood; }
+}
+
+#gold-info {
+    h1 { color: vars.$gold; }
+}

@@ -23,6 +23,7 @@ export function DisplayAntsOnBoard(board) {
         }
         
         if (gridCell) {
+            console.log(tile.currentAnts);
             gridCell.classList.add("contains-ants");
             // TODO add event listener
             // console.log(gridCell);

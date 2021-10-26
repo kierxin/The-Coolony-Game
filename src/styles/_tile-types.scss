@@ -67,7 +67,7 @@
 
 .tile-type-eat:hover::before {
     @include interactive-hover-before();
-    color: rgb(192, 221, 129);
+    color: vars.$eat;
     left: 10px;
     content: "eat";
 }
@@ -116,7 +116,7 @@
 .tile-type-nurse:hover::before {
     @include interactive-hover-before();
     left: 8px;
-    color: rgb(231, 211, 123);
+    color: vars.$nursery;
     content: "nursery";
 }
 
@@ -131,7 +131,7 @@
 .tile-type-sleep:hover::before {
     @include interactive-hover-before();
     left: 16px;
-    color: rgb(212, 200, 223);
+    color: vars.$sleep;
     content: "sleep";
 }
 

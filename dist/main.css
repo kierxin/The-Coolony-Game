@@ -961,3 +961,73 @@ nav {
     opacity: 0.5;
   }
 }
+
+.tile-info-hidden {
+  display: none;
+}
+
+.tile-info {
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: 70%;
+  margin-left: 30%;
+  margin-top: 5%;
+  padding: 0.6rem;
+  overflow: auto;
+  border-radius: 1rem;
+  background-color: #695042;
+  border: 1px solid #816249;
+  opacity: 0.95;
+}
+.tile-info h1 {
+  width: 100%;
+  margin-top: 0.3rem;
+  text-align: center;
+  font-family: "Boogaloo", cursive;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+}
+.tile-info p {
+  padding-top: 0.4rem;
+  white-space: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 140%;
+  font-size: 1.1rem;
+  text-shadow: none;
+  color: #ded2c2;
+}
+
+#clay-info h1 {
+  color: #df8832;
+}
+
+#battle-info h1 {
+  color: #9c2222;
+}
+
+#nursery-info h1 {
+  color: #e7d37b;
+}
+
+#eat-info h1 {
+  color: #c0dd81;
+}
+
+#sleep-info h1 {
+  color: #d4c8df;
+}
+
+#food-info h1 {
+  color: #9fbd60;
+}
+
+#wood-info h1 {
+  color: #ad6447;
+}
+
+#gold-info h1 {
+  color: #ffc64a;
+}
