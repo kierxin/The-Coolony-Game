@@ -15,7 +15,7 @@ export function TileInfoClickEvents () {
 
         let type;
 
-        if (tile.classList) {
+        if (tile.classList && !tile.classList.contains("tile-type-excavate")) {
             if (tile.classList.contains("tile-type-wood")) {
                 type = "wood";
             }
