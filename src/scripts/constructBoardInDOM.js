@@ -1,6 +1,6 @@
 export function ConstructBoardInDOM(board) {
-    const grid = document.querySelector(".grid");
 
+    const grid = document.querySelector(".grid");
     const boardArr = board;
 
     let i = 0;

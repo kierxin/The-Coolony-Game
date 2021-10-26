@@ -1,6 +1,7 @@
 const { BoardWithTilesProperties } = require("./scripts/boardFactory/boardWithTilesProperties.js");
 const { ActivateModals } = require("./scripts/modals/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
+const { TileInfoClickEvents } = require("./scripts/modals/tileInfoClickEvents.js");
 const { DisplayAntsOnBoard } = require("./scripts/displayAntsOnBoard.js");
 const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const interval = 400;
 
         ConstructBoardInDOM(board, player);
+        TileInfoClickEvents();
         DisplayAntsOnBoard(board, player);
         ActivateModals();
 

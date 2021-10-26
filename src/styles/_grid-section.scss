@@ -158,6 +158,18 @@
 
 }
 
+.close-info {
+    float: right;
+    opacity: .9;
+    font-size: 1.5rem;
+    color: vars.$cream;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
 .tile-info-hidden {
     display: none;
 }
