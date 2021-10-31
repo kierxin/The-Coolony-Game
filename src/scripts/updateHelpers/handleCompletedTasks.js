@@ -1,7 +1,10 @@
 import { FinishExcavateTask } from "./finishExcavateTask";
+import { updateBoardObject } from "./updateBoardObject";
 
 export function HandleCompletedTasks(board) {
 
+    // completers == ants whose task duration has reached 0; 
+    //  ants that have completed their task
     const completers = this.completers;
 
     if (completers.length > 0) {
@@ -22,17 +25,23 @@ export function HandleCompletedTasks(board) {
             if (task === "food") {
                 foodAdder(this);
             } else if (task === "eat") {
+                updateBoardObject(board, ant);
                 foodSubtracter(this);
                 appetiteSubtracter(ant);
             } else if (task === "wood") {
+                updateBoardObject(board, ant);
                 woodAdder(this);
             } else if (task === "clay") {
+                updateBoardObject(board, ant);
                 clayAdder(this);
             } else if (task === "gold") {
+                updateBoardObject(board, ant);
                 goldAdder(this);
             } else if (task === "sleep") {
+                updateBoardObject(board, ant);
                 energyAdder(ant);
             } else if (task === "excavate") {
+                updateBoardObject(board, ant);
                 const finishExcavation = FinishExcavateTask.bind(this, ant, board);
                 finishExcavation();
             }

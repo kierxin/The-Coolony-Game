@@ -46,20 +46,21 @@ export function AntsListSubmitListener(board) {
                 }
             }
 
-            place.currentAnts.ant = this.ants[ant];
+            place.currentAnts[this.ants[ant].id] = this.ants[ant];
+            const thisAnt = this.ants[ant];
 
             if (place.excavate === true) {
-                this.ants[ant].status = "excavate";
+                thisAnt.status = "excavate";
 
                 // excavate duration (should match determineDuration.js):
-                this.ants[ant].duration = 5 * 60000;
+                thisAnt.duration = .2 * 60000;
 
             } else {
-                this.ants[ant].status = place.tileType;
-                this.ants[ant].duration = place.durationInMinutes * 60000;
+                thisAnt.status = place.tileType;
+                thisAnt.duration = place.durationInMinutes * 60000;
             }
 
-            this.ants[ant].position = pos;
+            thisAnt.position = pos;
         });
     });
 

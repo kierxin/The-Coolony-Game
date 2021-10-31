@@ -8,6 +8,7 @@ export function PutAntRowsIntoDOM (item, board) {
 
     for (const tile in board) {
         if (board[tile].interactive === true && board[tile].visibility === true && board[tile].excavate === false) {
+            // console.log(board[tile]);
             const pos = board[tile].coordinates;
             const task = board[tile].tileType;
             

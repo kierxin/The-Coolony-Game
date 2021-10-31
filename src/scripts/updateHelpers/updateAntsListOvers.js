@@ -8,16 +8,16 @@ export function UpdateAntsListOvers () {
         properties.push(collection[i].innerHTML);
     }
 
-    const items = [];
+    const listItems = [];
 
-    antsList.children.forEach((item, i) => {
+    antsList.children.forEach((listItem, i) => {
         if (i > 0 && i % 2 === 1) {
-            items.push(item);
+            listItems.push(listItem);
         }
     });
 
 
-    items.forEach((item, i) => {
+    listItems.forEach((item, i) => {
 
         for (let j = 0; j < properties.length; j++) {
             item.children[j].children[0].innerHTML = this.ants[i][properties[j]];

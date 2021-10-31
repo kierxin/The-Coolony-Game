@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         fastButton.addEventListener("click", () => {
             gameSpeedWindow.style.display = "none";
-            runGame(.5);
+            runGame(.1);
         });
     };
     getGameSpeedFromPlayer();
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const interval = 400;
 
         ConstructBoardInDOM(board, player);
-        TileInfoClickEvents();
         DisplayAntsOnBoard(board, player);
         ActivateModals();
 
@@ -71,6 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 let decayDelay = 0;
 function update(interval, board) {
+    
+    TileInfoClickEvents();
     // DisplayAntsOnBoard(board);
 
     const energyAppetiteDepletion = EnergyAppetiteDepletion.bind(this);

@@ -1,4 +1,5 @@
 export function ConstructBoardInDOM(board) {
+    console.log('constructed board in DOM');
 
     const grid = document.querySelector(".grid");
     const boardArr = board;
@@ -39,5 +40,5 @@ export function ConstructBoardInDOM(board) {
         i++;
     }
 
-    return "";
+    return;
 }

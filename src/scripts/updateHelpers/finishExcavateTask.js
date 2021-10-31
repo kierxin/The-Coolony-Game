@@ -24,4 +24,6 @@ export function FinishExcavateTask(ant, board) {
     // also, update the select option in antsList to reflect that the tile is no longer under excavation and has now been revealed...   
     const updateAntsListUnders = UpdateAntsListUnders.bind(this, board[tile].coordinates, board[tile].tileType);
     updateAntsListUnders(board[tile].coordinates, board[tile].tileType);
+
+    board[tile].excavate = false;
 }
