@@ -2,7 +2,7 @@ const { MakeDOMListItem } = require("./makeDOMListItem.js");
 const { PutAntRowsIntoDOM } = require("./putAntRowsIntoDOM.js");
 
 
-export function AntsListModal(player, board) {
+export function AntsListModal(player) {
 
     const ants = player.ants;
 
@@ -11,6 +11,6 @@ export function AntsListModal(player, board) {
         antListItems.push(MakeDOMListItem(ant));
     });
 
-    antListItems.forEach(item => PutAntRowsIntoDOM(item, board));
+    antListItems.forEach(item => PutAntRowsIntoDOM(item, player.board));
 
 }

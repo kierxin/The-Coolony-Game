@@ -2,7 +2,7 @@ const { BoardWithTilesProperties } = require("./scripts/boardFactory/boardWithTi
 const { ActivateModals } = require("./scripts/modals/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
 const { TileInfoClickEvents } = require("./scripts/modals/tileInfoClickEvents.js");
-const { DisplayAntsOnBoard } = require("./scripts/displayAntsOnBoard.js");
+// const { DisplayAntsOnBoard } = require("./scripts/displayAntsOnBoard.js");
 const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
 const { AntsListModal } = require("./scripts/modals/antsListModal/antsListModal.js");
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function runGame(gameSpeed) {
         const board = BoardWithTilesProperties(gameSpeed);
 
-        const player = new Player();
+        const player = new Player(board);
         const ant1 = new Ant(player);
         const ant2 = new Ant(player);
 
@@ -48,31 +48,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const interval = 400;
 
-        ConstructBoardInDOM(board, player);
-        DisplayAntsOnBoard(board, player);
+        ConstructBoardInDOM(player);
+        // DisplayAntsOnBoard(player);
         ActivateModals();
 
-        const activateBuildListener = BuildModeListener.bind(player, board);
-        activateBuildListener(board);
+        const activateBuildListener = BuildModeListener.bind(player);
+        activateBuildListener();
 
         InstructionBlinkers();
 
-        AntsListModal(player, board);
+        AntsListModal(player);
         ListClickEvents();
 
-        const antsList = AntsListSubmitListener.bind(player, board);
-        antsList(board);
+        const antsListSubmit = AntsListSubmitListener.bind(player);
+        antsListSubmit();
 
-        window.setInterval(update.bind(player, interval, board), interval);
+        window.setInterval(update.bind(player, interval), interval);
     }
 });
 
 
 let decayDelay = 0;
-function update(interval, board) {
+
+function update(interval) {
     
     TileInfoClickEvents();
-    // DisplayAntsOnBoard(board);
+    // DisplayAntsOnBoard(this);
 
     const energyAppetiteDepletion = EnergyAppetiteDepletion.bind(this);
     energyAppetiteDepletion();
@@ -80,7 +81,7 @@ function update(interval, board) {
     const decr = decrementAntDurations.bind(this, interval);
     decr(interval);
 
-    const handle = HandleCompletedTasks.bind(this, board);
+    const handle = HandleCompletedTasks.bind(this);
     handle();
 
     this.updateResourceBar();

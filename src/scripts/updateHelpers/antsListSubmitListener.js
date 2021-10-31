@@ -1,4 +1,5 @@
-export function AntsListSubmitListener(board) {
+export function AntsListSubmitListener() {
+    const board = this.board;
 
     const overs = document.querySelectorAll(".over");
 

@@ -1,8 +1,7 @@
-export function ConstructBoardInDOM(board) {
-    console.log('constructed board in DOM');
+export function ConstructBoardInDOM(player) {
 
     const grid = document.querySelector(".grid");
-    const boardArr = board;
+    const boardArr = player.board;
 
     let i = 0;
     for (const key in boardArr) {

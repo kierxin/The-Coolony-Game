@@ -1,6 +1,7 @@
 import { Diggable } from "./diggable";
 
-export function BuildModeListener(board) {
+export function BuildModeListener() {
+    const board = this.board;
 
     const buildIcon = document.querySelector("#build-mode");
 
@@ -81,7 +82,7 @@ export function BuildModeListener(board) {
                 if (!grid.children[gridCellPosition].classList.contains("never-again-diggable")) {
                     grid.children[gridCellPosition].classList.add("tile-type-diggable");
 
-                    grid.children[gridCellPosition].addEventListener("click", Diggable.bind(grid.children[gridCellPosition], grid.children, this), { once: true });
+                    grid.children[gridCellPosition].addEventListener("click", Diggable.bind(grid.children[gridCellPosition], this, board), { once: true });
 
                     grid.children[gridCellPosition].classList.remove("hidden-from-player");
                 }

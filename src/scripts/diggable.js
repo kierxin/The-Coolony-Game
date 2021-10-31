@@ -1,4 +1,4 @@
-export function Diggable(diggables, player) {
+export function Diggable(player, board) {
 
     const verifyExacavation = document.createElement("div");
     verifyExacavation.classList.add("verify-excavation");
@@ -12,7 +12,7 @@ export function Diggable(diggables, player) {
     const confirmButton = document.createElement("button");
     confirmButton.classList = "confirm-btn";
     confirmButton.innerHTML = "confirm new excavation";
-    confirmButton.addEventListener("click", confirmHandler.bind(player));
+    confirmButton.addEventListener("click", confirmHandler.bind(player, board));
 
     const cancelButton = document.createElement("button");
     cancelButton.classList = "cancel-btn";
@@ -29,7 +29,16 @@ export function Diggable(diggables, player) {
 
 
 
-function confirmHandler(e) {
+function confirmHandler(board, e) {
+    const tile = e.currentTarget.parentNode;
+
+    // tile.classList[1] is a 2 digit number representing the tile's coordinates
+            // actually, a 2-3 digit number; when we get into 3-digits this will be a problem:
+    const boardTile = board[`tile${tile.classList[1][1]}${tile.classList[1][0]}`];
+    boardTile.excavate = true;
+    boardTile.visibility = true;
+    boardTile.tileType = boardTile.tileType.slice(0,6);
+    boardTile.tileType = `excavate,${boardTile.tileType}`;
 
     if (this.loot >= 50 && this.wood >= 150 && this.clay >= 150) {
 
