@@ -19,9 +19,12 @@ export function DetermineDuration(tileType, multiplier) {
     } else if (tileType === "nurse") {
         return 10 * multiplier;
     } else if (tileType === "excavate") {
-        return 5 * multiplier; //when changing, also change antsSubmitListener.js
-    // }
+        //when changing, also change antsSubmitListener.js :
+        return 5 * multiplier; 
+    }
 
+
+// TEST VALUES
     // if (!typesThatHaveDuration.includes(tileType)) {
     //     return null;
     // } else if (tileType === "food") {
@@ -40,5 +43,5 @@ export function DetermineDuration(tileType, multiplier) {
     //     return .010 * multiplier;
     // } else if (tileType === "excavate") {
     //     return .05 * multiplier; //when changing, also change antsSubmitListener.js
-    }
+    // }
 }

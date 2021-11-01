@@ -1,4 +1,6 @@
 export function UpdateAntsListUnders(coordinates, tileType) {
+    console.log("unders updated");
+
 
     const pos = JSON.stringify(coordinates);
 

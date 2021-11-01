@@ -1,5 +1,6 @@
 import { FinishExcavateTask } from "./finishExcavateTask";
 import { updateBoardObject } from "./updateBoardObject";
+import { Ant } from "../ant";
 
 export function HandleCompletedTasks() {
     const board = this.board;
@@ -43,6 +44,8 @@ export function HandleCompletedTasks() {
             } else if (task === "eat") {
                 foodSubtracter(this);
                 appetiteSubtracter(ant);
+            } else if (task === "nurse") {
+                new Ant(this);
             }
 
             lootRoller(this);

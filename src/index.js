@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         fastButton.addEventListener("click", () => {
             gameSpeedWindow.style.display = "none";
-            runGame(.1);
+            runGame(.5);
         });
     };
     getGameSpeedFromPlayer();
@@ -71,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
 let decayDelay = 0;
 
 function update(interval) {
+    AntsListModal(this);
+    ListClickEvents();
     
     TileInfoClickEvents();
     // DisplayAntsOnBoard(this);
@@ -95,6 +97,9 @@ function update(interval) {
 
     const updateAntsListOvers = UpdateAntsListOvers.bind(this);
     updateAntsListOvers();
+
+    const antsListSubmit = AntsListSubmitListener.bind(this);
+    antsListSubmit();
 }
 
 

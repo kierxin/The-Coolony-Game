@@ -1,8 +1,9 @@
+import { UpdateAntsListOvers } from "../../updateHelpers/updateAntsListOvers.js";
 import { CreateFormForAntsList } from "./createFormForAntsList.js";
 
-export function PutAntRowsIntoDOM (item, board) {
-
-    const antsList = document.querySelector("#ants-list");
+export function PutAntRowsIntoDOM (item, player) {
+    const board = player.board;
+    let antsList = document.querySelector("#ants-list");
 
     const potentialTasks = [];
 

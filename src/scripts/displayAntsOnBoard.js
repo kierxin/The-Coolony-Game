@@ -2,7 +2,6 @@ export function DisplayAntsOnBoard(player) {
     const grid = document.querySelector(".grid");
     const boardArr = player.board;
 
-    let i = 0;
     for (const key in boardArr) {
         const tile = boardArr[key];
         // const type = tile.tileType;
@@ -27,7 +26,6 @@ export function DisplayAntsOnBoard(player) {
             // console.log(tile.currentAnts);
             gridCell.classList.add("contains-ants");
             // TODO add event listener
-            // console.log(gridCell);
         }
     }
 

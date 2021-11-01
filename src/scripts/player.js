@@ -1,9 +1,9 @@
 export function Player (board) {
 
-    // this.loot = 1000;
-    // this.food = 1000;
-    // this.wood = 1000;
-    // this.clay = 1000;
+    // this.loot = 1000; // test values
+    // this.food = 1000; // test values
+    // this.wood = 1000; // test values
+    // this.clay = 1000; // test values
     this.loot = 0;
     this.food = 10;
     this.wood = 10;

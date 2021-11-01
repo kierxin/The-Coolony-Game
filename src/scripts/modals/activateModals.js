@@ -81,14 +81,18 @@ function toggleStatsModal() {
 
 
 
-// function toggleModal(node, child, modal) {
+// function toggleModal(arg, modal, modalType) {
 
 //     if (node.classList.contains(`${modal}`)) {
-//         node.classList.remove(`${modal}`);
-//         child.classList.remove(`${modal}-content`);
+        // arg[0].classList.add(`${modalType}`);
+        // arg[1].classList.add(`${modalType}-content`);
+        // arg[0].classList.remove(`ensure-display-none-if-model-inactive`);
+        // arg[1].classList.remove(`ensure-display-none-if-model-inactive`);
 //     } else {
-//         node.classList.add(`${modal}`);
-//         child.classList.add(`${modal}-content`);
+        // arg[0].classList.remove(`${modalType}`);
+        // arg[1].classList.remove(`${modalType}-content`);
+        // arg[0].classList.add(`ensure-display-none-if-model-inactive`);
+        // arg[1].classList.add(`ensure-display-none-if-model-inactive`);
 //     }
 
 // }

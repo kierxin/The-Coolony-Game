@@ -1,23 +1,28 @@
 export function ListClickEvents () {
 
-    const over = document.querySelectorAll(".over");
-    const under = document.querySelectorAll(".under");
+    const overs = document.querySelectorAll(".over");
+    const unders = document.querySelectorAll(".under");
 
-    for (let i = 0; i < over.length; i++) {
-        over[i].addEventListener("click", overListener);
+    for (let i = 0; i < overs.length; i++) {
+        if (!unders[i].hasAttribute("event-added")) {
+            unders[i].setAttribute("event-added", "true");
+
+            overs[i].addEventListener("click", overListener);
+        }
 
         function overListener() {
-            
-            if (under[i].getAttribute("display") === "block") {
-                under[i].style.display = "none";
-                under[i].setAttribute("display", "none");
+            console.log("click");
+
+            if (unders[i].getAttribute("display") === "block") {
+                unders[i].style.display = "none";
+                unders[i].setAttribute("display", "none");
             } else {
-                under[i].style.display = "block";
-                under[i].setAttribute("display", "block");
+                unders[i].style.display = "block";
+                unders[i].setAttribute("display", "block");
             }
 
-            under[i].style.opacity = 1;
-            under[i].style.pointerEvents = "auto";
+            unders[i].style.opacity = 1;
+            unders[i].style.pointerEvents = "auto";
         }
     }
 

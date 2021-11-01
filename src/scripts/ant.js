@@ -16,7 +16,6 @@ export function Ant(player) {
     }
 
     player.ants.push(this);
-
 }
 
 
