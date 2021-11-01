@@ -1,5 +1,4 @@
 import { FinishExcavateTask } from "./finishExcavateTask";
-import { updateBoardObject } from "./updateBoardObject";
 import { Ant } from "../ant";
 
 export function HandleCompletedTasks() {
@@ -23,10 +22,6 @@ export function HandleCompletedTasks() {
             }
 
             const task = ant.status;
-
-            if (task !== "idle") {
-                updateBoardObject(board, ant);
-            }
             
             if (task === "food") {
                 foodAdder(this);

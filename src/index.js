@@ -2,7 +2,7 @@ const { BoardWithTilesProperties } = require("./scripts/boardFactory/boardWithTi
 const { ActivateModals } = require("./scripts/modals/activateModals.js");
 const { ConstructBoardInDOM } = require("./scripts/constructBoardInDOM.js");
 const { TileInfoClickEvents } = require("./scripts/modals/tileInfoClickEvents.js");
-// const { DisplayAntsOnBoard } = require("./scripts/displayAntsOnBoard.js");
+const { DisplayAntsOnBoard } = require("./scripts/displayAntsOnBoard.js");
 const { Player } = require("./scripts/player.js");
 const { Ant } = require("./scripts/ant.js");
 const { AntsListModal } = require("./scripts/modals/antsListModal/antsListModal.js");
@@ -75,7 +75,6 @@ function update(interval) {
     ListClickEvents();
     
     TileInfoClickEvents();
-    // DisplayAntsOnBoard(this);
 
     const energyAppetiteDepletion = EnergyAppetiteDepletion.bind(this);
     energyAppetiteDepletion();
@@ -100,6 +99,8 @@ function update(interval) {
 
     const antsListSubmit = AntsListSubmitListener.bind(this);
     antsListSubmit();
+
+    // DisplayAntsOnBoard(this);
 }
 
 

@@ -31,11 +31,19 @@ export function Diggable(player, board) {
 
 function confirmHandler(board, e) {
     const tile = e.currentTarget.parentNode;
+    let boardTile;
 
-    // tile.classList[1] is a 2 digit number representing the tile's coordinates
-            // actually, a 2-3 digit number; when we get into 3-digits this will be a problem:
-    const boardTile = board[`tile${tile.classList[1][1]}${tile.classList[1][0]}`];
-    boardTile.excavate = true;
+    // tile.classList[1] is a 2-3 digit number representing the tile's coordinates:
+    const coords = tile.classList[1];
+
+    if (coords.length === 2) {
+        boardTile = board[`tile${coords[1]}${coords[0]}`];
+    } else if (coords.length === 3) {
+        boardTile = board[`tile${coords[2]}${coords[1]}${coords[0]}`];
+    }
+    
+
+            boardTile.excavate = true;
     boardTile.visibility = true;
     boardTile.tileType = boardTile.tileType.slice(0,6);
     boardTile.tileType = `excavate,${boardTile.tileType}`;

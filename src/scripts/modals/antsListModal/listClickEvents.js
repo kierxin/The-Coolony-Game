@@ -11,7 +11,6 @@ export function ListClickEvents () {
         }
 
         function overListener() {
-            console.log("click");
 
             if (unders[i].getAttribute("display") === "block") {
                 unders[i].style.display = "none";

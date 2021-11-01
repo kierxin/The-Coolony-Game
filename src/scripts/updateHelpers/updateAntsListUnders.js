@@ -1,9 +1,5 @@
 export function UpdateAntsListUnders(coordinates, tileType) {
-    console.log("unders updated");
-
-
     const pos = JSON.stringify(coordinates);
-
     const unders = document.querySelectorAll(".under");
 
     this.ants.forEach((ant, i) => {

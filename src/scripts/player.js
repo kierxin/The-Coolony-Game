@@ -1,13 +1,13 @@
 export function Player (board) {
 
-    // this.loot = 1000; // test values
-    // this.food = 1000; // test values
-    // this.wood = 1000; // test values
-    // this.clay = 1000; // test values
-    this.loot = 0;
-    this.food = 10;
-    this.wood = 10;
-    this.clay = 10;
+    this.loot = 1000; // test values
+    this.food = 1000; // test values
+    this.wood = 1000; // test values
+    this.clay = 1000; // test values
+    // this.loot = 0;
+    // this.food = 10;
+    // this.wood = 10;
+    // this.clay = 10;
     this.gold = 0;
     this.ants = [];
     this.lastAnt = null;    // player's most recently selected ant
