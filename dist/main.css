@@ -496,14 +496,11 @@ nav {
 }
 
 .contains-ants {
-  background-image: url("../src/images/ANT.png");
-  background-size: 40%;
+  background-image: url("https://i.pinimg.com/originals/49/b0/37/49b037744bb869198500a3a9531dc40c.gif");
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 10px;
-}
-.contains-ants:hover {
-  cursor: pointer;
 }
 
 .interactive:hover {

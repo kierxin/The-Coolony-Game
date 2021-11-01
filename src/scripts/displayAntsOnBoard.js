@@ -23,37 +23,3 @@ export function DisplayAntsOnBoard(oldPosition, newPosition) {
         }
     }
 }
-
-// export function DisplayAntsOnBoard(player) {
-    // const grid = document.querySelector(".grid");
-//     const boardArr = player.board;
-
-//     for (let i = 0; i < grid.children.length; i++) {
-//         grid.children[i].classList.remove("contains-ants");
-//     }
-
-//     for (const key in boardArr) {
-//         const tile = boardArr[`${key}`];
-
-//         // if (Object.keys(tile.currentAnts).length) {
-//         //     console.log(tile.currentAnts);
-
-//         // }
-
-//         for (let i = 0; i < grid.children.length; i++) {
-//             const cell = grid.children[i];
-//             // cell.classList.remove("contains-ants")
-
-//             if (Object.keys(tile.currentAnts).length && (
-//                 cell.classList.contains(`${tile.coordinates[0]}${tile.coordinates[1]}`))) {
-
-//                 cell.classList.add("contains-ants");
-
-//                 console.log(`${tile.coordinates[0]}${tile.coordinates[1]} has ant(s)`);
-//                 // TODO add event listener
-//             }
-//         }
-//     }
-
-//     return;
-// }

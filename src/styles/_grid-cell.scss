@@ -22,17 +22,38 @@
     background-color: transparent;
 }
 
+
 .contains-ants {
-    background-image: url("../src/images/ANT.png");
-    background-size: 40%;
+    // TEMPORARY IMG
+    background-image: url("https://i.pinimg.com/originals/49/b0/37/49b037744bb869198500a3a9531dc40c.gif");
+    background-size: 80%;
+
+    
+    // background-image: url("../src/images/ANT.png");
+    // background-size: 40%;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 10px;
-
-    &:hover {
-        cursor: pointer;
-    }
 }
+
+// .contains-ants {
+//     position: relative;
+//     z-index: 1;
+// }
+
+// .contains-ants::before {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: -50px;
+//     z-index: 10;
+    // background-image: url("../src/images/ANT.png");
+    // background-size: 40%;
+    // background-repeat: no-repeat;
+    // background-position-x: center;
+    // background-position-y: 10px;
+//     border: 1px solid magenta;
+// }
 
 .interactive:hover {
     cursor: pointer;

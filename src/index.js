@@ -99,8 +99,6 @@ function update(interval) {
 
     const antsListSubmit = AntsListSubmitListener.bind(this);
     antsListSubmit();
-
-    // DisplayAntsOnBoard(this);
 }
 
 
